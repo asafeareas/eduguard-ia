@@ -187,6 +187,35 @@ ficam na seção final.
 - Versionados: `reports/modeling/**/results.json`, CSVs de comparação e PNGs. Não versionados:
   `models.joblib` e `test_predictions.parquet`.
 
+### TD-42 — Q17 implementada: modelo principal v2 sem `adm_imd_band`
+- `MODEL_VERSIONS`: phase04-v1 (resultados preservados em `reports/modeling/`) e phase05-v2
+  (atual, `reports/modeling_v2/`). Custo em S4 (RL): −0,002 de PR-AUC [−0,006; +0,001]. A
+  disparidade de FPR entre faixas de IMD cai de 0,103 para 0,015.
+
+### TD-43 — Verificação da divisão (sem correção)
+- A divisão é por estudante (`GroupShuffleSplit`). Os números da Fase 04 eram registros, com os
+  estudantes entre parênteses. 121 estudantes têm dois registros em 2013 (S4). Zero estudantes em
+  mais de uma parte. Nada foi reexecutado por esse motivo.
+
+### TD-44 — Q18: sem threshold por grupo; acompanhamento humano
+- A subestimação para deficiência é confirmada (S4 RL: −4,9 p.p. [−7,2; −2,7]); o mix de
+  módulos explica pouco (−4,1 p.p. depois de padronizar). Recall semelhante. Medidas:
+  acompanhamento independente do score e monitoramento da calibração por grupo. A deficiência continua fora dos preditores.
+
+### TD-45 — Q19: thresholds são referência experimental
+- Metodologia por capacidade, razão de custos FN:FP e benefício líquido, calculada só em dados
+  de calibração. Nenhum threshold definitivo sem a equipe pedagógica.
+
+### TD-46 — Q20: transferência direta inviável; protocolo pronto
+- Só `adm_age_band` tem correspondência direta (1 de 46 preditores em S4). O protocolo exige o
+  teste de compatibilidade antes de qualquer avaliação externa. Adaptação ou retreino serão um
+  **novo modelo**, não validação externa. Nenhum dado da UFRN foi acessado; a autorização está pendente.
+
+### TD-47 — Kit de validação externa
+- `src/validation/`: matriz de correspondência (fonte única do documento), contrato de dados
+  com validador (campos proibidos de identificação), `evaluate_external` sem reajuste e recusa
+  de dados incompatíveis, PSI e taxa de categorias nunca vistas.
+
 ## Questões pendentes
 
 | # | Questão | Por que importa |
@@ -209,7 +238,9 @@ ficam na seção final.
 | Q14 | Modelo de "dia 0" para os 26% que cancelam antes do início? | Escopo |
 | Q15 | ~~Validação~~ **resolvida (TD-32)** — Validação na Fase 04: treinar 2013 → testar 2014 **e** agrupar por estudante (1.368 repetidos entre anos) | Evita vazamento entre treino e teste |
 | Q16 | ~~Sensíveis~~ **resolvida (TD-33)** — Uso de `adm_gender` e `adm_disability` (sensíveis) no modelo ou só na auditoria de equidade? | Equidade |
-| Q17 | Retirar `adm_imd_band` do modelo principal? Custo de PR-AUC de 0,003; com ela há excesso de falsos positivos nas áreas mais pobres (ver FAIRNESS_AUDIT.md) | Equidade |
-| Q18 | Como tratar a subestimação do risco de estudantes com deficiência (−5 a −8 p.p.) sem usar a variável como preditora? | Equidade / calibração |
-| Q19 | Threshold e faixas definidos junto com a equipe pedagógica, conforme a capacidade de atendimento | Uso institucional |
-| Q20 | Validação com dados brasileiros (UFRN) antes de qualquer uso real | Validade externa |
+| Q17 | ~~IMD~~ **resolvida (TD-42)** — Retirar `adm_imd_band` do modelo principal? Custo de PR-AUC de 0,003; com ela há excesso de falsos positivos nas áreas mais pobres (ver FAIRNESS_AUDIT.md) | Equidade |
+| Q18 | **em acompanhamento (TD-44)** — Como tratar a subestimação do risco de estudantes com deficiência (−5 a −8 p.p.) sem usar a variável como preditora? | Equidade / calibração |
+| Q19 | **metodologia pronta (TD-45); decisão com a equipe pendente** — Threshold e faixas definidos junto com a equipe pedagógica, conforme a capacidade de atendimento | Uso institucional |
+| Q20 | **protocolo pronto (TD-46); validação empírica pendente** — Validação com dados brasileiros (UFRN) antes de qualquer uso real | Validade externa |
+| Q21 | Disparidade de alertas por gênero persiste (FPR M 0,37 × F 0,23): investigar features correlacionadas ou o desenho do alerta? | Equidade |
+| Q22 | Autorização da UFRN (ou de outra instituição) e definição do rótulo brasileiro (cancelamento de disciplina × evasão do curso) | Validação externa |

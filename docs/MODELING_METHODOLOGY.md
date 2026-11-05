@@ -143,3 +143,43 @@ com o manifesto), target, corte, preditores, seed, auditoria da divisão, grades
 escolhidos, métricas, commit e versões das bibliotecas. Modelos (`models.joblib`) e previsões do
 teste (`test_predictions.parquet`) não são versionados. Teste de determinismo:
 `test_experiment_is_deterministic`.
+
+
+---
+
+## 10. Fase 05 — verificação da divisão por estudante
+
+> Questão levantada na revisão: na semana 4, treino + validação + calibração = 7.085 + 2.362 +
+> 2.360 = 11.807, ou seja, o número de **registros** e não o de estudantes (11.686). A divisão é
+> mesmo por estudante?
+
+**Verificação no código** (`src/modeling/splitting.py`): `split_by_student` usa
+`GroupShuffleSplit(groups=df["student_id"])`. As frações (20% para calibração; depois 25% do
+restante para validação) são de **estudantes**, e todas as linhas de um estudante vão para a
+mesma parte. `check_disjoint` interrompe a execução se houver estudante em duas partes.
+
+**Verificação nos dados reais** (`reports/phase05/split_integrity.json`):
+
+| | S2 | S4 | S6 |
+|---|---|---|---|
+| Registros 2013 = soma dos registros das 3 partes | 12.076 = 12.076 | 11.807 = 11.807 | 11.616 = 11.616 |
+| Estudantes 2013 = soma dos estudantes das 3 partes | 11.947 = 11.947 | **11.686 = 7.011 + 2.337 + 2.338** | 11.502 = 11.502 |
+| Estudantes com mais de 1 registro em 2013 (dois módulos) | 129 | **121** | 114 |
+| Estudantes em mais de uma parte | 0 | 0 | 0 |
+| Estudantes compartilhados com o teste | 0 | 0 | 0 |
+
+**Conclusão:** não há inconsistência nem vazamento. As tabelas da Fase 04 mostram os
+**registros** fora dos parênteses e os **estudantes** dentro deles. As duas somas fecham. A
+diferença de 121 corresponde a estudantes matriculados em dois módulos em 2013, sempre com os
+dois registros na mesma parte. Nenhuma correção ou reexecução foi necessária. A verificação
+virou teste com dados reais (`test_real_split_is_by_student_and_counts_reconcile`).
+
+## 11. Fase 05 — versões dos preditores
+
+| Versão | Exclui dos preditores (fica só para auditoria) | S2 / S4 / S6 | Resultados |
+|---|---|---|---|
+| phase04-v1 | gênero, deficiência | 31 / 47 / 49 | `reports/modeling/` (inalterados) |
+| **phase05-v2** (atual) | gênero, deficiência, `adm_imd_band` | **30 / 46 / 48** | `reports/modeling_v2/` |
+
+Uso: `run_oulad_experiment(..., model_version="phase05-v2")`. O protocolo é o mesmo nas duas.
+Ver `docs/MODEL_V2_EVALUATION.md`.

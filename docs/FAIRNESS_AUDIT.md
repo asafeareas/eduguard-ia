@@ -99,3 +99,100 @@ O grupo com necessidades especiais tem apenas 9 pessoas no teste: nenhuma conclu
 - Os grupos usam as categorias disponíveis na OULAD (gênero binário, deficiência autodeclarada,
   IMD da área de residência), que são aproximações imperfeitas.
 - Nenhuma técnica de mitigação foi aplicada nesta fase. As diferenças estão documentadas, não corrigidas.
+
+---
+
+# Atualização da Fase 05 (modelo v2, sem `adm_imd_band`)
+
+> Semana 4, target principal, teste 2014 sem recorrentes. Modelo **v2**: gênero, deficiência e
+> IMD fora dos preditores. Thresholds da partição de calibração (RL 0,211; GB 0,194). IC 95% por
+> bootstrap de estudantes (1.000 reamostragens no diagnóstico de deficiência). Os números da v1
+> acima ficam preservados para rastreabilidade. Resultados: `reports/phase05/`.
+
+## A. Consolidação das disparidades
+
+| Dimensão | v1 | v2 | Situação |
+|---|---|---|---|
+| IMD: amplitude de FPR entre faixas | 0,103 (0,199–0,302) | **0,015** (0,296–0,311; ICs sobrepostos) | **Resolvida** pela remoção (Q17) |
+| IMD: calibração por faixa | +0,007 a +0,023 | +0,003 a +0,041 (ausente +0,072 [+0,040; +0,103]) | Leve superestimação nas faixas menos privadas e na ausente |
+| Gênero: FPR M × F (RL) | 0,302 × 0,185 | **0,369 [0,359–0,381] × 0,232 [0,220–0,244]** | **Persiste** |
+| Gênero: recall M × F (RL) | 0,538 × 0,415 | 0,606 [0,584–0,631] × 0,472 [0,441–0,502] | Persiste |
+| Gênero: calibração | — | M +0,022 [+0,013; +0,031] · F +0,018 [+0,008; +0,027] | Semelhante entre os grupos |
+| Deficiência: calibração (Y) | −0,051 | **−0,049 [−0,072; −0,027]** | **Persiste** (ver B) |
+
+Com gênero, a calibração é parecida entre os grupos, mas o modelo distribui mais alertas (e
+mais falsos) para homens. Isso decorre de variáveis correlacionadas com gênero, como módulo e
+padrão de uso do AVA. Mitigar sem usar gênero exigiria rever essas features ou o desenho do
+alerta, e isso fica para decisão.
+
+## B. Estudantes com deficiência (Q18)
+
+### Tamanho e representatividade
+
+| Partição | Registros | Com deficiência | % | Taxa de cancelamento: deficiência × demais |
+|---|---|---|---|---|
+| Treino 2013 | 7.085 | 697 | 9,8% | 25,8% × 16,5% |
+| Validação 2013 | 2.362 | 224 | 9,5% | 23,7% × 14,7% |
+| Calibração 2013 | 2.360 | 202 | 8,6% | 27,2% × 16,5% |
+| **Teste 2014** | 14.185 | **1.301** | 9,2% | **25,4% × 17,3%** |
+| Recorrentes 2014 (secundário) | 1.449 | 173 | 11,9% | 35,3% × 30,5% |
+
+O grupo **está representado no treino** (cerca de 10%, o mesmo do teste) e a taxa maior é
+**consistente** em todas as partições. Não é um artefato de amostra. Com 331 casos positivos no
+teste, a menor diferença de recall detectável (α = 0,05; poder de 80%) é de **cerca de 8 pontos
+percentuais**. Diferenças menores não podem ser afirmadas nem descartadas.
+
+### Calibração (subestimação do risco)
+
+| Corte | Modelo | Observado (Y) | Previsto (Y) | Gap [IC 95%] | Gap dos demais |
+|---|---|---|---|---|---|
+| S2 | RL | 26,9% | 19,3% | **−0,077 [−0,100; −0,053]** | −0,001 |
+| S4 | RL | 25,4% | 20,5% | **−0,049 [−0,072; −0,027]** | +0,027 |
+| S4 | GB | 25,4% | 17,6% | **−0,078 [−0,100; −0,057]** | +0,003 |
+| S6 | RL | 23,5% | 14,6% | **−0,089 [−0,112; −0,067]** | −0,023 |
+
+A subestimação aparece em **todos os cortes e nos dois modelos**, e os ICs excluem zero.
+
+![Calibração por deficiência](../reports/phase05/figures/v2_disability_calibration.png)
+
+Por quintil (RL, S4), o problema se concentra nos riscos intermediários e altos: previsto 0,18 → observado 0,28; previsto 0,37 → observado 0,47.
+
+### Recall, falsos negativos e falsos positivos (S4)
+
+| Modelo | Grupo | Recall [IC 95%] | FNR | FPR | Precision | PR-AUC | Brier |
+|---|---|---|---|---|---|---|---|
+| RL | N | 0,550 [0,528–0,570] | 0,450 | 0,307 | 0,273 | 0,293 | 0,137 |
+| RL | **Y** | 0,565 [0,511–0,614] | 0,435 | 0,320 | 0,376 | 0,399 | 0,179 |
+| GB | N | 0,538 [0,518–0,558] | 0,462 | 0,320 | 0,261 | 0,273 | 0,138 |
+| GB | **Y** | 0,535 [0,481–0,587] | 0,465 | 0,311 | 0,370 | 0,390 | 0,184 |
+
+Fonte: `reports/phase05/disability_audit.json`.
+
+**Interpretação:** no threshold único, a **taxa de detecção é semelhante** (recall e FNR sem
+diferença detectável), porque a taxa de base maior compensa a subestimação. A probabilidade
+exibida, porém, fica **cerca de 5 pontos abaixo** da realidade. Em faixas de risco, estudantes
+com deficiência seriam classificados abaixo do risco real, e com threshold de capacidade (top *k*%) seriam priorizados de menos.
+
+### O mix de módulos explica?
+
+Pouco. Padronizando pela distribuição de módulos do teste, o gap vai de −0,049 para **−0,041**.
+A subestimação se concentra nos módulos **DDD (−0,105, n = 249)**, **FFF (−0,094, n = 285)** e
+GGG (−0,050). Em BBB e CCC fica perto de zero. A causa provável é que a deficiência
+acrescenta risco além do que o engajamento e as entregas capturam. Isso é coerente com
+excluir a variável (Q16), mas mostra que **excluir não garante equidade**.
+
+### Ações (sem thresholds por grupo)
+
+1. **Acompanhamento humano independente do score** (`docs/GOVERNANCE_AND_PRIVACY.md` §3): o núcleo
+   de acessibilidade segue seus próprios critérios, sem depender do alerta.
+2. **Monitorar a calibração por grupo** a cada período e reportar à equipe.
+3. **Investigar na próxima fase**, se autorizado: features de contexto que expliquem o risco
+   adicional (ex.: carga de créditos, quarentenada na Fase 03) e recalibração geral. Nenhuma
+   dessas opções usa deficiência como preditor.
+4. **Não apresentar** a probabilidade desse grupo como "baixo risco" sem revisão humana.
+
+## C. Limitações estatísticas
+
+- Idade 55+ (103 registros, 18 cancelamentos) e grupos pequenos da UCI: amostra insuficiente.
+- Os testes de diferença por grupo têm poder limitado (diferença mínima detectável de cerca de 8 p.p. para deficiência).
+- Um único ano de teste. Os ICs não capturam mudanças entre anos.

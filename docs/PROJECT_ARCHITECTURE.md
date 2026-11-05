@@ -65,6 +65,9 @@ medir **quanto a antecedência custa em desempenho**.
 | `src/feature_engineering/build_datasets.py` | Gera Parquet + metadados + manifestos; `split_roles` separa X/y sem IDs/auditoria | **Fase 03** |
 | `src/preprocessing/` | — | não usado: o pré-processamento ficou em `src/modeling/preprocessing.py`, junto dos pipelines |
 | `src/modeling/` | Divisão (Q15), pipelines, baselines, treino, avaliação, calibração, faixas, equidade, interpretação, UCI | **Fase 04** |
+| `src/modeling/preprocessing.py::MODEL_VERSIONS` | Versões dos preditores: phase04-v1 e **phase05-v2** (sem IMD; atual) | **Fase 05** |
+| `src/modeling/thresholds.py` | Threshold por capacidade, por custo e benefício líquido (metodologia; nada operacional) | **Fase 05** |
+| `src/validation/` | Correspondência OULAD→Brasil, contrato de dados (LGPD), compatibilidade, avaliação externa sem retreino, PSI | **Fase 05** |
 | `src/models/` | Treino e persistência | vazio (sem algoritmo escolhido) |
 | `src/evaluation/` | Validação por coorte/tempo, calibração, métricas por subgrupo | vazio |
 | `src/prediction/` | Probabilidade → faixa de risco → fatores explicativos | vazio |
@@ -110,3 +113,15 @@ Esboço — os nomes podem mudar quando a API for desenhada.
 - **Auditabilidade:** cada previsão registra a versão do modelo e o corte usado.
 - **Equidade:** métricas por subgrupo (sexo, idade, modalidade de ingresso) antes
   de qualquer uso real.
+
+## 7. Governança (preservada e reforçada na Fase 05)
+
+- O EduGuard-IA continua **independente** do app Flutter. A comunicação futura será por **API
+  REST**, que **ainda não foi autorizada**.
+- O modelo **não toma decisões acadêmicas**: entrega estimativas de risco com incerteza para
+  revisão humana. A equipe pedagógica define os critérios de acompanhamento
+  (`docs/THRESHOLD_METHODOLOGY.md`).
+- Dados brasileiros só com autorização, conforme o contrato de dados e a LGPD
+  (`docs/GOVERNANCE_AND_PRIVACY.md`). Sensíveis (gênero, deficiência, socioeconômico) ficam só para auditoria.
+- O modelo que eventualmente for servido precisa ter validação na instituição de destino. O
+  modelo OULAD não é transferível diretamente (`docs/BRAZILIAN_FEATURE_MAPPING.md`).

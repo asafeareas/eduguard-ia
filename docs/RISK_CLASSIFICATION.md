@@ -6,6 +6,11 @@
 > ⚠️ **Proposta experimental. Não deve ser usada para rotular estudantes reais nem para
 > decisões institucionais automatizadas.**
 
+> **Fase 05 (Q19):** estes limites são **referências experimentais**. Com o modelo v2 (sem IMD)
+> os limites são os mesmos (baixo < 0,174; alto ≥ 0,348), e no teste ficam: baixo 47% (11,0%
+> observado), moderado 44% (21,2%), alto 9% (39,6%). Thresholds definitivos dependem da
+> metodologia de `docs/THRESHOLD_METHODOLOGY.md` e da equipe pedagógica.
+
 ## 1. Critério
 
 As faixas são definidas sobre **probabilidades calibradas**, usando **apenas** dados de 2013

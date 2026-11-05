@@ -47,6 +47,18 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
   experimentais, não prontos para uso institucional
 - ⛔ Nenhuma API, integração ou previsão operacional (por definição das fases)
 
+**Fase 05 — validação externa e adequação ao contexto brasileiro** (branch `feat/brazilian-validation`)
+- ✅ Divisão por estudante verificada: sem inconsistência nem vazamento (somas de registros e de estudantes fecham)
+- ✅ Q17: modelo principal **v2** sem `adm_imd_band` (S4: PR-AUC 0,304 × 0,306, diferença não
+  significativa); disparidade de falsos positivos por privação eliminada
+- ✅ Q18: subestimação do risco de estudantes com deficiência confirmada (−4,9 p.p. [−7,2; −2,7])
+  e documentada, com acompanhamento humano independente do score
+- ✅ Q19: metodologia de thresholds por capacidade, custo e benefício líquido (thresholds atuais = referência experimental)
+- ✅ Q20: protocolo, contrato de dados e ferramentas de validação brasileira prontos;
+  **validação empírica brasileira PENDENTE** (autorização da UFRN não concedida; nenhum dado acessado)
+- ⚠️ Transferência direta do modelo OULAD para os dados brasileiros conhecidos é **inviável**
+  (só 1 de 46 preditores tem equivalência direta)
+
 ## Tecnologias previstas
 
 | Etapa | Tecnologia |
@@ -72,13 +84,16 @@ eduguard-ia/
 │   └── external/       # dados de contexto (ex.: indicadores INEP)
 ├── docs/               # documentação do projeto
 ├── notebooks/          # 01 OULAD EDA · 02 UCI EDA · 03 viabilidade temporal e vazamento
-├── reports/modeling/   # resultados da Fase 04 (JSON/CSV/PNG versionados; joblib/parquet não)
+├── reports/modeling/   # resultados da Fase 04 / v1 (JSON/CSV/PNG versionados; joblib/parquet não)
+├── reports/modeling_v2/ # resultados da Fase 05 / v2 (sem IMD)
+├── reports/phase05/    # integridade da divisão, v1×v2, auditoria de deficiência, thresholds
 ├── research/
 │   ├── figures/        # gráficos da Fase 02
 │   └── inspection/     # perfis e resultados agregados (JSON/CSV)
 ├── src/
 │   ├── analysis/       # EDA, auditoria de vazamento, gráficos, pipeline da Fase 02
-│   ├── modeling/       # divisão, pré-processamento, baselines, treino, avaliação, calibração, equidade, UCI
+│   ├── modeling/       # divisão, pré-processamento, baselines, treino, avaliação, calibração, equidade, UCI, thresholds
+│   ├── validation/     # correspondência OULAD→Brasil, contrato de dados, avaliação externa (Fase 05)
 │   ├── data/           # registry, download, loaders, qualidade, inspeção
 │   ├── preprocessing/
 │   ├── feature_engineering/  # catálogo de features, construção dos conjuntos por corte (OULAD) e ingresso (UCI)
@@ -147,6 +162,12 @@ Fase 04 (experimentos, ~15 min):
 python -m src.modeling.run_phase04    # reports/modeling/** (métricas, figuras; modelos não versionados)
 ```
 
+Fase 05 (~15 min):
+
+```bash
+python -m src.modeling.run_phase05    # reports/modeling_v2/** e reports/phase05/**
+```
+
 ## Documentação
 
 - [docs/DATASET_RESEARCH.md](docs/DATASET_RESEARCH.md) — pesquisa e comparação de datasets
@@ -167,6 +188,12 @@ python -m src.modeling.run_phase04    # reports/modeling/** (métricas, figuras;
 - [docs/MODEL_EVALUATION.md](docs/MODEL_EVALUATION.md) — resultados, comparação, calibração, limitações
 - [docs/FAIRNESS_AUDIT.md](docs/FAIRNESS_AUDIT.md) — auditoria de equidade
 - [docs/RISK_CLASSIFICATION.md](docs/RISK_CLASSIFICATION.md) — proposta preliminar de faixas de risco
+- [docs/MODEL_V2_EVALUATION.md](docs/MODEL_V2_EVALUATION.md) — Q17: v1 × v2 (sem IMD) (Fase 05)
+- [docs/THRESHOLD_METHODOLOGY.md](docs/THRESHOLD_METHODOLOGY.md) — Q19: metodologia de thresholds
+- [docs/BRAZILIAN_FEATURE_MAPPING.md](docs/BRAZILIAN_FEATURE_MAPPING.md) — matriz OULAD → Brasil
+- [docs/BRAZILIAN_VALIDATION_PROTOCOL.md](docs/BRAZILIAN_VALIDATION_PROTOCOL.md) — Q20: protocolo de validação
+- [docs/UFRN_DATA_AVAILABILITY.md](docs/UFRN_DATA_AVAILABILITY.md) — disponibilidade e restrições da UFRN
+- [docs/GOVERNANCE_AND_PRIVACY.md](docs/GOVERNANCE_AND_PRIVACY.md) — governança, LGPD, acompanhamento humano
 
 ## Licença dos dados
 

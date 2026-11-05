@@ -27,6 +27,15 @@ def to_text(X):
 # Decision Q16: never predictors (OULAD names and UCI names).
 EXCLUDED_SENSITIVE = {"adm_gender", "adm_disability", "Gender", "Educational special needs"}
 
+# Predictor-set versions. Every excluded column stays in the datasets for auditing only.
+#   phase04-v1: Q16 (gender, disability)
+#   phase05-v2: Q16 + Q17 (socio-economic deprivation band) -> current main model
+MODEL_VERSIONS = {
+    "phase04-v1": frozenset(EXCLUDED_SENSITIVE),
+    "phase05-v2": frozenset(EXCLUDED_SENSITIVE | {"adm_imd_band"}),
+}
+CURRENT_MODEL_VERSION = "phase05-v2"
+
 MISSING_INDICATOR_COLUMNS = {"asm_submission_rate", "asm_mean_days_before_deadline", "adm_imd_band"}
 
 

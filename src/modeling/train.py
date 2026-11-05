@@ -103,8 +103,13 @@ def select_from_grid(builder, grid, X_tr, y_tr, X_val, y_val):
 
 def run_oulad_experiment(week: int, target: str, extras: bool = False, interpret: bool = False,
                          out_dir: Path | None = None, df: pd.DataFrame | None = None, meta: dict | None = None,
-                         provenance: dict | None = None, n_boot: int = 1000) -> dict:
-    """Run one experiment. `df/meta` can be injected (tests); otherwise loaded and hash-verified."""
+                         provenance: dict | None = None, n_boot: int = 1000,
+                         model_version: str = "phase04-v1") -> dict:
+    """Run one experiment. `df/meta` can be injected (tests); otherwise loaded and hash-verified.
+
+    `model_version` selects the predictor set (preprocessing.MODEL_VERSIONS):
+    phase04-v1 = features minus gender/disability; phase05-v2 = also minus adm_imd_band (Q17).
+    """
     if df is None:
         df, meta, provenance = load_verified_oulad(week)
     out_dir = out_dir or REPORTS / "oulad" / f"week_{week:02d}" / target
@@ -112,7 +117,8 @@ def run_oulad_experiment(week: int, target: str, extras: bool = False, interpret
     cutoff_day = 7 * week - 1
 
     sp = splitting.oulad_split(df, meta["target_columns"])
-    cols = preprocessing.predictor_columns(meta)
+    audit_only = preprocessing.MODEL_VERSIONS[model_version]
+    cols = preprocessing.predictor_columns(meta, drop=audit_only)
     X = {k: getattr(sp, k)[cols] for k in ("train", "validation", "calibration", "test", "test_recurrent")}
     y = {k: getattr(sp, k)[target].to_numpy() for k in X}
     groups_test = sp.test["student_id"].to_numpy()
@@ -174,7 +180,9 @@ def run_oulad_experiment(week: int, target: str, extras: bool = False, interpret
         "experiment": {"dataset": "OULAD", "task": "module withdrawal prediction" if target == "target_withdrawn"
                        else "adverse academic outcome", "target": target, "week": week, "cutoff_day": cutoff_day,
                        "seed": SEED, "predictors": cols, "n_predictors": len(cols),
-                       "excluded_sensitive": sorted(preprocessing.EXCLUDED_SENSITIVE & set(meta["feature_columns"]))},
+                       "excluded_sensitive": sorted(preprocessing.EXCLUDED_SENSITIVE & set(meta["feature_columns"])),
+                       "model_version": model_version,
+                       "audit_only_features": sorted(audit_only & set(meta["feature_columns"]))},
         "provenance": {**(provenance or {}), "code": git_commit(), "libraries": library_versions()},
         "split_audit": sp.audit,
         "selection": selection,
@@ -219,11 +227,12 @@ def run_oulad_experiment(week: int, target: str, extras: bool = False, interpret
             "calibrator": bal_info,
         }
 
-        # with vs without the socio-economic deprivation band
+        # with vs without the socio-economic deprivation band (only meaningful when it is a predictor)
         cols_wo = [c for c in cols if c != "adm_imd_band"]
         wo = {}
-        for n, builder, params in (("logistic_regression", make_lr, lr_best["params"]),
-                                   ("gradient_boosting", make_hgb, hgb_best["params"])):
+        variants = (("logistic_regression", make_lr, lr_best["params"]),
+                    ("gradient_boosting", make_hgb, hgb_best["params"])) if "adm_imd_band" in cols else ()
+        for n, builder, params in variants:
             m = builder(meta, cols_wo, **params).fit(sp.train[cols_wo], y["train"])
             c, _ = calibration.select_calibrator(proba(m, sp.calibration[cols_wo]), y["calibration"], cal_groups)
             p_wo = c.transform(proba(m, sp.test[cols_wo]))

@@ -1,0 +1,586 @@
+{
+  "n_rows": 27441,
+  "n_features": 49,
+  "duplicate_ids": 0,
+  "total_missing_feature_cells": 14153,
+  "features_with_missing": {
+    "asm_submission_rate": 5445,
+    "asm_mean_days_before_deadline": 7674,
+    "adm_imd_band": 1027,
+    "adm_registration_lead_days": 7
+  },
+  "constant_features": [],
+  "out_of_domain": {},
+  "high_correlation_pairs": [
+    {
+      "a": "eng_active_weeks",
+      "b": "eng_inactive_weeks",
+      "spearman": -1.0
+    },
+    {
+      "a": "eng_active_weeks",
+      "b": "eng_active_weeks_ratio",
+      "spearman": 1.0
+    },
+    {
+      "a": "eng_inactive_weeks",
+      "b": "eng_active_weeks_ratio",
+      "spearman": -1.0
+    },
+    {
+      "a": "asm_submission_rate",
+      "b": "asm_n_missing",
+      "spearman": -0.9993
+    },
+    {
+      "a": "asm_submission_rate",
+      "b": "asm_first_submitted",
+      "spearman": 0.9826
+    },
+    {
+      "a": "asm_n_missing",
+      "b": "asm_missed_weight",
+      "spearman": 0.9767
+    },
+    {
+      "a": "asm_submission_rate",
+      "b": "asm_missed_weight",
+      "spearman": -0.9749
+    },
+    {
+      "a": "eng_total_clicks",
+      "b": "eng_clicks_per_elapsed_day",
+      "spearman": 0.9728
+    },
+    {
+      "a": "asm_n_submitted",
+      "b": "asm_n_due_submitted",
+      "spearman": 0.9164
+    },
+    {
+      "a": "eng_clicks_per_elapsed_day",
+      "b": "eng_clicks_last_14_days",
+      "spearman": 0.9088
+    },
+    {
+      "a": "asm_n_due_submitted",
+      "b": "asm_first_submitted",
+      "spearman": 0.9041
+    },
+    {
+      "a": "eng_clicks_pre_start",
+      "b": "eng_active_days_pre_start",
+      "spearman": 0.9012
+    },
+    {
+      "a": "eng_clicks_last_14_days",
+      "b": "eng_clicks_week_03",
+      "spearman": 0.9009
+    }
+  ],
+  "targets": {
+    "target_withdrawn": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 22415,
+        "1": 5026
+      },
+      "positive_rate": 0.1832
+    },
+    "target_adverse_outcome": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 15379,
+        "1": 12062
+      },
+      "positive_rate": 0.4396
+    }
+  },
+  "features": {
+    "eng_total_clicks": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 1929,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 7570.0
+    },
+    "eng_any_activity": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "eng_active_days": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 54,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 53.0
+    },
+    "eng_clicks_per_active_day": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 8215,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 197.0
+    },
+    "eng_clicks_per_elapsed_day": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 1615,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 217.28571428571428
+    },
+    "eng_clicks_pre_start": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 834,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 3731.0
+    },
+    "eng_active_days_pre_start": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 26,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 25.0
+    },
+    "eng_active_weeks": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "eng_inactive_weeks": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "eng_active_weeks_ratio": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "eng_days_since_last_activity": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 49,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 51.0
+    },
+    "eng_first_activity_day": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 54,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": -25.0,
+      "max": 28.0
+    },
+    "eng_distinct_sites": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 165,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 285.0
+    },
+    "eng_distinct_activity_types": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 15,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 14.0
+    },
+    "eng_activity_type_entropy": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 25244,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 3.0298434028396715
+    },
+    "eng_clicks_last_14_days": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 1014,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 3307.0
+    },
+    "eng_active_days_last_14_days": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 15,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 14.0
+    },
+    "eng_weekly_clicks_std": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 14849,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1821.5313612452574
+    },
+    "eng_weekly_clicks_cv": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 21995,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.7320508075688774
+    },
+    "eng_weekly_trend_slope": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 2174,
+      "constant": false,
+      "min": -1323.0,
+      "max": 676.3
+    },
+    "eng_last_week_change": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 864,
+      "constant": false,
+      "min": -1489.0,
+      "max": 2149.0
+    },
+    "eng_clicks_pct_in_presentation": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 12412,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0027100271002710027,
+      "max": 1.0
+    },
+    "eng_clicks_week_01": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 681,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4385.0
+    },
+    "eng_clicks_week_02": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 628,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1566.0
+    },
+    "eng_clicks_week_03": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 658,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1709.0
+    },
+    "eng_clicks_week_04": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 614,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2334.0
+    },
+    "asm_n_due": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "asm_n_submitted": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "asm_n_due_submitted": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "asm_submission_rate": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 5445,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "asm_n_missing": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "asm_missed_weight": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 7,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 12.5
+    },
+    "asm_n_on_time": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "asm_n_late": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "asm_mean_days_before_deadline": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 7674,
+      "n_unique": 267,
+      "constant": false,
+      "min": -15.0,
+      "max": 242.0
+    },
+    "asm_first_due_passed": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "asm_first_submitted": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "ctx_code_module": {
+      "dtype": "object",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 7,
+      "constant": false,
+      "out_of_domain": 0
+    },
+    "ctx_presentation_start": {
+      "dtype": "object",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0
+    },
+    "ctx_module_length": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 7,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 234.0,
+      "max": 269.0
+    },
+    "ctx_n_planned_assessments": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 8,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 4.0,
+      "max": 13.0
+    },
+    "adm_gender": {
+      "dtype": "object",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0
+    },
+    "adm_region": {
+      "dtype": "object",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 13,
+      "constant": false
+    },
+    "adm_highest_education": {
+      "dtype": "float64",
+      "ftype": "ordinal",
+      "n_missing": 0,
+      "n_unique": 5,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "adm_imd_band": {
+      "dtype": "float64",
+      "ftype": "ordinal",
+      "n_missing": 1027,
+      "n_unique": 10,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 9.0
+    },
+    "adm_age_band": {
+      "dtype": "float64",
+      "ftype": "ordinal",
+      "n_missing": 0,
+      "n_unique": 3,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "adm_disability": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "adm_num_prev_attempts": {
+      "dtype": "int64",
+      "ftype": "count",
+      "n_missing": 0,
+      "n_unique": 7,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "adm_registration_lead_days": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 7,
+      "n_unique": 300,
+      "constant": false,
+      "min": -27.0,
+      "max": 311.0
+    }
+  }
+}

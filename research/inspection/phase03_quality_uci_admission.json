@@ -1,0 +1,203 @@
+{
+  "n_rows": 3630,
+  "n_features": 18,
+  "duplicate_ids": 0,
+  "total_missing_feature_cells": 0,
+  "features_with_missing": {},
+  "constant_features": [],
+  "out_of_domain": {},
+  "high_correlation_pairs": [
+    {
+      "a": "Nacionality",
+      "b": "International",
+      "spearman": 0.9999
+    }
+  ],
+  "targets": {
+    "target_dropout": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 2209,
+        "1": 1421
+      },
+      "positive_rate": 0.3915
+    }
+  },
+  "features": {
+    "Marital status": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 6,
+      "constant": false,
+      "min": 1.0,
+      "max": 6.0
+    },
+    "Application mode": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 18,
+      "constant": false,
+      "min": 1.0,
+      "max": 57.0
+    },
+    "Course": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 17,
+      "constant": false,
+      "min": 33.0,
+      "max": 9991.0
+    },
+    "Previous qualification": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 17,
+      "constant": false,
+      "min": 1.0,
+      "max": 43.0
+    },
+    "Nacionality": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 19,
+      "constant": false,
+      "min": 1.0,
+      "max": 109.0
+    },
+    "Mother's qualification": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 29,
+      "constant": false,
+      "min": 1.0,
+      "max": 44.0
+    },
+    "Father's qualification": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 34,
+      "constant": false,
+      "min": 1.0,
+      "max": 44.0
+    },
+    "Mother's occupation": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 29,
+      "constant": false,
+      "min": 0.0,
+      "max": 194.0
+    },
+    "Father's occupation": {
+      "dtype": "int64",
+      "ftype": "nominal",
+      "n_missing": 0,
+      "n_unique": 42,
+      "constant": false,
+      "min": 0.0,
+      "max": 195.0
+    },
+    "Daytime/evening attendance": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "Displaced": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "Educational special needs": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "Gender": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "International": {
+      "dtype": "int64",
+      "ftype": "binary",
+      "n_missing": 0,
+      "n_unique": 2,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "Application order": {
+      "dtype": "int64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 7,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "Previous qualification (grade)": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 101,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 95.0,
+      "max": 190.0
+    },
+    "Admission grade": {
+      "dtype": "float64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 602,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 95.0,
+      "max": 190.0
+    },
+    "Age at enrollment": {
+      "dtype": "int64",
+      "ftype": "numeric",
+      "n_missing": 0,
+      "n_unique": 46,
+      "constant": false,
+      "out_of_domain": 0,
+      "min": 17.0,
+      "max": 70.0
+    }
+  }
+}

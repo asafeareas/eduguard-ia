@@ -16,6 +16,9 @@ data/external/**
 !data/external/.gitkeep
 !data/**/
 !data/**/*.source.json
+# Phase 03: small per-dataset metadata/manifests are versioned (datasets are not)
+!data/processed/**/*.metadata.json
+!data/processed/**/*.manifest.json
 
 # Common heavy / tabular formats anywhere in the repo
 *.zip

@@ -59,7 +59,11 @@ medir **quanto a antecedência custa em desempenho**.
 | `src/analysis/leakage.py` | Catálogo de vazamento (PERMITIDA/CONDICIONAL/PROIBIDA) + regras empíricas | **Fase 02** |
 | `src/analysis/plots.py` | Gráficos (matplotlib/seaborn) | **Fase 02** |
 | `src/analysis/run_phase02.py` / `build_notebooks.py` | Pipeline reprodutível e notebooks | **Fase 02** |
-| `src/preprocessing/` | Normalização de esquemas por fonte | vazio |
+| `src/feature_engineering/catalog.py` | Catálogo de features (origem, disponibilidade, cortes, tipo, domínio, quarentena) e papéis das colunas | **Fase 03** |
+| `src/feature_engineering/oulad_features.py` | Conjuntos OULAD por corte (população, engajamento, avaliações sem notas, contexto, ingresso, targets) | **Fase 03** |
+| `src/feature_engineering/uci_admission.py` | Conjunto UCI de ingresso (Enrolled separado) | **Fase 03** |
+| `src/feature_engineering/build_datasets.py` | Gera Parquet + metadados + manifestos; `split_roles` separa X/y sem IDs/auditoria | **Fase 03** |
+| `src/preprocessing/` | Imputação/codificação ajustadas só no treino | vazio (Fase 04) |
 | `src/models/` | Treino e persistência | vazio (sem algoritmo escolhido) |
 | `src/evaluation/` | Validação por coorte/tempo, calibração, métricas por subgrupo | vazio |
 | `src/prediction/` | Probabilidade → faixa de risco → fatores explicativos | vazio |

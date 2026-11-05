@@ -31,6 +31,9 @@ EXPECTED_DOCS = [
     # Phase 02
     "docs/EXPLORATORY_DATA_ANALYSIS.md", "docs/TEMPORAL_FEASIBILITY.md",
     "docs/DATA_LEAKAGE_AUDIT.md", "docs/DATASET_COMPARISON.md", "docs/FEATURE_CANDIDATES.md",
+    # Phase 03
+    "docs/FEATURE_ENGINEERING.md", "docs/TARGET_DEFINITION.md", "docs/MODELING_DATASETS.md",
+    "docs/FEATURE_VALIDATION.md",
 ]
 
 

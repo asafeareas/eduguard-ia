@@ -104,6 +104,43 @@ ficam na seção final.
 ### TD-22 — Dependências adicionadas
 - `matplotlib`, `seaborn`, `nbformat`, `nbconvert`, `ipykernel` (versões fixadas).
 
+### TD-23 — Decisões metodológicas aprovadas (Fase 03)
+- OULAD principal: `target_withdrawn` (Withdrawn = 1; Pass, Distinction, Fail = 0).
+  Secundário: `target_adverse_outcome` (Withdrawn, Fail = 1). Resolve Q1b.
+- UCI: Dropout = 1, Graduate = 0, Enrolled excluído (guardado sem rótulo). Resolve Q5.
+- Cortes S2 (alerta precoce), S4 (principal), S6 (comparativo). Resolve Q6.
+
+### TD-24 — Notas em quarentena (resolve Q12)
+- Nenhuma feature usa `score`. O sinal acadêmico vem de entregas, atrasos e não entregas.
+
+### TD-25 — Variáveis condicionais fora do conjunto principal (resolve Q13)
+- OULAD: `studied_credits`. UCI: `Scholarship holder`, `Debtor`, `Tuition fees up to date`,
+  inscrições/créditos do 1º semestre e macro (estas últimas viram `cohort_proxy`, só auditoria).
+
+### TD-26 — Resultados *banked*
+- Todas as 1.909 linhas têm `date_submitted = −1`. Não contam como entrega nem nota; a
+  avaliação sai do denominador de vencidas do estudante.
+
+### TD-27 — Rótulos inconsistentes excluídos
+- 93 `Withdrawn` sem data e 9 não-`Withdrawn` com data saem de todos os cortes.
+
+### TD-28 — Linhas duplicadas do AVA mantidas (Q11)
+- Cliques somados por estudante/dia, sem deduplicar (decisão conservadora; pendente de revisão).
+
+### TD-29 — Parquet + manifestos versionados
+- Parquet (pyarrow 18.1.0) em `data/processed/` não é versionado. `*.metadata.json` e
+  `*.manifest.json` são versionados (exceção no `.gitignore`).
+- Hash de conteúdo calculado sobre os dados relidos do disco; hashes dos brutos são
+  verificados a cada construção.
+
+### TD-30 — Tipos canônicos e sem transformações globais
+- Tipo de cada feature vem do catálogo. Nenhuma imputação, codificação, normalização ou
+  balanceamento nesta fase: tudo será ajustado só no treino (Fase 04).
+
+### TD-31 — IDs da OULAD mantidos
+- `id_student` já é pseudonimizado pela Open University; mantido como `student_id` para
+  validação por grupo. UCI não tem ID: `row_id` = posição no arquivo original.
+
 ## Questões pendentes
 
 | # | Questão | Por que importa |
@@ -124,3 +161,5 @@ ficam na seção final.
 | Q12 | Notas OULAD: aceitar "conhecida na entrega" ou aplicar defasagem fixa (+7/+14 dias)? | Otimismo das features acadêmicas |
 | Q13 | Variáveis financeiras da UCI (`Tuition fees up to date`, `Debtor`, `Scholarship holder`): manter em quarentena? | Risco de vazamento |
 | Q14 | Modelo de "dia 0" para os 26% que cancelam antes do início? | Escopo |
+| Q15 | Validação na Fase 04: treinar 2013 → testar 2014 **e** agrupar por estudante (1.368 repetidos entre anos) | Evita vazamento entre treino e teste |
+| Q16 | Uso de `adm_gender` e `adm_disability` (sensíveis) no modelo ou só na auditoria de equidade? | Equidade |

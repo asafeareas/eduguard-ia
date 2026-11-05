@@ -1,0 +1,139 @@
+{
+  "oulad": {
+    "oulad_week_02": {
+      "rows": 27976,
+      "features": 33,
+      "targets": {
+        "target_withdrawn": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 22386,
+            "1": 5590
+          },
+          "positive_rate": 0.1998
+        },
+        "target_adverse_outcome": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 15361,
+            "1": 12615
+          },
+          "positive_rate": 0.4509
+        }
+      },
+      "exclusions": {
+        "base_rows": 32593,
+        "excluded_inconsistent_label": 102,
+        "excluded_withdrawn_without_date": 93,
+        "excluded_not_withdrawn_with_date": 9,
+        "excluded_not_yet_registered": 58,
+        "excluded_unregistered_by_cutoff": 4457,
+        "eligible": 27976
+      }
+    },
+    "oulad_week_04": {
+      "rows": 27441,
+      "features": 49,
+      "targets": {
+        "target_withdrawn": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 22415,
+            "1": 5026
+          },
+          "positive_rate": 0.1832
+        },
+        "target_adverse_outcome": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 15379,
+            "1": 12062
+          },
+          "positive_rate": 0.4396
+        }
+      },
+      "exclusions": {
+        "base_rows": 32593,
+        "excluded_inconsistent_label": 102,
+        "excluded_withdrawn_without_date": 93,
+        "excluded_not_withdrawn_with_date": 9,
+        "excluded_not_yet_registered": 18,
+        "excluded_unregistered_by_cutoff": 5032,
+        "eligible": 27441
+      }
+    },
+    "oulad_week_06": {
+      "rows": 26928,
+      "features": 51,
+      "targets": {
+        "target_withdrawn": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 22417,
+            "1": 4511
+          },
+          "positive_rate": 0.1675
+        },
+        "target_adverse_outcome": {
+          "n_missing": 0,
+          "values": [
+            0,
+            1
+          ],
+          "counts": {
+            "0": 15380,
+            "1": 11548
+          },
+          "positive_rate": 0.4288
+        }
+      },
+      "exclusions": {
+        "base_rows": 32593,
+        "excluded_inconsistent_label": 102,
+        "excluded_withdrawn_without_date": 93,
+        "excluded_not_withdrawn_with_date": 9,
+        "excluded_not_yet_registered": 12,
+        "excluded_unregistered_by_cutoff": 5551,
+        "eligible": 26928
+      }
+    }
+  },
+  "uci": {
+    "rows": 3630,
+    "features": 18,
+    "targets": {
+      "target_dropout": {
+        "n_missing": 0,
+        "values": [
+          0,
+          1
+        ],
+        "counts": {
+          "0": 2209,
+          "1": 1421
+        },
+        "positive_rate": 0.3915
+      }
+    }
+  }
+}

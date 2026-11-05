@@ -1,0 +1,105 @@
+{
+  "dataset": "oulad_week_06",
+  "source": {
+    "source_id": "oulad_349",
+    "name": "Open University Learning Analytics Dataset",
+    "version": "UCI ML Repository id 349 (DOI 10.24432/C5KK69)",
+    "raw_files": [
+      {
+        "path": "data/raw/oulad_349/extracted/courses.csv",
+        "sha256": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75",
+        "size_bytes": 526
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/assessments.csv",
+        "sha256": "9ce92381e4a0ac457f8e251b2eb2c179ed51e023ab30d1d671a0268bd62316ba",
+        "size_bytes": 8211
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/vle.csv",
+        "sha256": "d7a146497edd0e47ef536144b58796c07b554002d3753e848b8e4cd8a56f4c38",
+        "size_bytes": 270612
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/studentInfo.csv",
+        "sha256": "815fbc3e2de29f79900bc63f0345a35db62c9146afaa1d86e7107b8b3beffc60",
+        "size_bytes": 3462763
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/studentRegistration.csv",
+        "sha256": "bbc87a0de1fe2a9ec6decce1ca6c1a02cf17b54ad3bdcc673fc6413b41c61d47",
+        "size_bytes": 1132550
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/studentAssessment.csv",
+        "sha256": "b1839e17618a5de36b6d189a242d3123f7939a56c8c9ccef0c17b9199c614a6b",
+        "size_bytes": 5690483
+      },
+      {
+        "path": "data/raw/oulad_349/extracted/studentVle.csv",
+        "sha256": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0",
+        "size_bytes": 453836331
+      }
+    ]
+  },
+  "processed_at_utc": "2026-11-05T18:17:56+00:00",
+  "cutoff": {
+    "week": 6,
+    "cutoff_day": 41,
+    "rule": "events with date <= cutoff_day; population registered and not unregistered by cutoff"
+  },
+  "n_rows": 26928,
+  "n_features": 51,
+  "n_columns": 65,
+  "targets": {
+    "target_withdrawn": "PRINCIPAL — Withdrawn = 1; Pass, Distinction, Fail = 0. Cancelamento do MÓDULO (não é evasão definitiva da universidade).",
+    "target_adverse_outcome": "SECUNDÁRIO — Withdrawn ou Fail = 1; Pass, Distinction = 0. Resultado acadêmico adverso, não evasão institucional."
+  },
+  "class_distribution": {
+    "target_withdrawn": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 22417,
+        "1": 4511
+      },
+      "positive_rate": 0.1675
+    },
+    "target_adverse_outcome": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 15380,
+        "1": 11548
+      },
+      "positive_rate": 0.4288
+    }
+  },
+  "population": {
+    "base_rows": 32593,
+    "excluded_inconsistent_label": 102,
+    "excluded_withdrawn_without_date": 93,
+    "excluded_not_withdrawn_with_date": 9,
+    "excluded_not_yet_registered": 12,
+    "excluded_unregistered_by_cutoff": 5551,
+    "eligible": 26928
+  },
+  "output": {
+    "path": "data/processed/oulad/week_06/oulad_week_06.parquet",
+    "file_sha256": "b48badae2e50e95670f0e53389607a78ce4695b8abd8fafd776fac1b0cfaeff9",
+    "content_sha256": "6d2314c524c884eba8a80f2a0fe116f06582088268a30f3e0db573a86f459988"
+  },
+  "code": {
+    "pipeline_version": "phase03-1.0",
+    "git_commit": "3656b66dcfa5319fd5ff51cbb7c511833e5db605",
+    "git_branch": "feat/feature-engineering",
+    "src_uncommitted_changes": false
+  },
+  "transformations_applied": "none (no imputation/encoding/scaling/balancing)"
+}

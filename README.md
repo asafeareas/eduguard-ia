@@ -36,7 +36,16 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
   (cancelamento do módulo) e secundário (resultado adverso)
 - ✅ Conjunto UCI de ingresso (18 features; Enrolled excluído)
 - ✅ Manifestos com hashes, testes de invariância temporal e de vazamento
-- ⛔ Nenhum modelo treinado; nenhuma API implementada (por definição das fases)
+
+**Fase 04 — treinamento e avaliação** (branch `feat/model-training`)
+- ✅ 13 experimentos independentes: OULAD S2/S4/S6 × 2 targets + UCI ingresso, com baselines,
+  regressão logística e gradient boosting; divisão 2013 → 2014 sem estudantes recorrentes
+- ✅ Semana 4 (cancelamento de módulo): regressão logística PR-AUC **0,306** [0,291–0,324] contra
+  prevalência 0,181 (ROC-AUC 0,668); supera todos os baselines; calibração adequada (ECE 0,02)
+- ✅ Auditoria de equidade (gênero, deficiência, IMD, idade) e faixas de risco **preliminares**
+- ⚠️ Desempenho modesto; prevê cancelamento de **módulo** (não evasão institucional); resultados
+  experimentais, não prontos para uso institucional
+- ⛔ Nenhuma API, integração ou previsão operacional (por definição das fases)
 
 ## Tecnologias previstas
 
@@ -46,6 +55,7 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
 | Dados | pandas (atual); formato colunar a avaliar |
 | Visualização / notebooks | matplotlib, seaborn, Jupyter (nbformat/nbconvert) |
 | Armazenamento processado | Parquet (pyarrow) |
+| Modelagem | scikit-learn (regressão logística, HistGradientBoosting), joblib |
 | Testes | pytest |
 | Modelagem | a definir com justificativa na fase de modelagem |
 | API | provavelmente FastAPI (a decidir) |
@@ -62,11 +72,13 @@ eduguard-ia/
 │   └── external/       # dados de contexto (ex.: indicadores INEP)
 ├── docs/               # documentação do projeto
 ├── notebooks/          # 01 OULAD EDA · 02 UCI EDA · 03 viabilidade temporal e vazamento
+├── reports/modeling/   # resultados da Fase 04 (JSON/CSV/PNG versionados; joblib/parquet não)
 ├── research/
 │   ├── figures/        # gráficos da Fase 02
 │   └── inspection/     # perfis e resultados agregados (JSON/CSV)
 ├── src/
 │   ├── analysis/       # EDA, auditoria de vazamento, gráficos, pipeline da Fase 02
+│   ├── modeling/       # divisão, pré-processamento, baselines, treino, avaliação, calibração, equidade, UCI
 │   ├── data/           # registry, download, loaders, qualidade, inspeção
 │   ├── preprocessing/
 │   ├── feature_engineering/  # catálogo de features, construção dos conjuntos por corte (OULAD) e ingresso (UCI)
@@ -129,6 +141,12 @@ Fase 03 (conjuntos de modelagem, ~20 s):
 python -m src.feature_engineering.build_datasets   # data/processed/** + manifestos
 ```
 
+Fase 04 (experimentos, ~15 min):
+
+```bash
+python -m src.modeling.run_phase04    # reports/modeling/** (métricas, figuras; modelos não versionados)
+```
+
 ## Documentação
 
 - [docs/DATASET_RESEARCH.md](docs/DATASET_RESEARCH.md) — pesquisa e comparação de datasets
@@ -145,6 +163,10 @@ python -m src.feature_engineering.build_datasets   # data/processed/** + manifes
 - [docs/TARGET_DEFINITION.md](docs/TARGET_DEFINITION.md) — targets aprovados
 - [docs/MODELING_DATASETS.md](docs/MODELING_DATASETS.md) — conjuntos de modelagem
 - [docs/FEATURE_VALIDATION.md](docs/FEATURE_VALIDATION.md) — testes temporais, de integridade e de vazamento
+- [docs/MODELING_METHODOLOGY.md](docs/MODELING_METHODOLOGY.md) — validação, divisão, pré-processamento (Fase 04)
+- [docs/MODEL_EVALUATION.md](docs/MODEL_EVALUATION.md) — resultados, comparação, calibração, limitações
+- [docs/FAIRNESS_AUDIT.md](docs/FAIRNESS_AUDIT.md) — auditoria de equidade
+- [docs/RISK_CLASSIFICATION.md](docs/RISK_CLASSIFICATION.md) — proposta preliminar de faixas de risco
 
 ## Licença dos dados
 

@@ -1,0 +1,77 @@
+# ---------------------------------------------------------------
+# EduGuard-IA — .gitignore
+# ---------------------------------------------------------------
+
+# --- Data (never version raw/processed datasets) ---------------
+# Datasets are re-obtained via `python -m src.data.download`.
+# Only the folder skeleton (.gitkeep) and small metadata manifests
+# (*.source.json) are versioned.
+data/raw/**
+data/processed/**
+data/interim/**
+data/external/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/interim/.gitkeep
+!data/external/.gitkeep
+!data/**/
+!data/**/*.source.json
+
+# Common heavy / tabular formats anywhere in the repo
+*.zip
+*.gz
+*.7z
+*.rar
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.sav
+*.dta
+
+# --- Models & artifacts ------------------------------------------
+/models/
+/artifacts/
+mlruns/
+*.pkl
+*.joblib
+*.onnx
+
+# --- Secrets / credentials ---------------------------------------
+.env
+.env.*
+!.env.example
+kaggle.json
+*.pem
+*.key
+secrets/
+credentials*.json
+
+# --- Python ------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Notebooks ---------------------------------------------------
+.ipynb_checkpoints/
+
+# --- OS / IDE ----------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log

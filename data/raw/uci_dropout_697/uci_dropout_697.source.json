@@ -1,0 +1,25 @@
+{
+  "source_id": "uci_dropout_697",
+  "name": "Predict Students' Dropout and Academic Success",
+  "institution": "Instituto Politécnico de Portalegre (via UCI ML Repository)",
+  "country": "Portugal",
+  "landing_url": "https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success",
+  "download_url": "https://archive.ics.uci.edu/static/public/697/predict+students+dropout+and+academic+success.zip",
+  "license": "CC BY 4.0",
+  "citation": "Realinho, V., Vieira Martins, M., Machado, J., & Baptista, L. (2021). Predict Students' Dropout and Academic Success [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5MC89",
+  "accessed_at_utc": "2026-11-05T17:14:50+00:00",
+  "files": [
+    {
+      "path": "extracted/data.csv",
+      "size_bytes": 533230,
+      "format": "csv",
+      "sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae"
+    },
+    {
+      "path": "predict_students_dropout_and_academic_success.zip",
+      "size_bytes": 533344,
+      "format": "zip",
+      "sha256": "e90e55fd65ec462ae283ebeb2cca409319e3460ed898d8754f62fb35cc83a65d"
+    }
+  ]
+}

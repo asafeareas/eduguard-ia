@@ -1,0 +1,67 @@
+{
+  "source_id": "oulad_349",
+  "name": "Open University Learning Analytics Dataset (OULAD)",
+  "institution": "The Open University (KMi) via UCI ML Repository",
+  "country": "United Kingdom",
+  "landing_url": "https://archive.ics.uci.edu/dataset/349/open+university+learning+analytics+dataset",
+  "download_url": "https://archive.ics.uci.edu/static/public/349/open+university+learning+analytics+dataset.zip",
+  "license": "CC BY 4.0",
+  "citation": "Kuzilek, J., Hlosta, M., & Zdrahal, Z. (2017). Open University Learning Analytics dataset. Scientific Data 4, 170171. https://doi.org/10.1038/sdata.2017.171",
+  "accessed_at_utc": "2026-11-05T17:19:46+00:00",
+  "files": [
+    {
+      "path": "extracted/assessments.csv",
+      "size_bytes": 8211,
+      "format": "csv",
+      "sha256": "9ce92381e4a0ac457f8e251b2eb2c179ed51e023ab30d1d671a0268bd62316ba"
+    },
+    {
+      "path": "extracted/courses.csv",
+      "size_bytes": 526,
+      "format": "csv",
+      "sha256": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75"
+    },
+    {
+      "path": "extracted/OULAD.names",
+      "size_bytes": 12278,
+      "format": "names",
+      "sha256": "e497bc5232f385ece30a7e964b0339bd9b74ba9b9083508b66628fed9dc23ebe"
+    },
+    {
+      "path": "extracted/studentAssessment.csv",
+      "size_bytes": 5690483,
+      "format": "csv",
+      "sha256": "b1839e17618a5de36b6d189a242d3123f7939a56c8c9ccef0c17b9199c614a6b"
+    },
+    {
+      "path": "extracted/studentInfo.csv",
+      "size_bytes": 3462763,
+      "format": "csv",
+      "sha256": "815fbc3e2de29f79900bc63f0345a35db62c9146afaa1d86e7107b8b3beffc60"
+    },
+    {
+      "path": "extracted/studentRegistration.csv",
+      "size_bytes": 1132550,
+      "format": "csv",
+      "sha256": "bbc87a0de1fe2a9ec6decce1ca6c1a02cf17b54ad3bdcc673fc6413b41c61d47"
+    },
+    {
+      "path": "extracted/studentVle.csv",
+      "size_bytes": 453836331,
+      "format": "csv",
+      "sha256": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0"
+    },
+    {
+      "path": "extracted/vle.csv",
+      "size_bytes": 270612,
+      "format": "csv",
+      "sha256": "d7a146497edd0e47ef536144b58796c07b554002d3753e848b8e4cd8a56f4c38"
+    },
+    {
+      "path": "open_university_learning_analytics_dataset.zip",
+      "size_bytes": 46748244,
+      "format": "zip",
+      "sha256": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4"
+    }
+  ]
+}

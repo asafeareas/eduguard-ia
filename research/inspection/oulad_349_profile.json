@@ -1,0 +1,571 @@
+{
+  "tables": {
+    "courses": {
+      "n_rows": 22,
+      "n_columns": 3,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 0,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "module_presentation_length",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 7,
+          "min": 234.0,
+          "max": 269.0,
+          "mean": 255.5455,
+          "n_zeros": 0
+        }
+      ]
+    },
+    "assessments": {
+      "n_rows": 206,
+      "n_columns": 6,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 11,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_assessment",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 206,
+          "min": 1752.0,
+          "max": 40088.0,
+          "mean": 26473.9757,
+          "n_zeros": 0
+        },
+        {
+          "name": "assessment_type",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 3
+        },
+        {
+          "name": "date",
+          "dtype": "float64",
+          "n_missing": 11,
+          "n_unique": 74,
+          "min": 12.0,
+          "max": 261.0,
+          "mean": 145.0051,
+          "n_zeros": 0
+        },
+        {
+          "name": "weight",
+          "dtype": "float64",
+          "n_missing": 0,
+          "n_unique": 24,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 20.8738,
+          "n_zeros": 56
+        }
+      ],
+      "target": {
+        "name": "assessment_type",
+        "counts": {
+          "TMA": 106,
+          "CMA": 76,
+          "Exam": 24
+        },
+        "proportions": {
+          "TMA": 0.5146,
+          "CMA": 0.3689,
+          "Exam": 0.1165
+        }
+      }
+    },
+    "vle": {
+      "n_rows": 6364,
+      "n_columns": 6,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 10486,
+      "columns": [
+        {
+          "name": "id_site",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 6364,
+          "min": 526721.0,
+          "max": 1077905.0,
+          "mean": 726099.0941,
+          "n_zeros": 0
+        },
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "activity_type",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 20
+        },
+        {
+          "name": "week_from",
+          "dtype": "float64",
+          "n_missing": 5243,
+          "n_unique": 30,
+          "min": 0.0,
+          "max": 29.0,
+          "mean": 15.2043,
+          "n_zeros": 2
+        },
+        {
+          "name": "week_to",
+          "dtype": "float64",
+          "n_missing": 5243,
+          "n_unique": 30,
+          "min": 0.0,
+          "max": 29.0,
+          "mean": 15.215,
+          "n_zeros": 2
+        }
+      ]
+    },
+    "studentInfo": {
+      "n_rows": 32593,
+      "n_columns": 12,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 1111,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 28785,
+          "min": 3733.0,
+          "max": 2716795.0,
+          "mean": 706687.6691,
+          "n_zeros": 0
+        },
+        {
+          "name": "gender",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 2
+        },
+        {
+          "name": "region",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 13
+        },
+        {
+          "name": "highest_education",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 5
+        },
+        {
+          "name": "imd_band",
+          "dtype": "object",
+          "n_missing": 1111,
+          "n_unique": 10
+        },
+        {
+          "name": "age_band",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 3
+        },
+        {
+          "name": "num_of_prev_attempts",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 7,
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 0.1632,
+          "n_zeros": 28421
+        },
+        {
+          "name": "studied_credits",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 61,
+          "min": 30.0,
+          "max": 655.0,
+          "mean": 79.7587,
+          "n_zeros": 0
+        },
+        {
+          "name": "disability",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 2
+        },
+        {
+          "name": "final_result",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        }
+      ],
+      "target": {
+        "name": "final_result",
+        "counts": {
+          "Pass": 12361,
+          "Withdrawn": 10156,
+          "Fail": 7052,
+          "Distinction": 3024
+        },
+        "proportions": {
+          "Pass": 0.3793,
+          "Withdrawn": 0.3116,
+          "Fail": 0.2164,
+          "Distinction": 0.0928
+        }
+      }
+    },
+    "studentRegistration": {
+      "n_rows": 32593,
+      "n_columns": 5,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 22566,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 28785,
+          "min": 3733.0,
+          "max": 2716795.0,
+          "mean": 706687.6691,
+          "n_zeros": 0
+        },
+        {
+          "name": "date_registration",
+          "dtype": "float64",
+          "n_missing": 45,
+          "n_unique": 332,
+          "min": -322.0,
+          "max": 167.0,
+          "mean": -69.4113,
+          "n_zeros": 2
+        },
+        {
+          "name": "date_unregistration",
+          "dtype": "float64",
+          "n_missing": 22521,
+          "n_unique": 416,
+          "min": -365.0,
+          "max": 444.0,
+          "mean": 49.7576,
+          "n_zeros": 419
+        }
+      ]
+    },
+    "studentAssessment": {
+      "n_rows": 173912,
+      "n_columns": 5,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 173,
+      "columns": [
+        {
+          "name": "id_assessment",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 188,
+          "min": 1752.0,
+          "max": 37443.0,
+          "mean": 26553.8036,
+          "n_zeros": 0
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 23369,
+          "min": 6516.0,
+          "max": 2698588.0,
+          "mean": 705150.7172,
+          "n_zeros": 0
+        },
+        {
+          "name": "date_submitted",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 312,
+          "min": -11.0,
+          "max": 608.0,
+          "mean": 116.0329,
+          "n_zeros": 61
+        },
+        {
+          "name": "is_banked",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 2,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.011,
+          "n_zeros": 172003
+        },
+        {
+          "name": "score",
+          "dtype": "float64",
+          "n_missing": 173,
+          "n_unique": 101,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 75.7996,
+          "n_zeros": 329
+        }
+      ]
+    },
+    "studentVle": {
+      "n_rows": 10655280,
+      "total_missing_cells": 0,
+      "date_min": -25,
+      "date_max": 269,
+      "rows_before_day_0": 688988
+    }
+  },
+  "temporal": {
+    "students_unique_ids": 28785,
+    "student_presentation_rows": 32593,
+    "duplicate_keys_studentInfo": 0,
+    "withdrawn_without_unregistration_date": 93,
+    "non_withdrawn_with_unregistration_date": 9,
+    "unregistration_date_quantiles": {
+      "0.1": -38.0,
+      "0.25": -2.0,
+      "0.5": 27.0,
+      "0.75": 109.0,
+      "0.9": 170.0
+    },
+    "unregistered_before_day_0": 2678,
+    "per_cutoff": {
+      "day_14": {
+        "already_unregistered_excluded": 4474,
+        "population": 28119,
+        "final_result_counts": {
+          "Pass": 12361,
+          "Fail": 7044,
+          "Withdrawn": 5690,
+          "Distinction": 3024
+        },
+        "students_with_zero_clicks_until_cutoff": 1691,
+        "median_clicks_until_cutoff_by_result": {
+          "Distinction": 241.0,
+          "Fail": 65.0,
+          "Pass": 159.0,
+          "Withdrawn": 90.0
+        },
+        "assessments_due_until_cutoff": 1
+      },
+      "day_28": {
+        "already_unregistered_excluded": 5055,
+        "population": 27538,
+        "final_result_counts": {
+          "Pass": 12361,
+          "Fail": 7044,
+          "Withdrawn": 5109,
+          "Distinction": 3024
+        },
+        "students_with_zero_clicks_until_cutoff": 921,
+        "median_clicks_until_cutoff_by_result": {
+          "Distinction": 396.0,
+          "Fail": 131.0,
+          "Pass": 280.0,
+          "Withdrawn": 183.0
+        },
+        "assessments_due_until_cutoff": 17
+      },
+      "day_42": {
+        "already_unregistered_excluded": 5569,
+        "population": 27024,
+        "final_result_counts": {
+          "Pass": 12361,
+          "Fail": 7044,
+          "Withdrawn": 4595,
+          "Distinction": 3024
+        },
+        "students_with_zero_clicks_until_cutoff": 717,
+        "median_clicks_until_cutoff_by_result": {
+          "Distinction": 507.5,
+          "Fail": 164.0,
+          "Pass": 365.0,
+          "Withdrawn": 235.0
+        },
+        "assessments_due_until_cutoff": 24
+      }
+    },
+    "first_non_exam_assessment_due_day": {
+      "min": 12.0,
+      "median": 21.5,
+      "max": 61.0
+    },
+    "assessments_missing_date": 11,
+    "students_without_any_vle_record": 3365
+  },
+  "courses": [
+    {
+      "code_module": "AAA",
+      "code_presentation": "2013J",
+      "module_presentation_length": 268
+    },
+    {
+      "code_module": "AAA",
+      "code_presentation": "2014J",
+      "module_presentation_length": 269
+    },
+    {
+      "code_module": "BBB",
+      "code_presentation": "2013J",
+      "module_presentation_length": 268
+    },
+    {
+      "code_module": "BBB",
+      "code_presentation": "2014J",
+      "module_presentation_length": 262
+    },
+    {
+      "code_module": "BBB",
+      "code_presentation": "2013B",
+      "module_presentation_length": 240
+    },
+    {
+      "code_module": "BBB",
+      "code_presentation": "2014B",
+      "module_presentation_length": 234
+    },
+    {
+      "code_module": "CCC",
+      "code_presentation": "2014J",
+      "module_presentation_length": 269
+    },
+    {
+      "code_module": "CCC",
+      "code_presentation": "2014B",
+      "module_presentation_length": 241
+    },
+    {
+      "code_module": "DDD",
+      "code_presentation": "2013J",
+      "module_presentation_length": 261
+    },
+    {
+      "code_module": "DDD",
+      "code_presentation": "2014J",
+      "module_presentation_length": 262
+    },
+    {
+      "code_module": "DDD",
+      "code_presentation": "2013B",
+      "module_presentation_length": 240
+    },
+    {
+      "code_module": "DDD",
+      "code_presentation": "2014B",
+      "module_presentation_length": 241
+    },
+    {
+      "code_module": "EEE",
+      "code_presentation": "2013J",
+      "module_presentation_length": 268
+    },
+    {
+      "code_module": "EEE",
+      "code_presentation": "2014J",
+      "module_presentation_length": 269
+    },
+    {
+      "code_module": "EEE",
+      "code_presentation": "2014B",
+      "module_presentation_length": 241
+    },
+    {
+      "code_module": "FFF",
+      "code_presentation": "2013J",
+      "module_presentation_length": 268
+    },
+    {
+      "code_module": "FFF",
+      "code_presentation": "2014J",
+      "module_presentation_length": 269
+    },
+    {
+      "code_module": "FFF",
+      "code_presentation": "2013B",
+      "module_presentation_length": 240
+    },
+    {
+      "code_module": "FFF",
+      "code_presentation": "2014B",
+      "module_presentation_length": 241
+    },
+    {
+      "code_module": "GGG",
+      "code_presentation": "2013J",
+      "module_presentation_length": 261
+    },
+    {
+      "code_module": "GGG",
+      "code_presentation": "2014J",
+      "module_presentation_length": 269
+    },
+    {
+      "code_module": "GGG",
+      "code_presentation": "2014B",
+      "module_presentation_length": 241
+    }
+  ]
+}

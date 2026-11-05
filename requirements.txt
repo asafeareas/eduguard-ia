@@ -1,0 +1,6 @@
+# EduGuard-IA — Phase 01 (initialization & dataset research)
+# Only what this phase actually uses. ML libraries will be added in
+# later phases, once algorithms are chosen with justification.
+
+pandas==2.2.3        # tabular loading and preliminary inspection
+pytest==8.3.4        # structural and unit tests

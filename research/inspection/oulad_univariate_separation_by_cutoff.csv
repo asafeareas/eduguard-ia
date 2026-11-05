@@ -1,0 +1,28 @@
+week_label,indicator,variable,auc,separation,coverage
+Semana 2,Cliques acumulados,total_clicks,0.364,0.2721,1.0
+Semana 2,Dias ativos,active_days,0.3831,0.2337,1.0
+Semana 2,Materiais distintos,distinct_sites,0.3906,0.2188,1.0
+Semana 2,Cliques antes do início,clicks_pre_start,0.3963,0.2074,1.0
+Semana 2,Cliques nos últimos 7 dias,clicks_last_7_days,0.3743,0.2513,1.0
+Semana 2,Dias desde o último acesso,days_since_last_activity,0.6042,0.2084,1.0
+Semana 2,Avaliações entregues,n_submitted,0.4607,0.0785,1.0
+Semana 2,Nota média (entregues),mean_score,0.3817,0.2365,0.1143
+Semana 2,Avaliações vencidas não entregues,n_missing_submissions,0.5032,0.0064,1.0
+Semana 4,Cliques acumulados,total_clicks,0.378,0.244,1.0
+Semana 4,Dias ativos,active_days,0.3788,0.2424,1.0
+Semana 4,Materiais distintos,distinct_sites,0.4099,0.1803,1.0
+Semana 4,Cliques antes do início,clicks_pre_start,0.4049,0.1902,1.0
+Semana 4,Cliques nos últimos 7 dias,clicks_last_7_days,0.3879,0.2242,1.0
+Semana 4,Dias desde o último acesso,days_since_last_activity,0.6115,0.223,1.0
+Semana 4,Avaliações entregues,n_submitted,0.4337,0.1327,1.0
+Semana 4,Nota média (entregues),mean_score,0.3224,0.3552,0.7536
+Semana 4,Avaliações vencidas não entregues,n_missing_submissions,0.602,0.204,1.0
+Semana 6,Cliques acumulados,total_clicks,0.3725,0.255,1.0
+Semana 6,Dias ativos,active_days,0.37,0.26,1.0
+Semana 6,Materiais distintos,distinct_sites,0.4141,0.1718,1.0
+Semana 6,Cliques antes do início,clicks_pre_start,0.4089,0.1822,1.0
+Semana 6,Cliques nos últimos 7 dias,clicks_last_7_days,0.3471,0.3058,1.0
+Semana 6,Dias desde o último acesso,days_since_last_activity,0.6365,0.273,1.0
+Semana 6,Avaliações entregues,n_submitted,0.4211,0.1579,1.0
+Semana 6,Nota média (entregues),mean_score,0.3061,0.3878,0.8677
+Semana 6,Avaliações vencidas não entregues,n_missing_submissions,0.6144,0.2287,1.0

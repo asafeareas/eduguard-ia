@@ -1,0 +1,1168 @@
+{
+  "structure": {
+    "n_rows": 4424,
+    "n_columns": 37,
+    "n_duplicate_rows": 0,
+    "total_missing_cells": 0,
+    "columns": [
+      {
+        "name": "Marital status",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 6,
+        "min": 1.0,
+        "max": 6.0,
+        "mean": 1.1786,
+        "n_zeros": 0
+      },
+      {
+        "name": "Application mode",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 18,
+        "min": 1.0,
+        "max": 57.0,
+        "mean": 18.6691,
+        "n_zeros": 0
+      },
+      {
+        "name": "Application order",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 8,
+        "min": 0.0,
+        "max": 9.0,
+        "mean": 1.7278,
+        "n_zeros": 1
+      },
+      {
+        "name": "Course",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 17,
+        "min": 33.0,
+        "max": 9991.0,
+        "mean": 8856.6426,
+        "n_zeros": 0
+      },
+      {
+        "name": "Daytime/evening attendance",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8908,
+        "n_zeros": 483
+      },
+      {
+        "name": "Previous qualification",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 17,
+        "min": 1.0,
+        "max": 43.0,
+        "mean": 4.5778,
+        "n_zeros": 0
+      },
+      {
+        "name": "Previous qualification (grade)",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 101,
+        "min": 95.0,
+        "max": 190.0,
+        "mean": 132.6133,
+        "n_zeros": 0
+      },
+      {
+        "name": "Nacionality",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 21,
+        "min": 1.0,
+        "max": 109.0,
+        "mean": 1.8732,
+        "n_zeros": 0
+      },
+      {
+        "name": "Mother's qualification",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 29,
+        "min": 1.0,
+        "max": 44.0,
+        "mean": 19.5619,
+        "n_zeros": 0
+      },
+      {
+        "name": "Father's qualification",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 34,
+        "min": 1.0,
+        "max": 44.0,
+        "mean": 22.2753,
+        "n_zeros": 0
+      },
+      {
+        "name": "Mother's occupation",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 32,
+        "min": 0.0,
+        "max": 194.0,
+        "mean": 10.9609,
+        "n_zeros": 144
+      },
+      {
+        "name": "Father's occupation",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 46,
+        "min": 0.0,
+        "max": 195.0,
+        "mean": 11.0323,
+        "n_zeros": 128
+      },
+      {
+        "name": "Admission grade",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 620,
+        "min": 95.0,
+        "max": 190.0,
+        "mean": 126.9781,
+        "n_zeros": 0
+      },
+      {
+        "name": "Displaced",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.5484,
+        "n_zeros": 1998
+      },
+      {
+        "name": "Educational special needs",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.0115,
+        "n_zeros": 4373
+      },
+      {
+        "name": "Debtor",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.1137,
+        "n_zeros": 3921
+      },
+      {
+        "name": "Tuition fees up to date",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.8807,
+        "n_zeros": 528
+      },
+      {
+        "name": "Gender",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.3517,
+        "n_zeros": 2868
+      },
+      {
+        "name": "Scholarship holder",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.2484,
+        "n_zeros": 3325
+      },
+      {
+        "name": "Age at enrollment",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 46,
+        "min": 17.0,
+        "max": 70.0,
+        "mean": 23.2651,
+        "n_zeros": 0
+      },
+      {
+        "name": "International",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 2,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.0249,
+        "n_zeros": 4314
+      },
+      {
+        "name": "Curricular units 1st sem (credited)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 21,
+        "min": 0.0,
+        "max": 20.0,
+        "mean": 0.71,
+        "n_zeros": 3847
+      },
+      {
+        "name": "Curricular units 1st sem (enrolled)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 23,
+        "min": 0.0,
+        "max": 26.0,
+        "mean": 6.2706,
+        "n_zeros": 180
+      },
+      {
+        "name": "Curricular units 1st sem (evaluations)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 35,
+        "min": 0.0,
+        "max": 45.0,
+        "mean": 8.2991,
+        "n_zeros": 349
+      },
+      {
+        "name": "Curricular units 1st sem (approved)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 23,
+        "min": 0.0,
+        "max": 26.0,
+        "mean": 4.7066,
+        "n_zeros": 718
+      },
+      {
+        "name": "Curricular units 1st sem (grade)",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 805,
+        "min": 0.0,
+        "max": 18.875,
+        "mean": 10.6408,
+        "n_zeros": 718
+      },
+      {
+        "name": "Curricular units 1st sem (without evaluations)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 11,
+        "min": 0.0,
+        "max": 12.0,
+        "mean": 0.1377,
+        "n_zeros": 4130
+      },
+      {
+        "name": "Curricular units 2nd sem (credited)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 19,
+        "min": 0.0,
+        "max": 19.0,
+        "mean": 0.5418,
+        "n_zeros": 3894
+      },
+      {
+        "name": "Curricular units 2nd sem (enrolled)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 22,
+        "min": 0.0,
+        "max": 23.0,
+        "mean": 6.2321,
+        "n_zeros": 180
+      },
+      {
+        "name": "Curricular units 2nd sem (evaluations)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 30,
+        "min": 0.0,
+        "max": 33.0,
+        "mean": 8.0633,
+        "n_zeros": 401
+      },
+      {
+        "name": "Curricular units 2nd sem (approved)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 20,
+        "min": 0.0,
+        "max": 20.0,
+        "mean": 4.4358,
+        "n_zeros": 870
+      },
+      {
+        "name": "Curricular units 2nd sem (grade)",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 786,
+        "min": 0.0,
+        "max": 18.571428571428573,
+        "mean": 10.2302,
+        "n_zeros": 870
+      },
+      {
+        "name": "Curricular units 2nd sem (without evaluations)",
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 10,
+        "min": 0.0,
+        "max": 12.0,
+        "mean": 0.1503,
+        "n_zeros": 4142
+      },
+      {
+        "name": "Unemployment rate",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 10,
+        "min": 7.6,
+        "max": 16.2,
+        "mean": 11.5661,
+        "n_zeros": 0
+      },
+      {
+        "name": "Inflation rate",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 9,
+        "min": -0.8,
+        "max": 3.7,
+        "mean": 1.228,
+        "n_zeros": 0
+      },
+      {
+        "name": "GDP",
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 10,
+        "min": -4.06,
+        "max": 3.51,
+        "mean": 0.002,
+        "n_zeros": 0
+      },
+      {
+        "name": "Target",
+        "dtype": "object",
+        "n_missing": 0,
+        "n_unique": 3
+      }
+    ],
+    "target": {
+      "name": "Target",
+      "counts": {
+        "Graduate": 2209,
+        "Dropout": 1421,
+        "Enrolled": 794
+      },
+      "proportions": {
+        "Graduate": 0.4993,
+        "Dropout": 0.3212,
+        "Enrolled": 0.1795
+      }
+    }
+  },
+  "consistency": {
+    "1st": {
+      "approved_gt_enrolled": 0,
+      "grade_zero_with_approvals": 0,
+      "grade_positive_without_approvals": 0,
+      "enrolled_zero": 180,
+      "enrolled_positive_zero_evaluations": 169
+    },
+    "2nd": {
+      "approved_gt_enrolled": 0,
+      "grade_zero_with_approvals": 0,
+      "grade_positive_without_approvals": 0,
+      "enrolled_zero": 180,
+      "enrolled_positive_zero_evaluations": 221
+    },
+    "age_below_17": 0,
+    "duplicate_rows": 0,
+    "missing_cells": 0
+  },
+  "target_distribution": [
+    {
+      "Target": "Graduate",
+      "count": 2209,
+      "proportion": 0.4993
+    },
+    {
+      "Target": "Dropout",
+      "count": 1421,
+      "proportion": 0.3212
+    },
+    {
+      "Target": "Enrolled",
+      "count": 794,
+      "proportion": 0.1795
+    }
+  ],
+  "medians_by_class": [
+    {
+      "Target": "Dropout",
+      "Admission grade": 123.6,
+      "Previous qualification (grade)": 133.1,
+      "Age at enrollment": 23.0,
+      "Curricular units 1st sem (enrolled)": 6.0,
+      "Curricular units 1st sem (approved)": 2.0,
+      "Curricular units 1st sem (grade)": 10.93,
+      "Curricular units 2nd sem (approved)": 0.0,
+      "Curricular units 2nd sem (grade)": 0.0
+    },
+    {
+      "Target": "Enrolled",
+      "Admission grade": 124.1,
+      "Previous qualification (grade)": 130.0,
+      "Age at enrollment": 20.0,
+      "Curricular units 1st sem (enrolled)": 6.0,
+      "Curricular units 1st sem (approved)": 5.0,
+      "Curricular units 1st sem (grade)": 12.0,
+      "Curricular units 2nd sem (approved)": 4.0,
+      "Curricular units 2nd sem (grade)": 12.0
+    },
+    {
+      "Target": "Graduate",
+      "Admission grade": 127.4,
+      "Previous qualification (grade)": 133.1,
+      "Age at enrollment": 19.0,
+      "Curricular units 1st sem (enrolled)": 6.0,
+      "Curricular units 1st sem (approved)": 6.0,
+      "Curricular units 1st sem (grade)": 13.0,
+      "Curricular units 2nd sem (approved)": 6.0,
+      "Curricular units 2nd sem (grade)": 13.0
+    }
+  ],
+  "binary_share_by_class": [
+    {
+      "Target": "Dropout",
+      "Debtor": 0.22,
+      "Tuition fees up to date": 0.678,
+      "Scholarship holder": 0.094,
+      "Displaced": 0.471,
+      "Gender": 0.493,
+      "International": 0.023,
+      "Educational special needs": 0.012,
+      "Daytime/evening attendance": 0.854
+    },
+    {
+      "Target": "Enrolled",
+      "Debtor": 0.113,
+      "Tuition fees up to date": 0.947,
+      "Scholarship holder": 0.164,
+      "Displaced": 0.545,
+      "Gender": 0.387,
+      "International": 0.03,
+      "Educational special needs": 0.014,
+      "Daytime/evening attendance": 0.906
+    },
+    {
+      "Target": "Graduate",
+      "Debtor": 0.046,
+      "Tuition fees up to date": 0.987,
+      "Scholarship holder": 0.378,
+      "Displaced": 0.599,
+      "Gender": 0.248,
+      "International": 0.024,
+      "Educational special needs": 0.01,
+      "Daytime/evening attendance": 0.909
+    }
+  ],
+  "approval_ratio_by_class": [
+    {
+      "Target": "Dropout",
+      "_approval_ratio_1st | count": 1344.0,
+      "_approval_ratio_1st | mean": 0.406,
+      "_approval_ratio_1st | std": 0.372,
+      "_approval_ratio_1st | min": 0.0,
+      "_approval_ratio_1st | 25%": 0.0,
+      "_approval_ratio_1st | 50%": 0.4,
+      "_approval_ratio_1st | 75%": 0.719,
+      "_approval_ratio_1st | max": 1.0,
+      "_approval_ratio_2nd | count": 1344.0,
+      "_approval_ratio_2nd | mean": 0.31,
+      "_approval_ratio_2nd | std": 0.354,
+      "_approval_ratio_2nd | min": 0.0,
+      "_approval_ratio_2nd | 25%": 0.0,
+      "_approval_ratio_2nd | 50%": 0.167,
+      "_approval_ratio_2nd | 75%": 0.6,
+      "_approval_ratio_2nd | max": 1.0
+    },
+    {
+      "Target": "Enrolled",
+      "_approval_ratio_1st | count": 766.0,
+      "_approval_ratio_1st | mean": 0.714,
+      "_approval_ratio_1st | std": 0.274,
+      "_approval_ratio_1st | min": 0.0,
+      "_approval_ratio_1st | 25%": 0.6,
+      "_approval_ratio_1st | 50%": 0.8,
+      "_approval_ratio_1st | 75%": 0.885,
+      "_approval_ratio_1st | max": 1.0,
+      "_approval_ratio_2nd | count": 766.0,
+      "_approval_ratio_2nd | mean": 0.673,
+      "_approval_ratio_2nd | std": 0.267,
+      "_approval_ratio_2nd | min": 0.0,
+      "_approval_ratio_2nd | 25%": 0.5,
+      "_approval_ratio_2nd | 50%": 0.714,
+      "_approval_ratio_2nd | 75%": 0.857,
+      "_approval_ratio_2nd | max": 1.0
+    },
+    {
+      "Target": "Graduate",
+      "_approval_ratio_1st | count": 2134.0,
+      "_approval_ratio_1st | mean": 0.935,
+      "_approval_ratio_1st | std": 0.108,
+      "_approval_ratio_1st | min": 0.0,
+      "_approval_ratio_1st | 25%": 0.857,
+      "_approval_ratio_1st | 50%": 1.0,
+      "_approval_ratio_1st | 75%": 1.0,
+      "_approval_ratio_1st | max": 1.0,
+      "_approval_ratio_2nd | count": 2134.0,
+      "_approval_ratio_2nd | mean": 0.932,
+      "_approval_ratio_2nd | std": 0.109,
+      "_approval_ratio_2nd | min": 0.25,
+      "_approval_ratio_2nd | 25%": 0.875,
+      "_approval_ratio_2nd | 50%": 1.0,
+      "_approval_ratio_2nd | 75%": 1.0,
+      "_approval_ratio_2nd | max": 1.0
+    }
+  ],
+  "binary_label_options": {
+    "A_dropout_vs_graduate (Enrolled excluded)": {
+      "n": 3630,
+      "positive_rate": 0.3915
+    },
+    "B_dropout_vs_graduate_plus_enrolled": {
+      "n": 4424,
+      "positive_rate": 0.3212
+    },
+    "C_dropout_plus_enrolled_vs_graduate (Enrolled as 'not completed on time')": {
+      "n": 4424,
+      "positive_rate": 0.5007
+    }
+  },
+  "univariate_separation": [
+    {
+      "index": 30,
+      "variable": "Curricular units 2nd sem (approved)",
+      "auc_A": 0.108,
+      "separation": 0.7839,
+      "separation_B": 0.7102,
+      "cramers_v_3class": 0.5453,
+      "class": "PROHIBITED",
+      "class_sem2": "PROHIBITED"
+    },
+    {
+      "index": 24,
+      "variable": "Curricular units 1st sem (approved)",
+      "auc_A": 0.1417,
+      "separation": 0.7166,
+      "separation_B": 0.6369,
+      "cramers_v_3class": 0.4816,
+      "class": "PROHIBITED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 31,
+      "variable": "Curricular units 2nd sem (grade)",
+      "auc_A": 0.1546,
+      "separation": 0.6908,
+      "separation_B": 0.6282,
+      "cramers_v_3class": NaN,
+      "class": "PROHIBITED",
+      "class_sem2": "PROHIBITED"
+    },
+    {
+      "index": 25,
+      "variable": "Curricular units 1st sem (grade)",
+      "auc_A": 0.1912,
+      "separation": 0.6176,
+      "separation_B": 0.5461,
+      "cramers_v_3class": NaN,
+      "class": "PROHIBITED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 19,
+      "variable": "Age at enrollment",
+      "auc_A": 0.684,
+      "separation": 0.368,
+      "separation_B": 0.342,
+      "cramers_v_3class": 0.2487,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 16,
+      "variable": "Tuition fees up to date",
+      "auc_A": 0.3458,
+      "separation": 0.3085,
+      "separation_B": 0.298,
+      "cramers_v_3class": 0.4315,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 18,
+      "variable": "Scholarship holder",
+      "auc_A": 0.3582,
+      "separation": 0.2837,
+      "separation_B": 0.227,
+      "cramers_v_3class": 0.3044,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 28,
+      "variable": "Curricular units 2nd sem (enrolled)",
+      "auc_A": 0.3581,
+      "separation": 0.2837,
+      "separation_B": 0.2211,
+      "cramers_v_3class": 0.2189,
+      "class": "PROHIBITED",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 22,
+      "variable": "Curricular units 1st sem (enrolled)",
+      "auc_A": 0.3641,
+      "separation": 0.2718,
+      "separation_B": 0.2117,
+      "cramers_v_3class": 0.2153,
+      "class": "CONDITIONAL",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 17,
+      "variable": "Gender",
+      "auc_A": 0.6226,
+      "separation": 0.2452,
+      "separation_B": 0.2086,
+      "cramers_v_3class": 0.2296,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 15,
+      "variable": "Debtor",
+      "auc_A": 0.5869,
+      "separation": 0.1738,
+      "separation_B": 0.156,
+      "cramers_v_3class": 0.2421,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 12,
+      "variable": "Admission grade",
+      "auc_A": 0.4226,
+      "separation": 0.1547,
+      "separation_B": 0.1219,
+      "cramers_v_3class": NaN,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 6,
+      "variable": "Previous qualification (grade)",
+      "auc_A": 0.4316,
+      "separation": 0.1368,
+      "separation_B": 0.0985,
+      "cramers_v_3class": NaN,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 13,
+      "variable": "Displaced",
+      "auc_A": 0.4357,
+      "separation": 0.1286,
+      "separation_B": 0.1143,
+      "cramers_v_3class": 0.1143,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 2,
+      "variable": "Application order",
+      "auc_A": 0.4473,
+      "separation": 0.1054,
+      "separation_B": 0.0844,
+      "cramers_v_3class": 0.0887,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 29,
+      "variable": "Curricular units 2nd sem (evaluations)",
+      "auc_A": 0.4521,
+      "separation": 0.0959,
+      "separation_B": 0.1464,
+      "cramers_v_3class": 0.3133,
+      "class": "PROHIBITED",
+      "class_sem2": "PROHIBITED"
+    },
+    {
+      "index": 35,
+      "variable": "GDP",
+      "auc_A": 0.4637,
+      "separation": 0.0727,
+      "separation_B": 0.0696,
+      "cramers_v_3class": 0.0766,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 4,
+      "variable": "Daytime/evening attendance",
+      "auc_A": 0.4727,
+      "separation": 0.0547,
+      "separation_B": 0.0538,
+      "cramers_v_3class": 0.0806,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 32,
+      "variable": "Curricular units 2nd sem (without evaluations)",
+      "auc_A": 0.5231,
+      "separation": 0.0462,
+      "separation_B": 0.0345,
+      "cramers_v_3class": 0.0827,
+      "class": "PROHIBITED",
+      "class_sem2": "PROHIBITED"
+    },
+    {
+      "index": 26,
+      "variable": "Curricular units 1st sem (without evaluations)",
+      "auc_A": 0.5213,
+      "separation": 0.0425,
+      "separation_B": 0.0312,
+      "cramers_v_3class": 0.0836,
+      "class": "PROHIBITED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 34,
+      "variable": "Inflation rate",
+      "auc_A": 0.5148,
+      "separation": 0.0296,
+      "separation_B": 0.0284,
+      "cramers_v_3class": 0.0725,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 27,
+      "variable": "Curricular units 2nd sem (credited)",
+      "auc_A": 0.4884,
+      "separation": 0.0232,
+      "separation_B": 0.0152,
+      "cramers_v_3class": 0.0761,
+      "class": "PROHIBITED",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 23,
+      "variable": "Curricular units 1st sem (evaluations)",
+      "auc_A": 0.4924,
+      "separation": 0.0153,
+      "separation_B": 0.0673,
+      "cramers_v_3class": 0.303,
+      "class": "PROHIBITED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 21,
+      "variable": "Curricular units 1st sem (credited)",
+      "auc_A": 0.4932,
+      "separation": 0.0136,
+      "separation_B": 0.0087,
+      "cramers_v_3class": 0.0817,
+      "class": "CONDITIONAL",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 33,
+      "variable": "Unemployment rate",
+      "auc_A": 0.495,
+      "separation": 0.0099,
+      "separation_B": 0.0117,
+      "cramers_v_3class": 0.0766,
+      "class": "CONDITIONAL",
+      "class_sem2": "CONDITIONAL"
+    },
+    {
+      "index": 20,
+      "variable": "International",
+      "auc_A": 0.499,
+      "separation": 0.0019,
+      "separation_B": 0.0035,
+      "cramers_v_3class": 0.017,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 14,
+      "variable": "Educational special needs",
+      "auc_A": 0.5008,
+      "separation": 0.0016,
+      "separation_B": 0.0006,
+      "cramers_v_3class": 0.012,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 3,
+      "variable": "Course",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.2512,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 1,
+      "variable": "Application mode",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.2296,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 10,
+      "variable": "Mother's occupation",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.1816,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 11,
+      "variable": "Father's occupation",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.1729,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 9,
+      "variable": "Father's qualification",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.1595,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 5,
+      "variable": "Previous qualification",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.1576,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 8,
+      "variable": "Mother's qualification",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.1569,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 0,
+      "variable": "Marital status",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.0847,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    },
+    {
+      "index": 7,
+      "variable": "Nacionality",
+      "auc_A": NaN,
+      "separation": NaN,
+      "separation_B": NaN,
+      "cramers_v_3class": 0.072,
+      "class": "PERMITTED",
+      "class_sem2": "PERMITTED"
+    }
+  ],
+  "max_separation_by_scenario": {
+    "sem1_weeks_2_6_permitted_only": 0.368,
+    "sem1_weeks_2_6_permitted_or_conditional": 0.368,
+    "sem2_weeks_2_6_permitted_only": 0.7166,
+    "prohibited_any": 0.7839
+  },
+  "outcome_revealing_rules": [
+    {
+      "index": 0,
+      "rule": "1st sem: enrolled>0 and evaluations==0",
+      "n": 169,
+      "share_dropout": 1.0,
+      "share_enrolled": 0.0,
+      "share_graduate": 0.0
+    },
+    {
+      "index": 1,
+      "rule": "1st sem: approved==0",
+      "n": 718,
+      "share_dropout": 0.7939,
+      "share_enrolled": 0.0989,
+      "share_graduate": 0.1072
+    },
+    {
+      "index": 2,
+      "rule": "2nd sem: enrolled==0",
+      "n": 180,
+      "share_dropout": 0.4278,
+      "share_enrolled": 0.1556,
+      "share_graduate": 0.4167
+    },
+    {
+      "index": 3,
+      "rule": "2nd sem: enrolled>0 and evaluations==0",
+      "n": 221,
+      "share_dropout": 0.9955,
+      "share_enrolled": 0.0045,
+      "share_graduate": 0.0
+    },
+    {
+      "index": 4,
+      "rule": "2nd sem: approved==0",
+      "n": 870,
+      "share_dropout": 0.8356,
+      "share_enrolled": 0.0782,
+      "share_graduate": 0.0862
+    },
+    {
+      "index": 5,
+      "rule": "Tuition fees up to date == 0",
+      "n": 528,
+      "share_dropout": 0.8655,
+      "share_enrolled": 0.0795,
+      "share_graduate": 0.0549
+    },
+    {
+      "index": 6,
+      "rule": "Debtor == 1",
+      "n": 503,
+      "share_dropout": 0.6203,
+      "share_enrolled": 0.1789,
+      "share_graduate": 0.2008
+    }
+  ],
+  "cohort_proxy_class_share": [
+    {
+      "row_0": "10.8|1.4|1.74",
+      "Dropout": 0.347,
+      "Enrolled": 0.171,
+      "Graduate": 0.482
+    },
+    {
+      "row_0": "11.1|0.6|2.02",
+      "Dropout": 0.283,
+      "Enrolled": 0.162,
+      "Graduate": 0.556
+    },
+    {
+      "row_0": "12.4|0.5|1.79",
+      "Dropout": 0.24,
+      "Enrolled": 0.202,
+      "Graduate": 0.557
+    },
+    {
+      "row_0": "12.7|3.7|-1.7",
+      "Dropout": 0.337,
+      "Enrolled": 0.15,
+      "Graduate": 0.513
+    },
+    {
+      "row_0": "13.9|-0.3|0.79",
+      "Dropout": 0.303,
+      "Enrolled": 0.164,
+      "Graduate": 0.533
+    },
+    {
+      "row_0": "15.5|2.8|-4.06",
+      "Dropout": 0.35,
+      "Enrolled": 0.174,
+      "Graduate": 0.476
+    },
+    {
+      "row_0": "16.2|0.3|-0.92",
+      "Dropout": 0.384,
+      "Enrolled": 0.127,
+      "Graduate": 0.489
+    },
+    {
+      "row_0": "7.6|2.6|0.32",
+      "Dropout": 0.354,
+      "Enrolled": 0.208,
+      "Graduate": 0.438
+    },
+    {
+      "row_0": "8.9|1.4|3.51",
+      "Dropout": 0.277,
+      "Enrolled": 0.209,
+      "Graduate": 0.514
+    },
+    {
+      "row_0": "9.4|-0.8|-3.12",
+      "Dropout": 0.326,
+      "Enrolled": 0.205,
+      "Graduate": 0.469
+    }
+  ],
+  "course_class_share": [
+    {
+      "Course": 33,
+      "Dropout": 0.667,
+      "Enrolled": 0.25,
+      "Graduate": 0.083
+    },
+    {
+      "Course": 171,
+      "Dropout": 0.381,
+      "Enrolled": 0.172,
+      "Graduate": 0.447
+    },
+    {
+      "Course": 8014,
+      "Dropout": 0.33,
+      "Enrolled": 0.098,
+      "Graduate": 0.572
+    },
+    {
+      "Course": 9003,
+      "Dropout": 0.41,
+      "Enrolled": 0.176,
+      "Graduate": 0.414
+    },
+    {
+      "Course": 9070,
+      "Dropout": 0.226,
+      "Enrolled": 0.186,
+      "Graduate": 0.588
+    },
+    {
+      "Course": 9085,
+      "Dropout": 0.267,
+      "Enrolled": 0.223,
+      "Graduate": 0.51
+    },
+    {
+      "Course": 9119,
+      "Dropout": 0.541,
+      "Enrolled": 0.376,
+      "Graduate": 0.082
+    },
+    {
+      "Course": 9130,
+      "Dropout": 0.553,
+      "Enrolled": 0.149,
+      "Graduate": 0.298
+    },
+    {
+      "Course": 9147,
+      "Dropout": 0.353,
+      "Enrolled": 0.284,
+      "Graduate": 0.363
+    },
+    {
+      "Course": 9238,
+      "Dropout": 0.183,
+      "Enrolled": 0.118,
+      "Graduate": 0.699
+    },
+    {
+      "Course": 9254,
+      "Dropout": 0.381,
+      "Enrolled": 0.163,
+      "Graduate": 0.456
+    },
+    {
+      "Course": 9500,
+      "Dropout": 0.154,
+      "Enrolled": 0.131,
+      "Graduate": 0.715
+    },
+    {
+      "Course": 9556,
+      "Dropout": 0.384,
+      "Enrolled": 0.198,
+      "Graduate": 0.419
+    },
+    {
+      "Course": 9670,
+      "Dropout": 0.354,
+      "Enrolled": 0.179,
+      "Graduate": 0.466
+    },
+    {
+      "Course": 9773,
+      "Dropout": 0.305,
+      "Enrolled": 0.103,
+      "Graduate": 0.592
+    },
+    {
+      "Course": 9853,
+      "Dropout": 0.443,
+      "Enrolled": 0.26,
+      "Graduate": 0.297
+    },
+    {
+      "Course": 9991,
+      "Dropout": 0.507,
+      "Enrolled": 0.201,
+      "Graduate": 0.291
+    }
+  ],
+  "strong_correlations_abs_ge_0_7": {
+    "Nacionality ~ International": 1.0,
+    "Curricular units 1st sem (enrolled) ~ Curricular units 2nd sem (enrolled)": 0.962,
+    "Curricular units 1st sem (credited) ~ Curricular units 2nd sem (credited)": 0.914,
+    "Curricular units 1st sem (approved) ~ Curricular units 2nd sem (approved)": 0.892,
+    "Curricular units 1st sem (grade) ~ Curricular units 2nd sem (grade)": 0.762,
+    "Curricular units 1st sem (enrolled) ~ Curricular units 1st sem (approved)": 0.707
+  }
+}

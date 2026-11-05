@@ -10,6 +10,12 @@
 - **CONDICIONAL** — utilizável apenas com filtro temporal ou premissa documentada.
 - **PROIBIDA** — usa informação futura ou revela diretamente o resultado.
 
+> **Atualização da Fase 03 (decisões aprovadas):** notas (`score`) ficam **fora** dos
+> conjuntos principais até existir evidência da data de divulgação; variáveis CONDICIONAIS
+> sem data comprovada (`studied_credits`; na UCI `Scholarship holder`, `Debtor`,
+> `Tuition fees up to date`, inscrições do 1º semestre e variáveis macro) também ficam fora.
+> Ver `docs/FEATURE_ENGINEERING.md`.
+
 ## 1. Evidência empírica de vazamento
 
 ### OULAD — mesma população (semana 4), com e sem futuro

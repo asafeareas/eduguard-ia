@@ -138,7 +138,11 @@ informa quando o estudante abandonou.
 | B | Dropout × Graduate + Enrolled | 4.424 | 32,1% | Trata desfecho censurado como não-evasão: **viés** se parte dos Enrolled abandonar depois |
 | C | Dropout + Enrolled × Graduate | 4.424 | 50,1% | Mede "não concluiu no prazo", não evasão |
 
-**Proposta (aguardando sua decisão):** OULAD **A** como principal, com C como
+> **Decisão aprovada na Fase 03:** OULAD principal = Withdrawn × (Pass, Distinction, **Fail**);
+> secundário = (Withdrawn, Fail) × (Pass, Distinction); UCI = Dropout × Graduate com
+> Enrolled excluído. Ver `docs/TARGET_DEFINITION.md`.
+
+**Proposta original da Fase 02 (substituída):** OULAD **A** como principal, com C como
 sensibilidade e avaliação final sobre a população completa do corte; UCI **A** como
 principal, com B como análise de sensibilidade. `Enrolled` **não** é automaticamente 0.
 

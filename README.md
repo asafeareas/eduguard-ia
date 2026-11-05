@@ -30,6 +30,12 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
 - ✅ EDA de OULAD e UCI 697, com 17 gráficos e 3 notebooks executados
 - ✅ Agregação *as-of* por corte temporal (semanas 2/4/6), testada contra vazamento
 - ✅ Auditoria de vazamento e lista preliminar de features candidatas
+
+**Fase 03 — engenharia de features e conjuntos de modelagem** (branch `feat/feature-engineering`)
+- ✅ Conjuntos OULAD por corte: semana 2 (33 features), 4 (49) e 6 (51), com target principal
+  (cancelamento do módulo) e secundário (resultado adverso)
+- ✅ Conjunto UCI de ingresso (18 features; Enrolled excluído)
+- ✅ Manifestos com hashes, testes de invariância temporal e de vazamento
 - ⛔ Nenhum modelo treinado; nenhuma API implementada (por definição das fases)
 
 ## Tecnologias previstas
@@ -39,6 +45,7 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
 | Linguagem | Python 3.12 |
 | Dados | pandas (atual); formato colunar a avaliar |
 | Visualização / notebooks | matplotlib, seaborn, Jupyter (nbformat/nbconvert) |
+| Armazenamento processado | Parquet (pyarrow) |
 | Testes | pytest |
 | Modelagem | a definir com justificativa na fase de modelagem |
 | API | provavelmente FastAPI (a decidir) |
@@ -51,7 +58,7 @@ eduguard-ia/
 ├── data/
 │   ├── raw/            # originais imutáveis (não versionados) + manifestos *.source.json
 │   ├── interim/        # intermediários (não versionados): cliques semanais, snapshots por corte
-│   ├── processed/      # prontos para modelagem
+│   ├── processed/      # conjuntos de modelagem (Parquet não versionado; manifestos versionados)
 │   └── external/       # dados de contexto (ex.: indicadores INEP)
 ├── docs/               # documentação do projeto
 ├── notebooks/          # 01 OULAD EDA · 02 UCI EDA · 03 viabilidade temporal e vazamento
@@ -62,7 +69,7 @@ eduguard-ia/
 │   ├── analysis/       # EDA, auditoria de vazamento, gráficos, pipeline da Fase 02
 │   ├── data/           # registry, download, loaders, qualidade, inspeção
 │   ├── preprocessing/
-│   ├── feature_engineering/  # agregação as-of por corte temporal
+│   ├── feature_engineering/  # catálogo de features, construção dos conjuntos por corte (OULAD) e ingresso (UCI)
 │   ├── models/
 │   ├── evaluation/
 │   └── prediction/
@@ -116,6 +123,12 @@ python -m src.analysis.run_phase02        # JSON/CSV em research/inspection, PNG
 python -m src.analysis.build_notebooks    # gera e executa os notebooks
 ```
 
+Fase 03 (conjuntos de modelagem, ~20 s):
+
+```bash
+python -m src.feature_engineering.build_datasets   # data/processed/** + manifestos
+```
+
 ## Documentação
 
 - [docs/DATASET_RESEARCH.md](docs/DATASET_RESEARCH.md) — pesquisa e comparação de datasets
@@ -128,6 +141,10 @@ python -m src.analysis.build_notebooks    # gera e executa os notebooks
 - [docs/DATA_LEAKAGE_AUDIT.md](docs/DATA_LEAKAGE_AUDIT.md) — auditoria de vazamento
 - [docs/DATASET_COMPARISON.md](docs/DATASET_COMPARISON.md) — OULAD × UCI
 - [docs/FEATURE_CANDIDATES.md](docs/FEATURE_CANDIDATES.md) — features candidatas (preliminar)
+- [docs/FEATURE_ENGINEERING.md](docs/FEATURE_ENGINEERING.md) — catálogo de features (Fase 03)
+- [docs/TARGET_DEFINITION.md](docs/TARGET_DEFINITION.md) — targets aprovados
+- [docs/MODELING_DATASETS.md](docs/MODELING_DATASETS.md) — conjuntos de modelagem
+- [docs/FEATURE_VALIDATION.md](docs/FEATURE_VALIDATION.md) — testes temporais, de integridade e de vazamento
 
 ## Licença dos dados
 

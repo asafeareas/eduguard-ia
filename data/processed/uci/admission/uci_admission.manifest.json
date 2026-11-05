@@ -1,0 +1,86 @@
+{
+  "dataset": "uci_admission",
+  "source": {
+    "source_id": "uci_dropout_697",
+    "name": "Predict Students' Dropout and Academic Success",
+    "version": "UCI ML Repository id 697 (DOI 10.24432/C5MC89)",
+    "raw_files": [
+      {
+        "path": "data/raw/uci_dropout_697/extracted/data.csv",
+        "sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+        "size_bytes": 533230
+      }
+    ]
+  },
+  "processed_at_utc": "2026-11-05T18:17:56+00:00",
+  "cutoff": {
+    "moment": "admission (enrollment)",
+    "rule": "only variables documented as known at enrollment"
+  },
+  "n_rows": 3630,
+  "n_features": 18,
+  "n_columns": 22,
+  "targets": {
+    "target_dropout": "UCI — Dropout = 1; Graduate = 0; Enrolled excluído (desfecho censurado)."
+  },
+  "class_distribution": {
+    "target_dropout": {
+      "n_missing": 0,
+      "values": [
+        0,
+        1
+      ],
+      "counts": {
+        "0": 2209,
+        "1": 1421
+      },
+      "positive_rate": 0.3915
+    }
+  },
+  "population": {
+    "rows_total": 4424,
+    "rows_supervised": 3630,
+    "rows_enrolled_excluded": 794,
+    "features_included": 18,
+    "quarantined": {
+      "Scholarship holder": "Data de coleta não documentada; bolsas podem ser concedidas/perdidas no curso.",
+      "Debtor": "Data de coleta não documentada; pode refletir dívida pós-abandono.",
+      "Tuition fees up to date": "Data de coleta não documentada; 86,6% Dropout entre os 'não em dia'.",
+      "Curricular units 1st sem (enrolled)": "Momento da extração não documentado.",
+      "Curricular units 1st sem (credited)": "Momento da extração não documentado.",
+      "Unemployment rate": "Ano de referência não documentado; mantido como auditoria (proxy de coorte).",
+      "Inflation rate": "Idem.",
+      "GDP": "Idem."
+    },
+    "prohibited": [
+      "Curricular units 1st sem (evaluations)",
+      "Curricular units 1st sem (approved)",
+      "Curricular units 1st sem (grade)",
+      "Curricular units 1st sem (without evaluations)",
+      "Curricular units 2nd sem (evaluations)",
+      "Curricular units 2nd sem (approved)",
+      "Curricular units 2nd sem (grade)",
+      "Curricular units 2nd sem (without evaluations)",
+      "Curricular units 2nd sem (enrolled)",
+      "Curricular units 2nd sem (credited)",
+      "Target"
+    ]
+  },
+  "output": {
+    "path": "data/processed/uci/admission/uci_admission.parquet",
+    "file_sha256": "793aea8b578b59b89242383d4db230ccb47ebe5756568156e64ad86efd7f76b9",
+    "content_sha256": "c79865ebdd3e57961c0c8c67440e35b5051ce17cd55160973e05fc4e5620a38d",
+    "enrolled_unlabelled": {
+      "path": "data/processed/uci/admission/uci_enrolled_unlabelled.parquet",
+      "rows": 794,
+      "file_sha256": "028b193f6e333fd223097c3c379079d0ef43d04b9bdc55e93601ed1672a04b8a"
+    }
+  },
+  "code": {
+    "pipeline_version": "phase03-1.0",
+    "git_commit": "3656b66dcfa5319fd5ff51cbb7c511833e5db605",
+    "git_branch": "feat/feature-engineering",
+    "src_uncommitted_changes": false
+  },
+  "transformations_applied": "none (no imputation/encoding/scaling/balancing)"
+}

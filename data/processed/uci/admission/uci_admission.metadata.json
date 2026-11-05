@@ -1,0 +1,85 @@
+{
+  "dataset": "uci_admission",
+  "id_columns": [
+    "row_id"
+  ],
+  "feature_columns": [
+    "Marital status",
+    "Application mode",
+    "Course",
+    "Previous qualification",
+    "Nacionality",
+    "Mother's qualification",
+    "Father's qualification",
+    "Mother's occupation",
+    "Father's occupation",
+    "Daytime/evening attendance",
+    "Displaced",
+    "Educational special needs",
+    "Gender",
+    "International",
+    "Application order",
+    "Previous qualification (grade)",
+    "Admission grade",
+    "Age at enrollment"
+  ],
+  "target_columns": [
+    "target_dropout"
+  ],
+  "audit_columns": [
+    "original_target",
+    "cohort_proxy"
+  ],
+  "feature_types": {
+    "Marital status": "nominal",
+    "Application mode": "nominal",
+    "Course": "nominal",
+    "Previous qualification": "nominal",
+    "Nacionality": "nominal",
+    "Mother's qualification": "nominal",
+    "Father's qualification": "nominal",
+    "Mother's occupation": "nominal",
+    "Father's occupation": "nominal",
+    "Daytime/evening attendance": "binary",
+    "Displaced": "binary",
+    "Educational special needs": "binary",
+    "Gender": "binary",
+    "International": "binary",
+    "Application order": "numeric",
+    "Previous qualification (grade)": "numeric",
+    "Admission grade": "numeric",
+    "Age at enrollment": "numeric"
+  },
+  "sensitive_features": [
+    "Gender",
+    "Nacionality",
+    "Marital status"
+  ],
+  "quarantined_features": {
+    "Scholarship holder": "Data de coleta não documentada; bolsas podem ser concedidas/perdidas no curso.",
+    "Debtor": "Data de coleta não documentada; pode refletir dívida pós-abandono.",
+    "Tuition fees up to date": "Data de coleta não documentada; 86,6% Dropout entre os 'não em dia'.",
+    "Curricular units 1st sem (enrolled)": "Momento da extração não documentado.",
+    "Curricular units 1st sem (credited)": "Momento da extração não documentado.",
+    "Unemployment rate": "Ano de referência não documentado; mantido como auditoria (proxy de coorte).",
+    "Inflation rate": "Idem.",
+    "GDP": "Idem."
+  },
+  "prohibited_features": [
+    "Curricular units 1st sem (evaluations)",
+    "Curricular units 1st sem (approved)",
+    "Curricular units 1st sem (grade)",
+    "Curricular units 1st sem (without evaluations)",
+    "Curricular units 2nd sem (evaluations)",
+    "Curricular units 2nd sem (approved)",
+    "Curricular units 2nd sem (grade)",
+    "Curricular units 2nd sem (without evaluations)",
+    "Curricular units 2nd sem (enrolled)",
+    "Curricular units 2nd sem (credited)",
+    "Target"
+  ],
+  "grouping_columns_for_validation": {
+    "cohort_proxy": "cohort_proxy"
+  },
+  "note": "Independent experiment. Never combine with OULAD."
+}

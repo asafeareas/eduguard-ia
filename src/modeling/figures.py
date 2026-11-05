@@ -123,3 +123,18 @@ def fairness_plot(audit: dict, title: str, path: Path):
         ax.invert_yaxis()
     fig.suptitle(title + " (cinza = amostra insuficiente; barras = IC 95%)", fontsize=10)
     return _save(fig, path)
+
+
+def group_calibration(rows: list[dict], title: str, path: Path):
+    d = pd.DataFrame(rows)
+    fig, ax = plt.subplots(figsize=(6.5, 5))
+    ax.plot([0, 0.6], [0, 0.6], color="black", ls=":", lw=1, label="Calibração perfeita")
+    for level, color in (("N", "#2e86c1"), ("Y", "#c0392b")):
+        s = d[d["level"] == level]
+        if len(s):
+            ax.plot(s["mean_predicted"], s["observed_rate"], marker="o", color=color,
+                    label=f"deficiência = {level} (n={int(s['n'].sum())})")
+    ax.set(title=title, xlabel="Probabilidade média prevista", ylabel="Taxa observada de cancelamento",
+           xlim=(0, 0.6), ylim=(0, 0.6))
+    ax.legend(fontsize=8)
+    return _save(fig, path)

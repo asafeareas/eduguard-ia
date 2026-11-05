@@ -1,0 +1,1790 @@
+{
+  "bootstrap_v2_minus_v1": {
+    "week_02/target_withdrawn/logistic_regression": {
+      "observed_a": 0.27109559044825104,
+      "observed_b": 0.26741323711850873,
+      "diff_mean": -0.0036277741952296986,
+      "diff_ci95": [
+        -0.005816931638533444,
+        -0.0015883845543904307
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.2583870575477283,
+        0.284981125654217
+      ],
+      "b_ci95": [
+        0.25494867987765735,
+        0.2808078590170252
+      ],
+      "n_boot": 1000
+    },
+    "week_02/target_withdrawn/gradient_boosting": {
+      "observed_a": 0.2534211947150888,
+      "observed_b": 0.24978059198199237,
+      "diff_mean": -0.0036933091327416303,
+      "diff_ci95": [
+        -0.006587881795525718,
+        -0.0009306243154106288
+      ],
+      "share_b_better": 0.004,
+      "a_ci95": [
+        0.24247574784196846,
+        0.26729715041162483
+      ],
+      "b_ci95": [
+        0.23916477342156678,
+        0.26382392064820875
+      ],
+      "n_boot": 1000
+    },
+    "week_04/target_withdrawn/logistic_regression": {
+      "observed_a": 0.3062170635662885,
+      "observed_b": 0.30411446338701065,
+      "diff_mean": -0.0021203457426820786,
+      "diff_ci95": [
+        -0.005617718515123463,
+        0.001255455179881651
+      ],
+      "share_b_better": 0.1,
+      "a_ci95": [
+        0.29067392622416205,
+        0.3235663879009619
+      ],
+      "b_ci95": [
+        0.2891248521198764,
+        0.32077213996472587
+      ],
+      "n_boot": 1000
+    },
+    "week_04/target_withdrawn/gradient_boosting": {
+      "observed_a": 0.28168861966088343,
+      "observed_b": 0.28457611061508953,
+      "diff_mean": 0.002861428911889396,
+      "diff_ci95": [
+        -0.002138198779155756,
+        0.007856973679977045
+      ],
+      "share_b_better": 0.868,
+      "a_ci95": [
+        0.2674012040806178,
+        0.2975818714180741
+      ],
+      "b_ci95": [
+        0.26967553415481277,
+        0.3010201254575259
+      ],
+      "n_boot": 1000
+    },
+    "week_06/target_withdrawn/logistic_regression": {
+      "observed_a": 0.2673959055876418,
+      "observed_b": 0.26263653874153114,
+      "diff_mean": -0.004655513856387893,
+      "diff_ci95": [
+        -0.008645622926356174,
+        -0.0006091381010167333
+      ],
+      "share_b_better": 0.007,
+      "a_ci95": [
+        0.25394597909447675,
+        0.2808893172025052
+      ],
+      "b_ci95": [
+        0.24928016428252112,
+        0.2764241872464589
+      ],
+      "n_boot": 1000
+    },
+    "week_06/target_withdrawn/gradient_boosting": {
+      "observed_a": 0.2708929662009419,
+      "observed_b": 0.2664889284462849,
+      "diff_mean": -0.004472075199268721,
+      "diff_ci95": [
+        -0.009186984473833652,
+        0.00026869655241641254
+      ],
+      "share_b_better": 0.035,
+      "a_ci95": [
+        0.2566865628175694,
+        0.28743909299259646
+      ],
+      "b_ci95": [
+        0.25370946787545373,
+        0.28313357799841105
+      ],
+      "n_boot": 1000
+    },
+    "week_02/target_adverse_outcome/logistic_regression": {
+      "observed_a": 0.6497547361755625,
+      "observed_b": 0.6421980591867054,
+      "diff_mean": -0.007546015452089627,
+      "diff_ci95": [
+        -0.010480278096458734,
+        -0.004578635093006708
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.6366530027671998,
+        0.6627909701646569
+      ],
+      "b_ci95": [
+        0.6287974380913601,
+        0.6554905950242751
+      ],
+      "n_boot": 1000
+    },
+    "week_02/target_adverse_outcome/gradient_boosting": {
+      "observed_a": 0.634687115220494,
+      "observed_b": 0.6233218546946587,
+      "diff_mean": -0.011404774623465194,
+      "diff_ci95": [
+        -0.016048885161025882,
+        -0.007362508166203638
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.6217124575325839,
+        0.6477768929953268
+      ],
+      "b_ci95": [
+        0.609975749303289,
+        0.637102637686548
+      ],
+      "n_boot": 1000
+    },
+    "week_04/target_adverse_outcome/logistic_regression": {
+      "observed_a": 0.6890169392777351,
+      "observed_b": 0.6914934160078083,
+      "diff_mean": 0.002542629617117976,
+      "diff_ci95": [
+        -0.0001341051282309851,
+        0.005065223587484475
+      ],
+      "share_b_better": 0.971,
+      "a_ci95": [
+        0.6780252828013088,
+        0.7016851701341508
+      ],
+      "b_ci95": [
+        0.680361892966531,
+        0.7040641426718839
+      ],
+      "n_boot": 1000
+    },
+    "week_04/target_adverse_outcome/gradient_boosting": {
+      "observed_a": 0.6907019300429007,
+      "observed_b": 0.6838121846398818,
+      "diff_mean": -0.006722645585264587,
+      "diff_ci95": [
+        -0.010373028136769274,
+        -0.0032262319327410597
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.6784962983089975,
+        0.7023567493652285
+      ],
+      "b_ci95": [
+        0.6720059602906521,
+        0.696059561704279
+      ],
+      "n_boot": 1000
+    },
+    "week_06/target_adverse_outcome/logistic_regression": {
+      "observed_a": 0.7168566018553125,
+      "observed_b": 0.7095941334318427,
+      "diff_mean": -0.007239724825983592,
+      "diff_ci95": [
+        -0.009257021994202941,
+        -0.005266477765944875
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.705270133317341,
+        0.7282071726532016
+      ],
+      "b_ci95": [
+        0.6979142098891993,
+        0.721562058539917
+      ],
+      "n_boot": 1000
+    },
+    "week_06/target_adverse_outcome/gradient_boosting": {
+      "observed_a": 0.7019944734492848,
+      "observed_b": 0.6959015780740778,
+      "diff_mean": -0.006123852149481811,
+      "diff_ci95": [
+        -0.008663968606977466,
+        -0.003438071154737921
+      ],
+      "share_b_better": 0.0,
+      "a_ci95": [
+        0.6901500893834269,
+        0.7144612658664948
+      ],
+      "b_ci95": [
+        0.6840551029286324,
+        0.7081758158547597
+      ],
+      "n_boot": 1000
+    }
+  },
+  "subgroups_week04": {
+    "logistic_regression": {
+      "v1": {
+        "gender": [
+          {
+            "group": "gender",
+            "level": "F",
+            "n_records": 6243,
+            "n_students": 6038,
+            "positives": 1032,
+            "observed_rate": 0.1653051417587698,
+            "mean_predicted": 0.17735611359735906,
+            "calibration_in_the_large": 0.012050971838589247,
+            "brier": 0.13082158511057185,
+            "pr_auc": 0.2914380890668285,
+            "recall": 0.41472868217054265,
+            "precision": 0.3079136690647482,
+            "false_negative_rate": 0.5852713178294574,
+            "false_positive_rate": 0.1846094799462675,
+            "flagged_share": 0.22264936729136633,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.3863034892131761,
+              0.4428161784736261
+            ],
+            "false_positive_rate_ci95": [
+              0.1741338761290003,
+              0.1946575554856249
+            ],
+            "precision_ci95": [
+              0.28358057773036954,
+              0.3329725833046784
+            ]
+          },
+          {
+            "group": "gender",
+            "level": "M",
+            "n_records": 7942,
+            "n_students": 7040,
+            "positives": 1534,
+            "observed_rate": 0.1931503399647444,
+            "mean_predicted": 0.21264672818329733,
+            "calibration_in_the_large": 0.01949638821855293,
+            "brier": 0.1475901541357912,
+            "pr_auc": 0.3161421620451034,
+            "recall": 0.5378096479791395,
+            "precision": 0.2986965966690804,
+            "false_negative_rate": 0.4621903520208605,
+            "false_positive_rate": 0.3022784019975031,
+            "flagged_share": 0.347771342231176,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5170910555353853,
+              0.5617739746370305
+            ],
+            "false_positive_rate_ci95": [
+              0.2918965385238574,
+              0.31299714937585676
+            ],
+            "precision_ci95": [
+              0.2821944948898049,
+              0.3162381366284533
+            ]
+          }
+        ],
+        "disability": [
+          {
+            "group": "disability",
+            "level": "N",
+            "n_records": 12884,
+            "n_students": 11883,
+            "positives": 2235,
+            "observed_rate": 0.17347097174790438,
+            "mean_predicted": 0.19644205208033572,
+            "calibration_in_the_large": 0.022971080332431337,
+            "brier": 0.13639674332340762,
+            "pr_auc": 0.29492633226879883,
+            "recall": 0.48456375838926175,
+            "precision": 0.2905822377247116,
+            "false_negative_rate": 0.5154362416107383,
+            "false_positive_rate": 0.24828622405859704,
+            "flagged_share": 0.2892735175411363,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4619262530070924,
+              0.5032599863224552
+            ],
+            "false_positive_rate_ci95": [
+              0.23961390362152868,
+              0.25547576353344625
+            ],
+            "precision_ci95": [
+              0.27637838183061797,
+              0.30471331547356845
+            ]
+          },
+          {
+            "group": "disability",
+            "level": "Y",
+            "n_records": 1301,
+            "n_students": 1195,
+            "positives": 331,
+            "observed_rate": 0.2544196771714066,
+            "mean_predicted": 0.20377796573175594,
+            "calibration_in_the_large": -0.05064171143965068,
+            "brier": 0.17797426519059978,
+            "pr_auc": 0.4045618856551071,
+            "recall": 0.513595166163142,
+            "precision": 0.4,
+            "false_negative_rate": 0.486404833836858,
+            "false_positive_rate": 0.26288659793814434,
+            "flagged_share": 0.32667179093005383,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4690434430652995,
+              0.5671667736414207
+            ],
+            "false_positive_rate_ci95": [
+              0.23658103006262515,
+              0.2881892101525609
+            ],
+            "precision_ci95": [
+              0.3546059617126261,
+              0.4456779952783789
+            ]
+          }
+        ],
+        "imd_group": [
+          {
+            "group": "imd_group",
+            "level": "0-20% (mais privação)",
+            "n_records": 2771,
+            "n_students": 2566,
+            "positives": 542,
+            "observed_rate": 0.19559725730783112,
+            "mean_predicted": 0.21853218428426385,
+            "calibration_in_the_large": 0.022934926976432735,
+            "brier": 0.14974927371034363,
+            "pr_auc": 0.3296697195718167,
+            "recall": 0.540590405904059,
+            "precision": 0.3029989658738366,
+            "false_negative_rate": 0.45940959409594095,
+            "false_positive_rate": 0.30237774786899957,
+            "flagged_share": 0.3489714904366655,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5026914576107123,
+              0.5848344884554942
+            ],
+            "false_positive_rate_ci95": [
+              0.2826990022871756,
+              0.32181563022498344
+            ],
+            "precision_ci95": [
+              0.275348415425735,
+              0.33876747788782374
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "20-40%",
+            "n_records": 3048,
+            "n_students": 2817,
+            "positives": 604,
+            "observed_rate": 0.19816272965879264,
+            "mean_predicted": 0.2056297833508531,
+            "calibration_in_the_large": 0.007467053692060466,
+            "brier": 0.15107628875669085,
+            "pr_auc": 0.31724274590888024,
+            "recall": 0.47516556291390727,
+            "precision": 0.3062966915688367,
+            "false_negative_rate": 0.5248344370860927,
+            "false_positive_rate": 0.26595744680851063,
+            "flagged_share": 0.30741469816272965,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.43766579533352695,
+              0.5176620859760394
+            ],
+            "false_positive_rate_ci95": [
+              0.24988524851035238,
+              0.2804726831000073
+            ],
+            "precision_ci95": [
+              0.2776553257161604,
+              0.3360753910855079
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "40-60%",
+            "n_records": 2798,
+            "n_students": 2608,
+            "positives": 513,
+            "observed_rate": 0.18334524660471765,
+            "mean_predicted": 0.197875198126698,
+            "calibration_in_the_large": 0.014529951521980333,
+            "brier": 0.14081379930169055,
+            "pr_auc": 0.31641063907745126,
+            "recall": 0.49707602339181284,
+            "precision": 0.3042959427207637,
+            "false_negative_rate": 0.5029239766081871,
+            "false_positive_rate": 0.2551422319474836,
+            "flagged_share": 0.29949964260185846,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.45270257911102985,
+              0.534960396039604
+            ],
+            "false_positive_rate_ci95": [
+              0.23674840878759879,
+              0.272076710670453
+            ],
+            "precision_ci95": [
+              0.27637386297113525,
+              0.33292462235240694
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "60-80%",
+            "n_records": 2607,
+            "n_students": 2392,
+            "positives": 454,
+            "observed_rate": 0.17414652857690832,
+            "mean_predicted": 0.18537512746327914,
+            "calibration_in_the_large": 0.011228598886370816,
+            "brier": 0.13540381417442288,
+            "pr_auc": 0.29990605687044875,
+            "recall": 0.48237885462555063,
+            "precision": 0.3183139534883721,
+            "false_negative_rate": 0.5176211453744494,
+            "false_positive_rate": 0.217835578262889,
+            "flagged_share": 0.26390487149980824,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.44342480908753373,
+              0.5189962289263531
+            ],
+            "false_positive_rate_ci95": [
+              0.20083081696122654,
+              0.2369965594946744
+            ],
+            "precision_ci95": [
+              0.2858117816091954,
+              0.35120160404936485
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "80-100% (menos privação)",
+            "n_records": 2412,
+            "n_students": 2204,
+            "positives": 374,
+            "observed_rate": 0.1550580431177446,
+            "mean_predicted": 0.1753203903897911,
+            "calibration_in_the_large": 0.02026234727204651,
+            "brier": 0.12425943865738275,
+            "pr_auc": 0.2808744218525891,
+            "recall": 0.4358288770053476,
+            "precision": 0.2869718309859155,
+            "false_negative_rate": 0.5641711229946524,
+            "false_positive_rate": 0.1987242394504416,
+            "flagged_share": 0.23548922056384744,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.38725655688760274,
+              0.48936994282015317
+            ],
+            "false_positive_rate_ci95": [
+              0.1836179761439519,
+              0.2149789740581337
+            ],
+            "precision_ci95": [
+              0.24757492368883544,
+              0.32297080206378986
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "ausente",
+            "n_records": 549,
+            "n_students": 491,
+            "positives": 79,
+            "observed_rate": 0.14389799635701275,
+            "mean_predicted": 0.18936562265850415,
+            "calibration_in_the_large": 0.0454676263014914,
+            "brier": 0.12155896970772355,
+            "pr_auc": 0.2250600237741259,
+            "recall": 0.45569620253164556,
+            "precision": 0.23376623376623376,
+            "false_negative_rate": 0.5443037974683544,
+            "false_positive_rate": 0.251063829787234,
+            "flagged_share": 0.28051001821493626,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.3532819225251076,
+              0.565524450744153
+            ],
+            "false_positive_rate_ci95": [
+              0.2138307458330403,
+              0.2904849963862839
+            ],
+            "precision_ci95": [
+              0.16666666666666666,
+              0.2963146551724138
+            ]
+          }
+        ],
+        "age_group": [
+          {
+            "group": "age_group",
+            "level": "0-35",
+            "n_records": 9866,
+            "n_students": 9024,
+            "positives": 1806,
+            "observed_rate": 0.18305290898033652,
+            "mean_predicted": 0.20159789160697703,
+            "calibration_in_the_large": 0.018544982626640505,
+            "brier": 0.142010533598224,
+            "pr_auc": 0.3050523505216746,
+            "recall": 0.4894795127353267,
+            "precision": 0.29486324216144094,
+            "false_negative_rate": 0.5105204872646734,
+            "false_positive_rate": 0.26228287841191067,
+            "flagged_share": 0.30387188323535375,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.46831515227586523,
+              0.5121535736917456
+            ],
+            "false_positive_rate_ci95": [
+              0.2534935495678241,
+              0.27101229527425136
+            ],
+            "precision_ci95": [
+              0.27691430899382846,
+              0.3102900825882192
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "35-55",
+            "n_records": 4216,
+            "n_students": 3974,
+            "positives": 742,
+            "observed_rate": 0.17599620493358634,
+            "mean_predicted": 0.18681788517425268,
+            "calibration_in_the_large": 0.010821680240666348,
+            "brier": 0.13605464477306745,
+            "pr_auc": 0.3112483160650994,
+            "recall": 0.4865229110512129,
+            "precision": 0.32146037399821903,
+            "false_negative_rate": 0.5134770889487871,
+            "false_positive_rate": 0.21934369602763384,
+            "flagged_share": 0.2663662239089184,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4553244184320922,
+              0.5193294437340154
+            ],
+            "false_positive_rate_ci95": [
+              0.20608489724217813,
+              0.23087409653515992
+            ],
+            "precision_ci95": [
+              0.2934089099709461,
+              0.3475015888459094
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "55+",
+            "n_records": 103,
+            "n_students": 92,
+            "positives": 18,
+            "observed_rate": 0.17475728155339806,
+            "mean_predicted": 0.1891799022424823,
+            "calibration_in_the_large": 0.014422620689084231,
+            "brier": 0.13784323445071425,
+            "pr_auc": 0.3387167774436216,
+            "recall": 0.4444444444444444,
+            "precision": 0.25806451612903225,
+            "false_negative_rate": 0.5555555555555556,
+            "false_positive_rate": 0.27058823529411763,
+            "flagged_share": 0.30097087378640774,
+            "sufficient_sample": false
+          }
+        ]
+      },
+      "v2": {
+        "gender": [
+          {
+            "group": "gender",
+            "level": "F",
+            "n_records": 6243,
+            "n_students": 6038,
+            "positives": 1032,
+            "observed_rate": 0.1653051417587698,
+            "mean_predicted": 0.1834624340200326,
+            "calibration_in_the_large": 0.01815729226126278,
+            "brier": 0.13119871238455516,
+            "pr_auc": 0.289962499329632,
+            "recall": 0.47189922480620156,
+            "precision": 0.2873156342182891,
+            "false_negative_rate": 0.5281007751937985,
+            "false_positive_rate": 0.23181730953751678,
+            "flagged_share": 0.2715040845747237,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.44125914126817306,
+              0.5022945390646121
+            ],
+            "false_positive_rate_ci95": [
+              0.21997540545969235,
+              0.2436539570792599
+            ],
+            "precision_ci95": [
+              0.26541347198262094,
+              0.3098646994095129
+            ]
+          },
+          {
+            "group": "gender",
+            "level": "M",
+            "n_records": 7942,
+            "n_students": 7040,
+            "positives": 1534,
+            "observed_rate": 0.1931503399647444,
+            "mean_predicted": 0.21488820662267621,
+            "calibration_in_the_large": 0.021737866657931815,
+            "brier": 0.14770486951298356,
+            "pr_auc": 0.31394307822957734,
+            "recall": 0.605606258148631,
+            "precision": 0.2818567961165049,
+            "false_negative_rate": 0.394393741851369,
+            "false_positive_rate": 0.3693820224719101,
+            "flagged_share": 0.41500881390078065,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.583752585489608,
+              0.6312854810389328
+            ],
+            "false_positive_rate_ci95": [
+              0.35940801341653006,
+              0.38135484223410776
+            ],
+            "precision_ci95": [
+              0.2661728045532923,
+              0.296659527820217
+            ]
+          }
+        ],
+        "disability": [
+          {
+            "group": "disability",
+            "level": "N",
+            "n_records": 12884,
+            "n_students": 11883,
+            "positives": 2235,
+            "observed_rate": 0.17347097174790438,
+            "mean_predicted": 0.2006103455213535,
+            "calibration_in_the_large": 0.027139373773449132,
+            "brier": 0.13658659875918575,
+            "pr_auc": 0.2933094491957275,
+            "recall": 0.5498881431767337,
+            "precision": 0.2734757454383623,
+            "false_negative_rate": 0.4501118568232662,
+            "false_positive_rate": 0.30660155883181517,
+            "flagged_share": 0.34880471903135674,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5277084417085718,
+              0.5682189972482067
+            ],
+            "false_positive_rate_ci95": [
+              0.297656136626821,
+              0.3149349839928164
+            ],
+            "precision_ci95": [
+              0.26046244738411645,
+              0.2872379190035216
+            ]
+          },
+          {
+            "group": "disability",
+            "level": "Y",
+            "n_records": 1301,
+            "n_students": 1195,
+            "positives": 331,
+            "observed_rate": 0.2544196771714066,
+            "mean_predicted": 0.20548379776113712,
+            "calibration_in_the_large": -0.0489358794102695,
+            "brier": 0.17860407123408475,
+            "pr_auc": 0.3993868444957143,
+            "recall": 0.5649546827794562,
+            "precision": 0.3762575452716298,
+            "false_negative_rate": 0.4350453172205438,
+            "false_positive_rate": 0.31958762886597936,
+            "flagged_share": 0.38201383551114526,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5196251952108277,
+              0.6191425120772945
+            ],
+            "false_positive_rate_ci95": [
+              0.28979112525987527,
+              0.3454933481152993
+            ],
+            "precision_ci95": [
+              0.3329567779960707,
+              0.4176694808467742
+            ]
+          }
+        ],
+        "imd_group": [
+          {
+            "group": "imd_group",
+            "level": "0-20% (mais privação)",
+            "n_records": 2771,
+            "n_students": 2566,
+            "positives": 542,
+            "observed_rate": 0.19559725730783112,
+            "mean_predicted": 0.2045946000865871,
+            "calibration_in_the_large": 0.008997342778755968,
+            "brier": 0.14912320867119266,
+            "pr_auc": 0.32633565670204273,
+            "recall": 0.551660516605166,
+            "precision": 0.3014112903225806,
+            "false_negative_rate": 0.4483394833948339,
+            "false_positive_rate": 0.31090174966352624,
+            "flagged_share": 0.3579935041501263,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5122442962518227,
+              0.5934909915829452
+            ],
+            "false_positive_rate_ci95": [
+              0.29071696328909835,
+              0.32996303501788043
+            ],
+            "precision_ci95": [
+              0.27227290692312756,
+              0.33304177463250867
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "20-40%",
+            "n_records": 3048,
+            "n_students": 2817,
+            "positives": 604,
+            "observed_rate": 0.19816272965879264,
+            "mean_predicted": 0.2008367237208533,
+            "calibration_in_the_large": 0.0026739940620606473,
+            "brier": 0.15062976225531988,
+            "pr_auc": 0.31947114651282515,
+            "recall": 0.5165562913907285,
+            "precision": 0.2965779467680608,
+            "false_negative_rate": 0.48344370860927155,
+            "false_positive_rate": 0.3027823240589198,
+            "flagged_share": 0.3451443569553806,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4763762251323611,
+              0.5574919948548126
+            ],
+            "false_positive_rate_ci95": [
+              0.28574937292189234,
+              0.31830418871118554
+            ],
+            "precision_ci95": [
+              0.26678606860762394,
+              0.32527872757948356
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "40-60%",
+            "n_records": 2798,
+            "n_students": 2608,
+            "positives": 513,
+            "observed_rate": 0.18334524660471765,
+            "mean_predicted": 0.20171704519963793,
+            "calibration_in_the_large": 0.018371798594920274,
+            "brier": 0.1410794654490253,
+            "pr_auc": 0.3130784442032398,
+            "recall": 0.5730994152046783,
+            "precision": 0.2963709677419355,
+            "false_negative_rate": 0.4269005847953216,
+            "false_positive_rate": 0.3054704595185996,
+            "flagged_share": 0.3545389563974267,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5315494083786376,
+              0.6170916199218085
+            ],
+            "false_positive_rate_ci95": [
+              0.28413541931492603,
+              0.32456736706725253
+            ],
+            "precision_ci95": [
+              0.2675010834524497,
+              0.3252620113138329
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "60-80%",
+            "n_records": 2607,
+            "n_students": 2392,
+            "positives": 454,
+            "observed_rate": 0.17414652857690832,
+            "mean_predicted": 0.19826816431181868,
+            "calibration_in_the_large": 0.024121635734910357,
+            "brier": 0.13587170364400833,
+            "pr_auc": 0.2980063328513979,
+            "recall": 0.5616740088105727,
+            "precision": 0.2855543113101904,
+            "false_negative_rate": 0.43832599118942733,
+            "false_positive_rate": 0.2963307013469577,
+            "flagged_share": 0.3425393172228615,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5182212536322125,
+              0.6008898305084746
+            ],
+            "false_positive_rate_ci95": [
+              0.2767969767656113,
+              0.3156059300176947
+            ],
+            "precision_ci95": [
+              0.2573937116372291,
+              0.3145897257594854
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "80-100% (menos privação)",
+            "n_records": 2412,
+            "n_students": 2204,
+            "positives": 374,
+            "observed_rate": 0.1550580431177446,
+            "mean_predicted": 0.1960465122238884,
+            "calibration_in_the_large": 0.04098846910614379,
+            "brier": 0.12542536892912504,
+            "pr_auc": 0.2795886385975292,
+            "recall": 0.5454545454545454,
+            "precision": 0.25061425061425063,
+            "false_negative_rate": 0.45454545454545453,
+            "false_positive_rate": 0.29931305201177627,
+            "flagged_share": 0.33747927031509123,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5034023310376146,
+              0.5966194008987201
+            ],
+            "false_positive_rate_ci95": [
+              0.2805638287041183,
+              0.3184867990637221
+            ],
+            "precision_ci95": [
+              0.22075237034317757,
+              0.28222344054580895
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "ausente",
+            "n_records": 549,
+            "n_students": 491,
+            "positives": 79,
+            "observed_rate": 0.14389799635701275,
+            "mean_predicted": 0.21632524140209003,
+            "calibration_in_the_large": 0.07242724504507728,
+            "brier": 0.12444780131776204,
+            "pr_auc": 0.23629613778079916,
+            "recall": 0.6582278481012658,
+            "precision": 0.20967741935483872,
+            "false_negative_rate": 0.34177215189873417,
+            "false_positive_rate": 0.41702127659574467,
+            "flagged_share": 0.4517304189435337,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5592320470227446,
+              0.756443638760712
+            ],
+            "false_positive_rate_ci95": [
+              0.37498483916705105,
+              0.4615783633715222
+            ],
+            "precision_ci95": [
+              0.1614159486548268,
+              0.2599644898666204
+            ]
+          }
+        ],
+        "age_group": [
+          {
+            "group": "age_group",
+            "level": "0-35",
+            "n_records": 9866,
+            "n_students": 9024,
+            "positives": 1806,
+            "observed_rate": 0.18305290898033652,
+            "mean_predicted": 0.20565044777271207,
+            "calibration_in_the_large": 0.022597538792375554,
+            "brier": 0.14236168914203054,
+            "pr_auc": 0.30103207742186283,
+            "recall": 0.5581395348837209,
+            "precision": 0.27791563275434245,
+            "false_negative_rate": 0.4418604651162791,
+            "false_positive_rate": 0.3249379652605459,
+            "flagged_share": 0.3676261909588486,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5377390141992139,
+              0.5834084806877013
+            ],
+            "false_positive_rate_ci95": [
+              0.31503369994032226,
+              0.33389971208639785
+            ],
+            "precision_ci95": [
+              0.26268110981684706,
+              0.29250956727893235
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "35-55",
+            "n_records": 4216,
+            "n_students": 3974,
+            "positives": 742,
+            "observed_rate": 0.17599620493358634,
+            "mean_predicted": 0.1904399626919345,
+            "calibration_in_the_large": 0.014443757758348164,
+            "brier": 0.13604059637948668,
+            "pr_auc": 0.31438592474168425,
+            "recall": 0.5363881401617251,
+            "precision": 0.30083144368858655,
+            "false_negative_rate": 0.4636118598382749,
+            "false_positive_rate": 0.2662636729994243,
+            "flagged_share": 0.3138045540796964,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5067072796907232,
+              0.5701979494608976
+            ],
+            "false_positive_rate_ci95": [
+              0.25190210886737274,
+              0.27962335457762505
+            ],
+            "precision_ci95": [
+              0.27531378811665264,
+              0.3254563615785812
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "55+",
+            "n_records": 103,
+            "n_students": 92,
+            "positives": 18,
+            "observed_rate": 0.17475728155339806,
+            "mean_predicted": 0.19568846747169896,
+            "calibration_in_the_large": 0.0209311859183009,
+            "brier": 0.13648597745343904,
+            "pr_auc": 0.4070273192473959,
+            "recall": 0.5555555555555556,
+            "precision": 0.24390243902439024,
+            "false_negative_rate": 0.4444444444444444,
+            "false_positive_rate": 0.36470588235294116,
+            "flagged_share": 0.39805825242718446,
+            "sufficient_sample": false
+          }
+        ]
+      }
+    },
+    "gradient_boosting": {
+      "v1": {
+        "gender": [
+          {
+            "group": "gender",
+            "level": "F",
+            "n_records": 6243,
+            "n_students": 6038,
+            "positives": 1032,
+            "observed_rate": 0.1653051417587698,
+            "mean_predicted": 0.1582090072794977,
+            "calibration_in_the_large": -0.007096134479272126,
+            "brier": 0.13310889065218193,
+            "pr_auc": 0.26684174316718057,
+            "recall": 0.34205426356589147,
+            "precision": 0.2851373182552504,
+            "false_negative_rate": 0.6579457364341085,
+            "false_positive_rate": 0.16983304548071387,
+            "flagged_share": 0.19830209835015217,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.31334472179612327,
+              0.3708431574068476
+            ],
+            "false_positive_rate_ci95": [
+              0.158436717679869,
+              0.1798838260735011
+            ],
+            "precision_ci95": [
+              0.2602861725449739,
+              0.31197518828847726
+            ]
+          },
+          {
+            "group": "gender",
+            "level": "M",
+            "n_records": 7942,
+            "n_students": 7040,
+            "positives": 1534,
+            "observed_rate": 0.1931503399647444,
+            "mean_predicted": 0.18994794225329664,
+            "calibration_in_the_large": -0.0032023977114477575,
+            "brier": 0.14950725504467002,
+            "pr_auc": 0.2906806157107983,
+            "recall": 0.470013037809648,
+            "precision": 0.2997920997920998,
+            "false_negative_rate": 0.529986962190352,
+            "false_positive_rate": 0.26279650436953805,
+            "flagged_share": 0.30282044824981114,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4443936865410938,
+              0.4961635275479669
+            ],
+            "false_positive_rate_ci95": [
+              0.2517585664475078,
+              0.27449377182643586
+            ],
+            "precision_ci95": [
+              0.28017080814770723,
+              0.3206457319964177
+            ]
+          }
+        ],
+        "disability": [
+          {
+            "group": "disability",
+            "level": "N",
+            "n_records": 12884,
+            "n_students": 11883,
+            "positives": 2235,
+            "observed_rate": 0.17347097174790438,
+            "mean_predicted": 0.1757601546101447,
+            "calibration_in_the_large": 0.0022891828622403076,
+            "brier": 0.13818560096719182,
+            "pr_auc": 0.26840717524387153,
+            "recall": 0.4147651006711409,
+            "precision": 0.2833995719963314,
+            "false_negative_rate": 0.5852348993288591,
+            "false_positive_rate": 0.22011456474786364,
+            "flagged_share": 0.2538807823657249,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.3945718110740729,
+              0.43899947571740555
+            ],
+            "false_positive_rate_ci95": [
+              0.21147428583409478,
+              0.22735597790994394
+            ],
+            "precision_ci95": [
+              0.2672061945595486,
+              0.30092719311878885
+            ]
+          },
+          {
+            "group": "disability",
+            "level": "Y",
+            "n_records": 1301,
+            "n_students": 1195,
+            "positives": 331,
+            "observed_rate": 0.2544196771714066,
+            "mean_predicted": 0.1781487761909929,
+            "calibration_in_the_large": -0.07627090098041373,
+            "brier": 0.18293784861263765,
+            "pr_auc": 0.40284739489884897,
+            "recall": 0.44410876132930516,
+            "precision": 0.3951612903225806,
+            "false_negative_rate": 0.5558912386706949,
+            "false_positive_rate": 0.23195876288659795,
+            "flagged_share": 0.2859338970023059,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.39229825989620437,
+              0.5045550409395417
+            ],
+            "false_positive_rate_ci95": [
+              0.20676363299382483,
+              0.26172411969969334
+            ],
+            "precision_ci95": [
+              0.34467857142857145,
+              0.4484564861017241
+            ]
+          }
+        ],
+        "imd_group": [
+          {
+            "group": "imd_group",
+            "level": "0-20% (mais privação)",
+            "n_records": 2771,
+            "n_students": 2566,
+            "positives": 542,
+            "observed_rate": 0.19559725730783112,
+            "mean_predicted": 0.19547130140445934,
+            "calibration_in_the_large": -0.0001259559033717772,
+            "brier": 0.15408488197933556,
+            "pr_auc": 0.2764167081999218,
+            "recall": 0.5018450184501845,
+            "precision": 0.28661749209694415,
+            "false_negative_rate": 0.4981549815498155,
+            "false_positive_rate": 0.30372364288918796,
+            "flagged_share": 0.34247564056297364,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4635712009136665,
+              0.5478786624382577
+            ],
+            "false_positive_rate_ci95": [
+              0.2838487682377753,
+              0.3224640678836773
+            ],
+            "precision_ci95": [
+              0.2593843283161777,
+              0.3176433033641467
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "20-40%",
+            "n_records": 3048,
+            "n_students": 2817,
+            "positives": 604,
+            "observed_rate": 0.19816272965879264,
+            "mean_predicted": 0.18361815305287066,
+            "calibration_in_the_large": -0.014544576605921983,
+            "brier": 0.1538280717449645,
+            "pr_auc": 0.2983852546779392,
+            "recall": 0.43211920529801323,
+            "precision": 0.302784222737819,
+            "false_negative_rate": 0.5678807947019867,
+            "false_positive_rate": 0.24590834697217676,
+            "flagged_share": 0.2828083989501312,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.39205325613862196,
+              0.4724582440755121
+            ],
+            "false_positive_rate_ci95": [
+              0.22885413371891614,
+              0.26180971284080173
+            ],
+            "precision_ci95": [
+              0.27245326758592164,
+              0.33295410067653386
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "40-60%",
+            "n_records": 2798,
+            "n_students": 2608,
+            "positives": 513,
+            "observed_rate": 0.18334524660471765,
+            "mean_predicted": 0.16662718457636544,
+            "calibration_in_the_large": -0.016718062028352215,
+            "brier": 0.14049295253253077,
+            "pr_auc": 0.3224277848736508,
+            "recall": 0.3898635477582846,
+            "precision": 0.32786885245901637,
+            "false_negative_rate": 0.6101364522417154,
+            "false_positive_rate": 0.17943107221006566,
+            "flagged_share": 0.21801286633309508,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.3466062196742144,
+              0.434894190537496
+            ],
+            "false_positive_rate_ci95": [
+              0.163252763302059,
+              0.19535316392384885
+            ],
+            "precision_ci95": [
+              0.29294573594758117,
+              0.36254426840633736
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "60-80%",
+            "n_records": 2607,
+            "n_students": 2392,
+            "positives": 454,
+            "observed_rate": 0.17414652857690832,
+            "mean_predicted": 0.16631457164898805,
+            "calibration_in_the_large": -0.00783195692792027,
+            "brier": 0.1370806057295555,
+            "pr_auc": 0.2813185312963264,
+            "recall": 0.4008810572687225,
+            "precision": 0.3079526226734349,
+            "false_negative_rate": 0.5991189427312775,
+            "false_positive_rate": 0.18996748722712495,
+            "flagged_share": 0.22669735327963175,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.3578616237036782,
+              0.4404102669827853
+            ],
+            "false_positive_rate_ci95": [
+              0.17343237671689993,
+              0.20706480348425357
+            ],
+            "precision_ci95": [
+              0.2728667939491849,
+              0.3417647595583539
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "80-100% (menos privação)",
+            "n_records": 2412,
+            "n_students": 2204,
+            "positives": 374,
+            "observed_rate": 0.1550580431177446,
+            "mean_predicted": 0.16254671850140381,
+            "calibration_in_the_large": 0.007488675383659216,
+            "brier": 0.1262850256530512,
+            "pr_auc": 0.2558318053732844,
+            "recall": 0.32887700534759357,
+            "precision": 0.26170212765957446,
+            "false_negative_rate": 0.6711229946524064,
+            "false_positive_rate": 0.17026496565260058,
+            "flagged_share": 0.19485903814262023,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.2794418854255176,
+              0.3757104566298521
+            ],
+            "false_positive_rate_ci95": [
+              0.1544418647372931,
+              0.18523599752826564
+            ],
+            "precision_ci95": [
+              0.2223080108089261,
+              0.3018069609327278
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "ausente",
+            "n_records": 549,
+            "n_students": 491,
+            "positives": 79,
+            "observed_rate": 0.14389799635701275,
+            "mean_predicted": 0.18775709902679602,
+            "calibration_in_the_large": 0.04385910266978327,
+            "brier": 0.12291502926196451,
+            "pr_auc": 0.21048717564821565,
+            "recall": 0.45569620253164556,
+            "precision": 0.2236024844720497,
+            "false_negative_rate": 0.5443037974683544,
+            "false_positive_rate": 0.26595744680851063,
+            "flagged_share": 0.29326047358834245,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.35171298058622,
+              0.5742083333333333
+            ],
+            "false_positive_rate_ci95": [
+              0.2287158536751022,
+              0.30420174958993984
+            ],
+            "precision_ci95": [
+              0.15883649141880873,
+              0.28929947182399424
+            ]
+          }
+        ],
+        "age_group": [
+          {
+            "group": "age_group",
+            "level": "0-35",
+            "n_records": 9866,
+            "n_students": 9024,
+            "positives": 1806,
+            "observed_rate": 0.18305290898033652,
+            "mean_predicted": 0.17820248158469296,
+            "calibration_in_the_large": -0.004850427395643564,
+            "brier": 0.14387469127644165,
+            "pr_auc": 0.28251994275811065,
+            "recall": 0.4108527131782946,
+            "precision": 0.29258675078864355,
+            "false_negative_rate": 0.5891472868217055,
+            "false_positive_rate": 0.22258064516129034,
+            "flagged_share": 0.25704439489154673,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.39047433997806064,
+              0.433634428979744
+            ],
+            "false_positive_rate_ci95": [
+              0.21285644900576306,
+              0.23061647312648673
+            ],
+            "precision_ci95": [
+              0.2752730967486122,
+              0.3089723827874116
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "35-55",
+            "n_records": 4216,
+            "n_students": 3974,
+            "positives": 742,
+            "observed_rate": 0.17599620493358634,
+            "mean_predicted": 0.17063147291771022,
+            "calibration_in_the_large": -0.005364732015876117,
+            "brier": 0.13879653829130298,
+            "pr_auc": 0.28179336941986227,
+            "recall": 0.4326145552560647,
+            "precision": 0.2972222222222222,
+            "false_negative_rate": 0.5673854447439353,
+            "false_positive_rate": 0.21848013816925735,
+            "flagged_share": 0.25616698292220114,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.39660940225671826,
+              0.46305761603049506
+            ],
+            "false_positive_rate_ci95": [
+              0.20650859874062374,
+              0.23201756512106425
+            ],
+            "precision_ci95": [
+              0.2682623418308247,
+              0.322804869572656
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "55+",
+            "n_records": 103,
+            "n_students": 92,
+            "positives": 18,
+            "observed_rate": 0.17475728155339806,
+            "mean_predicted": 0.18191666685377436,
+            "calibration_in_the_large": 0.0071593853003762975,
+            "brier": 0.13350984793043164,
+            "pr_auc": 0.3609834312452409,
+            "recall": 0.6111111111111112,
+            "precision": 0.4074074074074074,
+            "false_negative_rate": 0.3888888888888889,
+            "false_positive_rate": 0.18823529411764706,
+            "flagged_share": 0.2621359223300971,
+            "sufficient_sample": false
+          }
+        ]
+      },
+      "v2": {
+        "gender": [
+          {
+            "group": "gender",
+            "level": "F",
+            "n_records": 6243,
+            "n_students": 6038,
+            "positives": 1032,
+            "observed_rate": 0.1653051417587698,
+            "mean_predicted": 0.15744460257952156,
+            "calibration_in_the_large": -0.007860539179248255,
+            "brier": 0.13298784870362484,
+            "pr_auc": 0.26941968453269594,
+            "recall": 0.4428294573643411,
+            "precision": 0.2568858909499719,
+            "false_negative_rate": 0.5571705426356589,
+            "false_positive_rate": 0.2536941086163884,
+            "flagged_share": 0.2849591542527631,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4123052131098249,
+              0.470891040018888
+            ],
+            "false_positive_rate_ci95": [
+              0.2403273918692336,
+              0.265100399860521
+            ],
+            "precision_ci95": [
+              0.23635279078574742,
+              0.2766481324688113
+            ]
+          },
+          {
+            "group": "gender",
+            "level": "M",
+            "n_records": 7942,
+            "n_students": 7040,
+            "positives": 1534,
+            "observed_rate": 0.1931503399647444,
+            "mean_predicted": 0.19077173060960917,
+            "calibration_in_the_large": -0.0023786093551352305,
+            "brier": 0.14932651631594773,
+            "pr_auc": 0.29433657485000264,
+            "recall": 0.6016949152542372,
+            "precision": 0.278767743884023,
+            "false_negative_rate": 0.3983050847457627,
+            "false_positive_rate": 0.37265917602996257,
+            "flagged_share": 0.4168975069252078,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5787383010159709,
+              0.6276427876802182
+            ],
+            "false_positive_rate_ci95": [
+              0.3621660664148673,
+              0.3849016012391036
+            ],
+            "precision_ci95": [
+              0.26344514363454924,
+              0.29497171535993927
+            ]
+          }
+        ],
+        "disability": [
+          {
+            "group": "disability",
+            "level": "N",
+            "n_records": 12884,
+            "n_students": 11883,
+            "positives": 2235,
+            "observed_rate": 0.17347097174790438,
+            "mean_predicted": 0.17608968257853663,
+            "calibration_in_the_large": 0.0026187108306322537,
+            "brier": 0.13788174640009443,
+            "pr_auc": 0.2730413165984634,
+            "recall": 0.538255033557047,
+            "precision": 0.2608978529603123,
+            "false_negative_rate": 0.46174496644295304,
+            "false_positive_rate": 0.32003004976993144,
+            "flagged_share": 0.35788574976715304,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5185443202302986,
+              0.5602747362148239
+            ],
+            "false_positive_rate_ci95": [
+              0.3106011893690273,
+              0.32950251860624846
+            ],
+            "precision_ci95": [
+              0.24877532774719066,
+              0.2751653531301427
+            ]
+          },
+          {
+            "group": "disability",
+            "level": "Y",
+            "n_records": 1301,
+            "n_students": 1195,
+            "positives": 331,
+            "observed_rate": 0.2544196771714066,
+            "mean_predicted": 0.17624617068685833,
+            "calibration_in_the_large": -0.0781735064845483,
+            "brier": 0.18426280662503475,
+            "pr_auc": 0.39028958301076905,
+            "recall": 0.5347432024169184,
+            "precision": 0.3695198329853862,
+            "false_negative_rate": 0.4652567975830816,
+            "false_positive_rate": 0.311340206185567,
+            "flagged_share": 0.3681783243658724,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4876942678373196,
+              0.5882352941176471
+            ],
+            "false_positive_rate_ci95": [
+              0.2850398387454225,
+              0.34011518243661104
+            ],
+            "precision_ci95": [
+              0.3244786871039376,
+              0.4159729303791601
+            ]
+          }
+        ],
+        "imd_group": [
+          {
+            "group": "imd_group",
+            "level": "0-20% (mais privação)",
+            "n_records": 2771,
+            "n_students": 2566,
+            "positives": 542,
+            "observed_rate": 0.19559725730783112,
+            "mean_predicted": 0.17940684242878405,
+            "calibration_in_the_large": -0.01619041487904707,
+            "brier": 0.1527104328986433,
+            "pr_auc": 0.2889979351491001,
+            "recall": 0.544280442804428,
+            "precision": 0.27699530516431925,
+            "false_negative_rate": 0.45571955719557194,
+            "false_positive_rate": 0.3454463885150292,
+            "flagged_share": 0.38433778419343195,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5046534735878307,
+              0.5934104209169977
+            ],
+            "false_positive_rate_ci95": [
+              0.3241906839683897,
+              0.36608322888863326
+            ],
+            "precision_ci95": [
+              0.25,
+              0.3054960245686823
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "20-40%",
+            "n_records": 3048,
+            "n_students": 2817,
+            "positives": 604,
+            "observed_rate": 0.19816272965879264,
+            "mean_predicted": 0.17651319090496126,
+            "calibration_in_the_large": -0.021649538753831382,
+            "brier": 0.15399855762809977,
+            "pr_auc": 0.29852366628838556,
+            "recall": 0.5082781456953642,
+            "precision": 0.27934485896269334,
+            "false_negative_rate": 0.4917218543046358,
+            "false_positive_rate": 0.32405891980360063,
+            "flagged_share": 0.36056430446194226,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.46932368838904476,
+              0.5475203981538183
+            ],
+            "false_positive_rate_ci95": [
+              0.3072819081336238,
+              0.3420950952746727
+            ],
+            "precision_ci95": [
+              0.25287957216142026,
+              0.30515588177533387
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "40-60%",
+            "n_records": 2798,
+            "n_students": 2608,
+            "positives": 513,
+            "observed_rate": 0.18334524660471765,
+            "mean_predicted": 0.17435326276352492,
+            "calibration_in_the_large": -0.008991983841192736,
+            "brier": 0.14015867186390082,
+            "pr_auc": 0.324115711234904,
+            "recall": 0.5516569200779727,
+            "precision": 0.29025641025641025,
+            "false_negative_rate": 0.44834307992202727,
+            "false_positive_rate": 0.3028446389496718,
+            "flagged_share": 0.34846318799142245,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5125667424027265,
+              0.5984929286034258
+            ],
+            "false_positive_rate_ci95": [
+              0.28322259987798815,
+              0.3203692621728691
+            ],
+            "precision_ci95": [
+              0.2626686321884711,
+              0.3188446969696969
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "60-80%",
+            "n_records": 2607,
+            "n_students": 2392,
+            "positives": 454,
+            "observed_rate": 0.17414652857690832,
+            "mean_predicted": 0.17372394271121666,
+            "calibration_in_the_large": -0.00042258586569166035,
+            "brier": 0.1377366871588697,
+            "pr_auc": 0.273711665748488,
+            "recall": 0.5374449339207048,
+            "precision": 0.2684268426842684,
+            "false_negative_rate": 0.46255506607929514,
+            "false_positive_rate": 0.3088713423130516,
+            "flagged_share": 0.3486766398158803,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.4899431740846604,
+              0.575899809956429
+            ],
+            "false_positive_rate_ci95": [
+              0.28589729764784666,
+              0.3301689430883424
+            ],
+            "precision_ci95": [
+              0.24061670162625484,
+              0.2991083036681628
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "80-100% (menos privação)",
+            "n_records": 2412,
+            "n_students": 2204,
+            "positives": 374,
+            "observed_rate": 0.1550580431177446,
+            "mean_predicted": 0.17207482015604064,
+            "calibration_in_the_large": 0.017016777038296044,
+            "brier": 0.1263636840754952,
+            "pr_auc": 0.25682274069159383,
+            "recall": 0.5427807486631016,
+            "precision": 0.25123762376237624,
+            "false_negative_rate": 0.4572192513368984,
+            "false_positive_rate": 0.2968596663395486,
+            "flagged_share": 0.33499170812603646,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.49242474739058645,
+              0.5946520735715783
+            ],
+            "false_positive_rate_ci95": [
+              0.2769488640165964,
+              0.3168257410386029
+            ],
+            "precision_ci95": [
+              0.21974882836761966,
+              0.2830188679245283
+            ]
+          },
+          {
+            "group": "imd_group",
+            "level": "ausente",
+            "n_records": 549,
+            "n_students": 491,
+            "positives": 79,
+            "observed_rate": 0.14389799635701275,
+            "mean_predicted": 0.19508917683084118,
+            "calibration_in_the_large": 0.051191180473828424,
+            "brier": 0.1231573871346739,
+            "pr_auc": 0.2188780399882755,
+            "recall": 0.6075949367088608,
+            "precision": 0.20512820512820512,
+            "false_negative_rate": 0.3924050632911392,
+            "false_positive_rate": 0.39574468085106385,
+            "flagged_share": 0.4262295081967213,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5111916461916461,
+              0.7249721293199554
+            ],
+            "false_positive_rate_ci95": [
+              0.358962134911502,
+              0.4393578944939308
+            ],
+            "precision_ci95": [
+              0.15253613033196112,
+              0.2567728785855243
+            ]
+          }
+        ],
+        "age_group": [
+          {
+            "group": "age_group",
+            "level": "0-35",
+            "n_records": 9866,
+            "n_students": 9024,
+            "positives": 1806,
+            "observed_rate": 0.18305290898033652,
+            "mean_predicted": 0.17923471291364254,
+            "calibration_in_the_large": -0.0038181960666939796,
+            "brier": 0.14398236149422597,
+            "pr_auc": 0.2826763338883628,
+            "recall": 0.5393133997785161,
+            "precision": 0.26854149434794594,
+            "false_negative_rate": 0.46068660022148394,
+            "false_positive_rate": 0.32915632754342433,
+            "flagged_share": 0.3676261909588486,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.5172619231362865,
+              0.5605916835794313
+            ],
+            "false_positive_rate_ci95": [
+              0.31890095145723685,
+              0.33826604802863247
+            ],
+            "precision_ci95": [
+              0.2530969477488396,
+              0.2832751352051362
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "35-55",
+            "n_records": 4216,
+            "n_students": 3974,
+            "positives": 742,
+            "observed_rate": 0.17599620493358634,
+            "mean_predicted": 0.16836982747709878,
+            "calibration_in_the_large": -0.00762637745648756,
+            "brier": 0.13807647214011157,
+            "pr_auc": 0.28871220941095976,
+            "recall": 0.5296495956873315,
+            "precision": 0.2771509167842031,
+            "false_negative_rate": 0.47035040431266845,
+            "false_positive_rate": 0.295048934945308,
+            "flagged_share": 0.33633776091081596,
+            "sufficient_sample": true,
+            "recall_ci95": [
+              0.48965366680555,
+              0.5678648426812585
+            ],
+            "false_positive_rate_ci95": [
+              0.2804460832830812,
+              0.30959279509154847
+            ],
+            "precision_ci95": [
+              0.25174533407891675,
+              0.30007544957600496
+            ]
+          },
+          {
+            "group": "age_group",
+            "level": "55+",
+            "n_records": 103,
+            "n_students": 92,
+            "positives": 18,
+            "observed_rate": 0.17475728155339806,
+            "mean_predicted": 0.1928045452041093,
+            "calibration_in_the_large": 0.018047263650711243,
+            "brier": 0.13139754362371966,
+            "pr_auc": 0.3511595650661698,
+            "recall": 0.7222222222222222,
+            "precision": 0.28888888888888886,
+            "false_negative_rate": 0.2777777777777778,
+            "false_positive_rate": 0.3764705882352941,
+            "flagged_share": 0.4368932038834951,
+            "sufficient_sample": false
+          }
+        ]
+      }
+    }
+  }
+}

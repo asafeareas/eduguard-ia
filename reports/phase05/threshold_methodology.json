@@ -1,0 +1,328 @@
+{
+  "logistic_regression": {
+    "by_capacity": {
+      "5%": {
+        "threshold": 0.40479215375621047,
+        "flagged": 118,
+        "flagged_share": 0.05,
+        "true_alerts": 62,
+        "false_alerts": 56,
+        "missed": 348,
+        "precision": 0.5254237288135594,
+        "recall": 0.15121951219512195,
+        "alerts_per_true_case": 1.903225806451613,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "10%": {
+        "threshold": 0.30263943934654464,
+        "flagged": 236,
+        "flagged_share": 0.1,
+        "true_alerts": 109,
+        "false_alerts": 127,
+        "missed": 301,
+        "precision": 0.461864406779661,
+        "recall": 0.2658536585365854,
+        "alerts_per_true_case": 2.165137614678899,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "20%": {
+        "threshold": 0.23254108897763567,
+        "flagged": 472,
+        "flagged_share": 0.2,
+        "true_alerts": 169,
+        "false_alerts": 303,
+        "missed": 241,
+        "precision": 0.3580508474576271,
+        "recall": 0.4121951219512195,
+        "alerts_per_true_case": 2.7928994082840237,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "30%": {
+        "threshold": 0.20458205127637843,
+        "flagged": 708,
+        "flagged_share": 0.3,
+        "true_alerts": 216,
+        "false_alerts": 492,
+        "missed": 194,
+        "precision": 0.3050847457627119,
+        "recall": 0.526829268292683,
+        "alerts_per_true_case": 3.2777777777777777,
+        "expected_prevented": 0.0,
+        "n": 2360
+      }
+    },
+    "by_cost_ratio": {
+      "FN custa 2x FP": {
+        "threshold": 0.3333333333333333,
+        "flagged": 205,
+        "flagged_share": 0.08686440677966102,
+        "true_alerts": 96,
+        "false_alerts": 109,
+        "missed": 314,
+        "precision": 0.4682926829268293,
+        "recall": 0.23414634146341465,
+        "alerts_per_true_case": 2.1354166666666665,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 3x FP": {
+        "threshold": 0.25,
+        "flagged": 372,
+        "flagged_share": 0.1576271186440678,
+        "true_alerts": 147,
+        "false_alerts": 225,
+        "missed": 263,
+        "precision": 0.3951612903225806,
+        "recall": 0.35853658536585364,
+        "alerts_per_true_case": 2.5306122448979593,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 5x FP": {
+        "threshold": 0.16666666666666666,
+        "flagged": 1194,
+        "flagged_share": 0.5059322033898305,
+        "true_alerts": 286,
+        "false_alerts": 908,
+        "missed": 124,
+        "precision": 0.23953098827470687,
+        "recall": 0.697560975609756,
+        "alerts_per_true_case": 4.174825174825175,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 10x FP": {
+        "threshold": 0.09090909090909091,
+        "flagged": 2178,
+        "flagged_share": 0.9228813559322034,
+        "true_alerts": 403,
+        "false_alerts": 1775,
+        "missed": 7,
+        "precision": 0.18503213957759412,
+        "recall": 0.9829268292682927,
+        "alerts_per_true_case": 5.4044665012406945,
+        "expected_prevented": 0.0,
+        "n": 2360
+      }
+    },
+    "net_benefit": [
+      {
+        "threshold": 0.05,
+        "net_benefit": 0.13030776092774307,
+        "treat_all": 0.1302408563782337
+      },
+      {
+        "threshold": 0.1,
+        "net_benefit": 0.08898305084745763,
+        "treat_all": 0.08192090395480227
+      },
+      {
+        "threshold": 0.15000000000000002,
+        "net_benefit": 0.050972083748753734,
+        "treat_all": 0.027916251246261188
+      },
+      {
+        "threshold": 0.2,
+        "net_benefit": 0.03898305084745763,
+        "treat_all": -0.03283898305084746
+      },
+      {
+        "threshold": 0.25,
+        "net_benefit": 0.030508474576271188,
+        "treat_all": -0.1016949152542373
+      },
+      {
+        "threshold": 0.3,
+        "net_benefit": 0.022820823244552056,
+        "treat_all": -0.18038740920096855
+      },
+      {
+        "threshold": 0.35000000000000003,
+        "net_benefit": 0.016525423728813556,
+        "treat_all": -0.2711864406779662
+      },
+      {
+        "threshold": 0.4,
+        "net_benefit": 0.009745762711864408,
+        "treat_all": -0.3771186440677966
+      },
+      {
+        "threshold": 0.45,
+        "net_benefit": 0.003775038520801233,
+        "treat_all": -0.5023112480739599
+      },
+      {
+        "threshold": 0.5,
+        "net_benefit": -0.000423728813559322,
+        "treat_all": -0.652542372881356
+      }
+    ],
+    "data": "2013 calibration subset (never the 2014 test)"
+  },
+  "gradient_boosting": {
+    "by_capacity": {
+      "5%": {
+        "threshold": 0.3905208929560211,
+        "flagged": 118,
+        "flagged_share": 0.05,
+        "true_alerts": 52,
+        "false_alerts": 66,
+        "missed": 358,
+        "precision": 0.4406779661016949,
+        "recall": 0.12682926829268293,
+        "alerts_per_true_case": 2.269230769230769,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "10%": {
+        "threshold": 0.3289968175727613,
+        "flagged": 236,
+        "flagged_share": 0.1,
+        "true_alerts": 103,
+        "false_alerts": 133,
+        "missed": 307,
+        "precision": 0.4364406779661017,
+        "recall": 0.25121951219512195,
+        "alerts_per_true_case": 2.29126213592233,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "20%": {
+        "threshold": 0.24877220105445402,
+        "flagged": 472,
+        "flagged_share": 0.2,
+        "true_alerts": 168,
+        "false_alerts": 304,
+        "missed": 242,
+        "precision": 0.3559322033898305,
+        "recall": 0.4097560975609756,
+        "alerts_per_true_case": 2.8095238095238093,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "30%": {
+        "threshold": 0.20202430367488908,
+        "flagged": 708,
+        "flagged_share": 0.3,
+        "true_alerts": 213,
+        "false_alerts": 495,
+        "missed": 197,
+        "precision": 0.3008474576271186,
+        "recall": 0.5195121951219512,
+        "alerts_per_true_case": 3.323943661971831,
+        "expected_prevented": 0.0,
+        "n": 2360
+      }
+    },
+    "by_cost_ratio": {
+      "FN custa 2x FP": {
+        "threshold": 0.3333333333333333,
+        "flagged": 223,
+        "flagged_share": 0.09449152542372881,
+        "true_alerts": 96,
+        "false_alerts": 127,
+        "missed": 314,
+        "precision": 0.4304932735426009,
+        "recall": 0.23414634146341465,
+        "alerts_per_true_case": 2.3229166666666665,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 3x FP": {
+        "threshold": 0.25,
+        "flagged": 466,
+        "flagged_share": 0.19745762711864406,
+        "true_alerts": 167,
+        "false_alerts": 299,
+        "missed": 243,
+        "precision": 0.3583690987124464,
+        "recall": 0.4073170731707317,
+        "alerts_per_true_case": 2.7904191616766467,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 5x FP": {
+        "threshold": 0.16666666666666666,
+        "flagged": 979,
+        "flagged_share": 0.41483050847457625,
+        "true_alerts": 265,
+        "false_alerts": 714,
+        "missed": 145,
+        "precision": 0.27068437180796734,
+        "recall": 0.6463414634146342,
+        "alerts_per_true_case": 3.6943396226415093,
+        "expected_prevented": 0.0,
+        "n": 2360
+      },
+      "FN custa 10x FP": {
+        "threshold": 0.09090909090909091,
+        "flagged": 1857,
+        "flagged_share": 0.786864406779661,
+        "true_alerts": 369,
+        "false_alerts": 1488,
+        "missed": 41,
+        "precision": 0.1987075928917609,
+        "recall": 0.9,
+        "alerts_per_true_case": 5.032520325203252,
+        "expected_prevented": 0.0,
+        "n": 2360
+      }
+    },
+    "net_benefit": [
+      {
+        "threshold": 0.05,
+        "net_benefit": 0.13220338983050847,
+        "treat_all": 0.1302408563782337
+      },
+      {
+        "threshold": 0.1,
+        "net_benefit": 0.08662900188323916,
+        "treat_all": 0.08192090395480227
+      },
+      {
+        "threshold": 0.15000000000000002,
+        "net_benefit": 0.06084247258225323,
+        "treat_all": 0.027916251246261188
+      },
+      {
+        "threshold": 0.2,
+        "net_benefit": 0.03919491525423729,
+        "treat_all": -0.03283898305084746
+      },
+      {
+        "threshold": 0.25,
+        "net_benefit": 0.02853107344632768,
+        "treat_all": -0.1016949152542373
+      },
+      {
+        "threshold": 0.3,
+        "net_benefit": 0.01961259079903148,
+        "treat_all": -0.18038740920096855
+      },
+      {
+        "threshold": 0.35000000000000003,
+        "net_benefit": 0.012548891786179918,
+        "treat_all": -0.2711864406779662
+      },
+      {
+        "threshold": 0.4,
+        "net_benefit": 0.003389830508474573,
+        "treat_all": -0.3771186440677966
+      },
+      {
+        "threshold": 0.45,
+        "net_benefit": 0.00030816640986132486,
+        "treat_all": -0.5023112480739599
+      },
+      {
+        "threshold": 0.5,
+        "net_benefit": -0.000423728813559322,
+        "treat_all": -0.652542372881356
+      }
+    ],
+    "data": "2013 calibration subset (never the 2014 test)"
+  }
+}

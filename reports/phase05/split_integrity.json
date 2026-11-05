@@ -1,0 +1,86 @@
+{
+  "week_02": {
+    "rows_2013": 12076,
+    "students_2013": 11947,
+    "students_with_more_than_one_record_2013": 129,
+    "sum_rows_train_val_cal": 12076,
+    "sum_students_train_val_cal": 11947,
+    "students_in_more_than_one_part": 0,
+    "shared_students": {
+      "train&validation": 0,
+      "train&calibration": 0,
+      "train&test_main": 0,
+      "validation&calibration": 0,
+      "validation&test_main": 0,
+      "calibration&test_main": 0
+    },
+    "rows_by_part": {
+      "train": 7246,
+      "validation": 2414,
+      "calibration": 2416,
+      "test_main": 14392
+    },
+    "students_by_part": {
+      "train": 7167,
+      "validation": 2390,
+      "calibration": 2390,
+      "test_main": 13211
+    }
+  },
+  "week_04": {
+    "rows_2013": 11807,
+    "students_2013": 11686,
+    "students_with_more_than_one_record_2013": 121,
+    "sum_rows_train_val_cal": 11807,
+    "sum_students_train_val_cal": 11686,
+    "students_in_more_than_one_part": 0,
+    "shared_students": {
+      "train&validation": 0,
+      "train&calibration": 0,
+      "train&test_main": 0,
+      "validation&calibration": 0,
+      "validation&test_main": 0,
+      "calibration&test_main": 0
+    },
+    "rows_by_part": {
+      "train": 7085,
+      "validation": 2362,
+      "calibration": 2360,
+      "test_main": 14185
+    },
+    "students_by_part": {
+      "train": 7011,
+      "validation": 2337,
+      "calibration": 2338,
+      "test_main": 13078
+    }
+  },
+  "week_06": {
+    "rows_2013": 11616,
+    "students_2013": 11502,
+    "students_with_more_than_one_record_2013": 114,
+    "sum_rows_train_val_cal": 11616,
+    "sum_students_train_val_cal": 11502,
+    "students_in_more_than_one_part": 0,
+    "shared_students": {
+      "train&validation": 0,
+      "train&calibration": 0,
+      "train&test_main": 0,
+      "validation&calibration": 0,
+      "validation&test_main": 0,
+      "calibration&test_main": 0
+    },
+    "rows_by_part": {
+      "train": 6961,
+      "validation": 2329,
+      "calibration": 2326,
+      "test_main": 13969
+    },
+    "students_by_part": {
+      "train": 6900,
+      "validation": 2301,
+      "calibration": 2301,
+      "test_main": 12927
+    }
+  }
+}

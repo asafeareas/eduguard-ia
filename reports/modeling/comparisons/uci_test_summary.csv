@@ -1,0 +1,5 @@
+model,pr_auc,roc_auc,brier,ece,prevalence,recall,precision,cv_pr_auc
+logistic_regression,0.6762,0.7609,0.1906,0.0386,0.3912,0.7535,0.5646,0.6761
+gradient_boosting,0.7045,0.7667,0.1867,0.0486,0.3912,0.7606,0.5347,0.6796
+baseline_prevalence,0.3912,0.5,0.2382,0.0694,0.3912,1.0,0.3912,0.3911
+baseline_course_rate,0.5803,0.6976,0.2092,0.0237,0.3912,0.831,0.4807,0.5686

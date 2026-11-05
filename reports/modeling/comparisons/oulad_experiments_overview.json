@@ -1,0 +1,1058 @@
+{
+  "week_02/target_withdrawn": {
+    "split_audit": {
+      "rows_2013": 12076,
+      "students_2013": 11947,
+      "rows_2014": 15900,
+      "students_2014": 14632,
+      "students_in_both_years": 1421,
+      "rows_excluded_from_main_test": 1508,
+      "parts": {
+        "train": {
+          "rows": 7246,
+          "students": 7167,
+          "classes": {
+            "target_withdrawn": {
+              "n": 7246,
+              "positives": 1380,
+              "rate": 0.1904
+            },
+            "target_adverse_outcome": {
+              "n": 7246,
+              "positives": 3339,
+              "rate": 0.4608
+            }
+          }
+        },
+        "validation": {
+          "rows": 2414,
+          "students": 2390,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2414,
+              "positives": 438,
+              "rate": 0.1814
+            },
+            "target_adverse_outcome": {
+              "n": 2414,
+              "positives": 1063,
+              "rate": 0.4403
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2416,
+          "students": 2390,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2416,
+              "positives": 468,
+              "rate": 0.1937
+            },
+            "target_adverse_outcome": {
+              "n": 2416,
+              "positives": 1113,
+              "rate": 0.4607
+            }
+          }
+        },
+        "test_main": {
+          "rows": 14392,
+          "students": 13211,
+          "classes": {
+            "target_withdrawn": {
+              "n": 14392,
+              "positives": 2797,
+              "rate": 0.1943
+            },
+            "target_adverse_outcome": {
+              "n": 14392,
+              "positives": 6165,
+              "rate": 0.4284
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1508,
+          "students": 1421,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1508,
+              "positives": 507,
+              "rate": 0.3362
+            },
+            "target_adverse_outcome": {
+              "n": 1508,
+              "positives": 935,
+              "rate": 0.62
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15900,
+          "positives": 3304,
+          "rate": 0.2078
+        },
+        "target_adverse_outcome": {
+          "n": 15900,
+          "positives": 7100,
+          "rate": 0.4465
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l1",
+          "C": 0.03
+        },
+        "val_pr_auc": 0.29542477191896666
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 50,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.29675197180909785
+      }
+    },
+    "inactivity_n": 1,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "none",
+      "gradient_boosting": "sigmoid"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.27109559044825104,
+        "observed_b": 0.2534211947150888,
+        "diff_mean": -0.017502847617343897,
+        "diff_ci95": [
+          -0.02504037720137368,
+          -0.010142036761197413
+        ],
+        "share_b_better": 0.0,
+        "a_ci95": [
+          0.2583870575477283,
+          0.284981125654217
+        ],
+        "b_ci95": [
+          0.24247574784196846,
+          0.26729715041162483
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_module_rate": {
+        "observed_a": 0.22721065112168917,
+        "observed_b": 0.27109559044825104,
+        "diff_mean": 0.04444594112691019,
+        "diff_ci95": [
+          0.034483943788031456,
+          0.05470924726826076
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.21843011172564533,
+          0.23721918434559036
+        ],
+        "b_ci95": [
+          0.2583870575477283,
+          0.284981125654217
+        ],
+        "n_boot": 1000
+      }
+    }
+  },
+  "week_04/target_withdrawn": {
+    "split_audit": {
+      "rows_2013": 11807,
+      "students_2013": 11686,
+      "rows_2014": 15634,
+      "students_2014": 14446,
+      "students_in_both_years": 1368,
+      "rows_excluded_from_main_test": 1449,
+      "parts": {
+        "train": {
+          "rows": 7085,
+          "students": 7011,
+          "classes": {
+            "target_withdrawn": {
+              "n": 7085,
+              "positives": 1233,
+              "rate": 0.174
+            },
+            "target_adverse_outcome": {
+              "n": 7085,
+              "positives": 3165,
+              "rate": 0.4467
+            }
+          }
+        },
+        "validation": {
+          "rows": 2362,
+          "students": 2337,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2362,
+              "positives": 367,
+              "rate": 0.1554
+            },
+            "target_adverse_outcome": {
+              "n": 2362,
+              "positives": 1035,
+              "rate": 0.4382
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2360,
+          "students": 2338,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2360,
+              "positives": 410,
+              "rate": 0.1737
+            },
+            "target_adverse_outcome": {
+              "n": 2360,
+              "positives": 1041,
+              "rate": 0.4411
+            }
+          }
+        },
+        "test_main": {
+          "rows": 14185,
+          "students": 13078,
+          "classes": {
+            "target_withdrawn": {
+              "n": 14185,
+              "positives": 2566,
+              "rate": 0.1809
+            },
+            "target_adverse_outcome": {
+              "n": 14185,
+              "positives": 5944,
+              "rate": 0.419
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1449,
+          "students": 1368,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1449,
+              "positives": 450,
+              "rate": 0.3106
+            },
+            "target_adverse_outcome": {
+              "n": 1449,
+              "positives": 877,
+              "rate": 0.6052
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15634,
+          "positives": 3016,
+          "rate": 0.1929
+        },
+        "target_adverse_outcome": {
+          "n": 15634,
+          "positives": 6821,
+          "rate": 0.4363
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l2",
+          "C": 0.03
+        },
+        "val_pr_auc": 0.2815131691283897
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 50,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.2717260772490711
+      }
+    },
+    "inactivity_n": 1,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "none",
+      "gradient_boosting": "none"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.3062170635662885,
+        "observed_b": 0.28168861966088343,
+        "diff_mean": -0.024871781565774007,
+        "diff_ci95": [
+          -0.03519687245802526,
+          -0.015318212495782526
+        ],
+        "share_b_better": 0.0,
+        "a_ci95": [
+          0.29067392622416205,
+          0.3235663879009619
+        ],
+        "b_ci95": [
+          0.2674012040806178,
+          0.2975818714180741
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_module_rate": {
+        "observed_a": 0.2130369284837128,
+        "observed_b": 0.3062170635662885,
+        "diff_mean": 0.09416700016076536,
+        "diff_ci95": [
+          0.08149513361411694,
+          0.10694643217528163
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.2038273315628475,
+          0.22284802293891762
+        ],
+        "b_ci95": [
+          0.29067392622416205,
+          0.3235663879009619
+        ],
+        "n_boot": 1000
+      }
+    }
+  },
+  "week_06/target_withdrawn": {
+    "split_audit": {
+      "rows_2013": 11616,
+      "students_2013": 11502,
+      "rows_2014": 15312,
+      "students_2014": 14201,
+      "students_in_both_years": 1274,
+      "rows_excluded_from_main_test": 1343,
+      "parts": {
+        "train": {
+          "rows": 6961,
+          "students": 6900,
+          "classes": {
+            "target_withdrawn": {
+              "n": 6961,
+              "positives": 1088,
+              "rate": 0.1563
+            },
+            "target_adverse_outcome": {
+              "n": 6961,
+              "positives": 3011,
+              "rate": 0.4326
+            }
+          }
+        },
+        "validation": {
+          "rows": 2329,
+          "students": 2301,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2329,
+              "positives": 373,
+              "rate": 0.1602
+            },
+            "target_adverse_outcome": {
+              "n": 2329,
+              "positives": 1018,
+              "rate": 0.4371
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2326,
+          "students": 2301,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2326,
+              "positives": 357,
+              "rate": 0.1535
+            },
+            "target_adverse_outcome": {
+              "n": 2326,
+              "positives": 1020,
+              "rate": 0.4385
+            }
+          }
+        },
+        "test_main": {
+          "rows": 13969,
+          "students": 12927,
+          "classes": {
+            "target_withdrawn": {
+              "n": 13969,
+              "positives": 2326,
+              "rate": 0.1665
+            },
+            "target_adverse_outcome": {
+              "n": 13969,
+              "positives": 5717,
+              "rate": 0.4093
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1343,
+          "students": 1274,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1343,
+              "positives": 367,
+              "rate": 0.2733
+            },
+            "target_adverse_outcome": {
+              "n": 1343,
+              "positives": 782,
+              "rate": 0.5823
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15312,
+          "positives": 2693,
+          "rate": 0.1759
+        },
+        "target_adverse_outcome": {
+          "n": 15312,
+          "positives": 6499,
+          "rate": 0.4244
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l1",
+          "C": 0.1
+        },
+        "val_pr_auc": 0.27865119686015427
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 200,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.28638946996864506
+      }
+    },
+    "inactivity_n": 3,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "isotonic",
+      "gradient_boosting": "none"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.2673959055876418,
+        "observed_b": 0.2708929662009419,
+        "diff_mean": 0.0041456923033192546,
+        "diff_ci95": [
+          -0.004105001304429886,
+          0.012831312436027172
+        ],
+        "share_b_better": 0.814,
+        "a_ci95": [
+          0.25394597909447675,
+          0.2808893172025052
+        ],
+        "b_ci95": [
+          0.2566865628175694,
+          0.28743909299259646
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_module_rate": {
+        "observed_a": 0.19813016602536412,
+        "observed_b": 0.2673959055876418,
+        "diff_mean": 0.06933801980520178,
+        "diff_ci95": [
+          0.05754121971529964,
+          0.081076512543666
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.18889029696563123,
+          0.20765170540782682
+        ],
+        "b_ci95": [
+          0.25394597909447675,
+          0.2808893172025052
+        ],
+        "n_boot": 1000
+      }
+    }
+  },
+  "week_02/target_adverse_outcome": {
+    "split_audit": {
+      "rows_2013": 12076,
+      "students_2013": 11947,
+      "rows_2014": 15900,
+      "students_2014": 14632,
+      "students_in_both_years": 1421,
+      "rows_excluded_from_main_test": 1508,
+      "parts": {
+        "train": {
+          "rows": 7246,
+          "students": 7167,
+          "classes": {
+            "target_withdrawn": {
+              "n": 7246,
+              "positives": 1380,
+              "rate": 0.1904
+            },
+            "target_adverse_outcome": {
+              "n": 7246,
+              "positives": 3339,
+              "rate": 0.4608
+            }
+          }
+        },
+        "validation": {
+          "rows": 2414,
+          "students": 2390,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2414,
+              "positives": 438,
+              "rate": 0.1814
+            },
+            "target_adverse_outcome": {
+              "n": 2414,
+              "positives": 1063,
+              "rate": 0.4403
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2416,
+          "students": 2390,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2416,
+              "positives": 468,
+              "rate": 0.1937
+            },
+            "target_adverse_outcome": {
+              "n": 2416,
+              "positives": 1113,
+              "rate": 0.4607
+            }
+          }
+        },
+        "test_main": {
+          "rows": 14392,
+          "students": 13211,
+          "classes": {
+            "target_withdrawn": {
+              "n": 14392,
+              "positives": 2797,
+              "rate": 0.1943
+            },
+            "target_adverse_outcome": {
+              "n": 14392,
+              "positives": 6165,
+              "rate": 0.4284
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1508,
+          "students": 1421,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1508,
+              "positives": 507,
+              "rate": 0.3362
+            },
+            "target_adverse_outcome": {
+              "n": 1508,
+              "positives": 935,
+              "rate": 0.62
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15900,
+          "positives": 3304,
+          "rate": 0.2078
+        },
+        "target_adverse_outcome": {
+          "n": 15900,
+          "positives": 7100,
+          "rate": 0.4465
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l2",
+          "C": 0.03
+        },
+        "val_pr_auc": 0.7011223339881416
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 50,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.699015989258865
+      }
+    },
+    "inactivity_n": 1,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "none",
+      "gradient_boosting": "none"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.6497547361755625,
+        "observed_b": 0.634687115220494,
+        "diff_mean": -0.015134192769306125,
+        "diff_ci95": [
+          -0.020679442583495827,
+          -0.009725469683341502
+        ],
+        "share_b_better": 0.0,
+        "a_ci95": [
+          0.6366530027671998,
+          0.6627909701646569
+        ],
+        "b_ci95": [
+          0.6217124575325839,
+          0.6477768929953268
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_inactivity_rule": {
+        "observed_a": 0.4626696578982049,
+        "observed_b": 0.6497547361755625,
+        "diff_mean": 0.18732030433111374,
+        "diff_ci95": [
+          0.1767193431412315,
+          0.19797526101217588
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.4535290121684114,
+          0.47225171649697406
+        ],
+        "b_ci95": [
+          0.6366530027671998,
+          0.6627909701646569
+        ],
+        "n_boot": 1000
+      }
+    }
+  },
+  "week_04/target_adverse_outcome": {
+    "split_audit": {
+      "rows_2013": 11807,
+      "students_2013": 11686,
+      "rows_2014": 15634,
+      "students_2014": 14446,
+      "students_in_both_years": 1368,
+      "rows_excluded_from_main_test": 1449,
+      "parts": {
+        "train": {
+          "rows": 7085,
+          "students": 7011,
+          "classes": {
+            "target_withdrawn": {
+              "n": 7085,
+              "positives": 1233,
+              "rate": 0.174
+            },
+            "target_adverse_outcome": {
+              "n": 7085,
+              "positives": 3165,
+              "rate": 0.4467
+            }
+          }
+        },
+        "validation": {
+          "rows": 2362,
+          "students": 2337,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2362,
+              "positives": 367,
+              "rate": 0.1554
+            },
+            "target_adverse_outcome": {
+              "n": 2362,
+              "positives": 1035,
+              "rate": 0.4382
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2360,
+          "students": 2338,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2360,
+              "positives": 410,
+              "rate": 0.1737
+            },
+            "target_adverse_outcome": {
+              "n": 2360,
+              "positives": 1041,
+              "rate": 0.4411
+            }
+          }
+        },
+        "test_main": {
+          "rows": 14185,
+          "students": 13078,
+          "classes": {
+            "target_withdrawn": {
+              "n": 14185,
+              "positives": 2566,
+              "rate": 0.1809
+            },
+            "target_adverse_outcome": {
+              "n": 14185,
+              "positives": 5944,
+              "rate": 0.419
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1449,
+          "students": 1368,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1449,
+              "positives": 450,
+              "rate": 0.3106
+            },
+            "target_adverse_outcome": {
+              "n": 1449,
+              "positives": 877,
+              "rate": 0.6052
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15634,
+          "positives": 3016,
+          "rate": 0.1929
+        },
+        "target_adverse_outcome": {
+          "n": 15634,
+          "positives": 6821,
+          "rate": 0.4363
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l1",
+          "C": 0.3
+        },
+        "val_pr_auc": 0.7450944639378072
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 200,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.7380069602169012
+      }
+    },
+    "inactivity_n": 1,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "none",
+      "gradient_boosting": "none"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.6890169392777351,
+        "observed_b": 0.6907019300429007,
+        "diff_mean": 0.0015819995149862378,
+        "diff_ci95": [
+          -0.003183640801751625,
+          0.006393789935482136
+        ],
+        "share_b_better": 0.732,
+        "a_ci95": [
+          0.6780252828013088,
+          0.7016851701341508
+        ],
+        "b_ci95": [
+          0.6784962983089975,
+          0.7023567493652285
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_inactivity_rule": {
+        "observed_a": 0.46366874660937574,
+        "observed_b": 0.6890169392777351,
+        "diff_mean": 0.22581234229948682,
+        "diff_ci95": [
+          0.2151961000346463,
+          0.23527787197692623
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.45323374893564916,
+          0.4735827944482288
+        ],
+        "b_ci95": [
+          0.6780252828013088,
+          0.7016851701341508
+        ],
+        "n_boot": 1000
+      }
+    }
+  },
+  "week_06/target_adverse_outcome": {
+    "split_audit": {
+      "rows_2013": 11616,
+      "students_2013": 11502,
+      "rows_2014": 15312,
+      "students_2014": 14201,
+      "students_in_both_years": 1274,
+      "rows_excluded_from_main_test": 1343,
+      "parts": {
+        "train": {
+          "rows": 6961,
+          "students": 6900,
+          "classes": {
+            "target_withdrawn": {
+              "n": 6961,
+              "positives": 1088,
+              "rate": 0.1563
+            },
+            "target_adverse_outcome": {
+              "n": 6961,
+              "positives": 3011,
+              "rate": 0.4326
+            }
+          }
+        },
+        "validation": {
+          "rows": 2329,
+          "students": 2301,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2329,
+              "positives": 373,
+              "rate": 0.1602
+            },
+            "target_adverse_outcome": {
+              "n": 2329,
+              "positives": 1018,
+              "rate": 0.4371
+            }
+          }
+        },
+        "calibration": {
+          "rows": 2326,
+          "students": 2301,
+          "classes": {
+            "target_withdrawn": {
+              "n": 2326,
+              "positives": 357,
+              "rate": 0.1535
+            },
+            "target_adverse_outcome": {
+              "n": 2326,
+              "positives": 1020,
+              "rate": 0.4385
+            }
+          }
+        },
+        "test_main": {
+          "rows": 13969,
+          "students": 12927,
+          "classes": {
+            "target_withdrawn": {
+              "n": 13969,
+              "positives": 2326,
+              "rate": 0.1665
+            },
+            "target_adverse_outcome": {
+              "n": 13969,
+              "positives": 5717,
+              "rate": 0.4093
+            }
+          }
+        },
+        "test_recurrent_secondary": {
+          "rows": 1343,
+          "students": 1274,
+          "classes": {
+            "target_withdrawn": {
+              "n": 1343,
+              "positives": 367,
+              "rate": 0.2733
+            },
+            "target_adverse_outcome": {
+              "n": 1343,
+              "positives": 782,
+              "rate": 0.5823
+            }
+          }
+        }
+      },
+      "class_rate_2014_before_exclusion": {
+        "target_withdrawn": {
+          "n": 15312,
+          "positives": 2693,
+          "rate": 0.1759
+        },
+        "target_adverse_outcome": {
+          "n": 15312,
+          "positives": 6499,
+          "rate": 0.4244
+        }
+      },
+      "seed": 42,
+      "fractions_of_2013_students": {
+        "train": 0.6,
+        "validation": 0.2,
+        "calibration": 0.2
+      }
+    },
+    "selected": {
+      "logistic_regression": {
+        "params": {
+          "penalty": "l1",
+          "C": 0.3
+        },
+        "val_pr_auc": 0.7589118053951395
+      },
+      "gradient_boosting": {
+        "params": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 50,
+          "max_iter": 150
+        },
+        "val_pr_auc": 0.7672213548973126
+      }
+    },
+    "inactivity_n": 1,
+    "calibrators": {
+      "baseline_prevalence": "none",
+      "baseline_module_rate": "none",
+      "baseline_inactivity_rule": "none",
+      "logistic_regression": "none",
+      "gradient_boosting": "none"
+    },
+    "bootstrap": {
+      "gradient_boosting_minus_logistic_regression": {
+        "observed_a": 0.7168566018553125,
+        "observed_b": 0.7019944734492848,
+        "diff_mean": -0.0148942748319234,
+        "diff_ci95": [
+          -0.020540120556023292,
+          -0.009525669977254998
+        ],
+        "share_b_better": 0.0,
+        "a_ci95": [
+          0.705270133317341,
+          0.7282071726532016
+        ],
+        "b_ci95": [
+          0.6901500893834269,
+          0.7144612658664948
+        ],
+        "n_boot": 1000
+      },
+      "logistic_regression_minus_baseline_inactivity_rule": {
+        "observed_a": 0.4522756644629015,
+        "observed_b": 0.7168566018553125,
+        "diff_mean": 0.264533683133984,
+        "diff_ci95": [
+          0.25436083568143336,
+          0.2745072638449508
+        ],
+        "share_b_better": 1.0,
+        "a_ci95": [
+          0.44295168841331567,
+          0.46200112870635324
+        ],
+        "b_ci95": [
+          0.705270133317341,
+          0.7282071726532016
+        ],
+        "n_boot": 1000
+      }
+    }
+  }
+}

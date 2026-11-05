@@ -63,7 +63,8 @@ medir **quanto a antecedência custa em desempenho**.
 | `src/feature_engineering/oulad_features.py` | Conjuntos OULAD por corte (população, engajamento, avaliações sem notas, contexto, ingresso, targets) | **Fase 03** |
 | `src/feature_engineering/uci_admission.py` | Conjunto UCI de ingresso (Enrolled separado) | **Fase 03** |
 | `src/feature_engineering/build_datasets.py` | Gera Parquet + metadados + manifestos; `split_roles` separa X/y sem IDs/auditoria | **Fase 03** |
-| `src/preprocessing/` | Imputação/codificação ajustadas só no treino | vazio (Fase 04) |
+| `src/preprocessing/` | — | não usado: o pré-processamento ficou em `src/modeling/preprocessing.py`, junto dos pipelines |
+| `src/modeling/` | Divisão (Q15), pipelines, baselines, treino, avaliação, calibração, faixas, equidade, interpretação, UCI | **Fase 04** |
 | `src/models/` | Treino e persistência | vazio (sem algoritmo escolhido) |
 | `src/evaluation/` | Validação por coorte/tempo, calibração, métricas por subgrupo | vazio |
 | `src/prediction/` | Probabilidade → faixa de risco → fatores explicativos | vazio |

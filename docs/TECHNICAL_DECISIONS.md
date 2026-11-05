@@ -141,6 +141,52 @@ ficam na seção final.
 - `id_student` já é pseudonimizado pela Open University; mantido como `student_id` para
   validação por grupo. UCI não tem ID: `row_id` = posição no arquivo original.
 
+### TD-32 — Validação (Q15, decisão aprovada)
+- Treino 2013 e teste 2014 sem os estudantes presentes em 2013 (1.368 em S4). Os recorrentes
+  ficam num cenário secundário, reportado à parte.
+- Dentro de 2013, divisão por estudante: 60% treino, 20% validação (seleção) e 20% calibração
+  (calibrador, threshold, faixas). A terceira partição evita ajustar calibração e threshold nos
+  dados usados para escolher o modelo.
+
+### TD-33 — Gênero e deficiência fora dos preditores (Q16, decisão aprovada)
+- `EXCLUDED_SENSITIVE` = {adm_gender, adm_disability}. Na UCI, por coerência, também `Gender` e
+  `Educational special needs` (análogo a deficiência), embora façam parte das 18 features de
+  ingresso aprovadas. Todos são usados só na auditoria.
+
+### TD-34 — Modelo baseado em árvores: HistGradientBoosting
+- Não linearidades e interações, NaN nativo, rapidez, regularização controlável e probabilidades
+  em geral melhores que Random Forest. Early stopping desligado (dividiria o treino por linha,
+  não por estudante).
+
+### TD-35 — Indicadores de ausência seletivos
+- Só para `asm_submission_rate`, `asm_mean_days_before_deadline` e `adm_imd_band`. Nunca para
+  `adm_registration_lead_days` (quarentena).
+
+### TD-36 — Calibração conservadora
+- none/Platt/isotônico escolhido pelo Brier fora do fold dentro da partição de calibração; troca
+  "none" só com ganho > 0,5%. Na S4 nenhum calibrador foi necessário.
+
+### TD-37 — Faixas de risco preliminares
+- Baixo < prevalência do treino ≤ moderado < máx(threshold F1, 2 × prevalência) ≤ alto.
+  Definidas só com dados de 2013. Ver `docs/RISK_CLASSIFICATION.md`.
+
+### TD-38 — Balanceamento não adotado
+- `class_weight="balanced"` testado na S4: mesma PR-AUC, calibração muito pior. Mantida a
+  distribuição natural; nada de SMOTE.
+
+### TD-39 — Validação da UCI sem simulação temporal
+- Hold-out estratificado de 20% + validação cruzada estratificada de 5 folds; deixar uma coorte
+  de fora apenas como teste de robustez (não temporal).
+
+### TD-40 — Nominais inteiros convertidos em texto
+- Os códigos nominais da UCI (inteiros) são convertidos para texto antes do one-hot (erro
+  detectado na primeira execução). Para a OULAD a conversão não altera nada: os resultados das
+  duas execuções foram idênticos.
+
+### TD-41 — Artefatos
+- Versionados: `reports/modeling/**/results.json`, CSVs de comparação e PNGs. Não versionados:
+  `models.joblib` e `test_predictions.parquet`.
+
 ## Questões pendentes
 
 | # | Questão | Por que importa |
@@ -161,5 +207,9 @@ ficam na seção final.
 | Q12 | Notas OULAD: aceitar "conhecida na entrega" ou aplicar defasagem fixa (+7/+14 dias)? | Otimismo das features acadêmicas |
 | Q13 | Variáveis financeiras da UCI (`Tuition fees up to date`, `Debtor`, `Scholarship holder`): manter em quarentena? | Risco de vazamento |
 | Q14 | Modelo de "dia 0" para os 26% que cancelam antes do início? | Escopo |
-| Q15 | Validação na Fase 04: treinar 2013 → testar 2014 **e** agrupar por estudante (1.368 repetidos entre anos) | Evita vazamento entre treino e teste |
-| Q16 | Uso de `adm_gender` e `adm_disability` (sensíveis) no modelo ou só na auditoria de equidade? | Equidade |
+| Q15 | ~~Validação~~ **resolvida (TD-32)** — Validação na Fase 04: treinar 2013 → testar 2014 **e** agrupar por estudante (1.368 repetidos entre anos) | Evita vazamento entre treino e teste |
+| Q16 | ~~Sensíveis~~ **resolvida (TD-33)** — Uso de `adm_gender` e `adm_disability` (sensíveis) no modelo ou só na auditoria de equidade? | Equidade |
+| Q17 | Retirar `adm_imd_band` do modelo principal? Custo de PR-AUC de 0,003; com ela há excesso de falsos positivos nas áreas mais pobres (ver FAIRNESS_AUDIT.md) | Equidade |
+| Q18 | Como tratar a subestimação do risco de estudantes com deficiência (−5 a −8 p.p.) sem usar a variável como preditora? | Equidade / calibração |
+| Q19 | Threshold e faixas definidos junto com a equipe pedagógica, conforme a capacidade de atendimento | Uso institucional |
+| Q20 | Validação com dados brasileiros (UFRN) antes de qualquer uso real | Validade externa |

@@ -34,6 +34,9 @@ EXPECTED_DOCS = [
     # Phase 03
     "docs/FEATURE_ENGINEERING.md", "docs/TARGET_DEFINITION.md", "docs/MODELING_DATASETS.md",
     "docs/FEATURE_VALIDATION.md",
+    # Phase 04
+    "docs/MODELING_METHODOLOGY.md", "docs/MODEL_EVALUATION.md", "docs/FAIRNESS_AUDIT.md",
+    "docs/RISK_CLASSIFICATION.md",
 ]
 
 

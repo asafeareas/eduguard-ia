@@ -1,6 +1,13 @@
-# EduGuard-IA — Phase 01 (initialization & dataset research)
-# Only what this phase actually uses. ML libraries will be added in
-# later phases, once algorithms are chosen with justification.
+# EduGuard-IA — dependencies actually used up to Phase 02
+# (exploration & temporal feasibility). No ML libraries yet: algorithms
+# will only be added once chosen with justification.
 
-pandas==2.2.3        # tabular loading and preliminary inspection
-pytest==8.3.4        # structural and unit tests
+pandas==2.2.3        # tabular loading, profiling, aggregation
+pytest==8.3.4        # tests
+
+# Phase 02 — visualisation and reproducible notebooks
+matplotlib==3.9.4
+seaborn==0.13.2
+nbformat==5.10.4     # notebooks are generated from src/analysis/build_notebooks.py
+nbconvert==7.16.4    # ... and executed headless for reproducibility
+ipykernel==6.29.5

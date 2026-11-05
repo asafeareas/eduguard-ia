@@ -18,13 +18,19 @@ semanas do semestre**, entregue:
 O modelo só pode aprender com informações que **existiriam no momento da previsão**
 — controle de vazamento temporal é requisito, não detalhe.
 
-## Situação atual — Fase 01 (inicialização e pesquisa de dados)
+## Situação atual
 
+**Fase 01 — inicialização e pesquisa de dados** (na `main`)
 - ✅ Estrutura do repositório, `.gitignore`, ambiente virtual
 - ✅ Pesquisa e avaliação de fontes brasileiras e internacionais
 - ✅ Download e inspeção preliminar dos datasets UCI 697 e OULAD
 - ⏸️ UFRN aguardando autorização de download
-- ⛔ Nenhum modelo treinado; nenhuma API implementada (por definição desta fase)
+
+**Fase 02 — exploração de dados e viabilidade temporal** (branch `feat/data-exploration`)
+- ✅ EDA de OULAD e UCI 697, com 17 gráficos e 3 notebooks executados
+- ✅ Agregação *as-of* por corte temporal (semanas 2/4/6), testada contra vazamento
+- ✅ Auditoria de vazamento e lista preliminar de features candidatas
+- ⛔ Nenhum modelo treinado; nenhuma API implementada (por definição das fases)
 
 ## Tecnologias previstas
 
@@ -32,6 +38,7 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
 |---|---|
 | Linguagem | Python 3.12 |
 | Dados | pandas (atual); formato colunar a avaliar |
+| Visualização / notebooks | matplotlib, seaborn, Jupyter (nbformat/nbconvert) |
 | Testes | pytest |
 | Modelagem | a definir com justificativa na fase de modelagem |
 | API | provavelmente FastAPI (a decidir) |
@@ -43,17 +50,19 @@ O modelo só pode aprender com informações que **existiriam no momento da prev
 eduguard-ia/
 ├── data/
 │   ├── raw/            # originais imutáveis (não versionados) + manifestos *.source.json
-│   ├── interim/        # intermediários
+│   ├── interim/        # intermediários (não versionados): cliques semanais, snapshots por corte
 │   ├── processed/      # prontos para modelagem
 │   └── external/       # dados de contexto (ex.: indicadores INEP)
 ├── docs/               # documentação do projeto
-├── notebooks/          # exploração
+├── notebooks/          # 01 OULAD EDA · 02 UCI EDA · 03 viabilidade temporal e vazamento
 ├── research/
-│   └── inspection/     # perfis exploratórios gerados por script
+│   ├── figures/        # gráficos da Fase 02
+│   └── inspection/     # perfis e resultados agregados (JSON/CSV)
 ├── src/
-│   ├── data/           # registry, download, inspeção
+│   ├── analysis/       # EDA, auditoria de vazamento, gráficos, pipeline da Fase 02
+│   ├── data/           # registry, download, loaders, qualidade, inspeção
 │   ├── preprocessing/
-│   ├── feature_engineering/
+│   ├── feature_engineering/  # agregação as-of por corte temporal
 │   ├── models/
 │   ├── evaluation/
 │   └── prediction/
@@ -100,6 +109,13 @@ python -m src.data.inspect_oulad
 python -m pytest -q
 ```
 
+Fase 02 (análise exploratória, ~1 min):
+
+```bash
+python -m src.analysis.run_phase02        # JSON/CSV em research/inspection, PNG em research/figures
+python -m src.analysis.build_notebooks    # gera e executa os notebooks
+```
+
 ## Documentação
 
 - [docs/DATASET_RESEARCH.md](docs/DATASET_RESEARCH.md) — pesquisa e comparação de datasets
@@ -107,6 +123,11 @@ python -m pytest -q
 - [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) — proveniência, licenças e datas de acesso
 - [docs/PROJECT_ARCHITECTURE.md](docs/PROJECT_ARCHITECTURE.md) — arquitetura planejada
 - [docs/TECHNICAL_DECISIONS.md](docs/TECHNICAL_DECISIONS.md) — decisões e pendências
+- [docs/EXPLORATORY_DATA_ANALYSIS.md](docs/EXPLORATORY_DATA_ANALYSIS.md) — análise exploratória (Fase 02)
+- [docs/TEMPORAL_FEASIBILITY.md](docs/TEMPORAL_FEASIBILITY.md) — viabilidade nas semanas 2, 4 e 6
+- [docs/DATA_LEAKAGE_AUDIT.md](docs/DATA_LEAKAGE_AUDIT.md) — auditoria de vazamento
+- [docs/DATASET_COMPARISON.md](docs/DATASET_COMPARISON.md) — OULAD × UCI
+- [docs/FEATURE_CANDIDATES.md](docs/FEATURE_CANDIDATES.md) — features candidatas (preliminar)
 
 ## Licença dos dados
 

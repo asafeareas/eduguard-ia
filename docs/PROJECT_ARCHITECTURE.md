@@ -52,8 +52,14 @@ medir **quanto a antecedência custa em desempenho**.
 | `src/data/registry.py` | Catálogo de fontes (URL, licença, política de download) | **implementado** |
 | `src/data/download.py` | Download, extração segura, manifesto com SHA-256 | **implementado** |
 | `src/data/inspect_dataset.py` | Perfil exploratório somente leitura | **implementado** |
+| `src/data/loaders.py` | Leitura padronizada (missing `"?"`, BOM, dtypes compactos do AVA) | **Fase 02** |
+| `src/data/quality.py` | Unicidade de chaves, órfãos, consistência rótulo × datas | **Fase 02** |
+| `src/feature_engineering/temporal.py` | População e agregados *as-of* por corte (semana *k* → dia 7k−1) | **Fase 02** (exploratório; seleção final na Fase 03) |
+| `src/analysis/eda.py` | Estatísticas descritivas (taxas, Cramér's V, AUC univariada, trajetórias) | **Fase 02** |
+| `src/analysis/leakage.py` | Catálogo de vazamento (PERMITIDA/CONDICIONAL/PROIBIDA) + regras empíricas | **Fase 02** |
+| `src/analysis/plots.py` | Gráficos (matplotlib/seaborn) | **Fase 02** |
+| `src/analysis/run_phase02.py` / `build_notebooks.py` | Pipeline reprodutível e notebooks | **Fase 02** |
 | `src/preprocessing/` | Normalização de esquemas por fonte | vazio |
-| `src/feature_engineering/` | Features as-of por corte temporal | vazio |
 | `src/models/` | Treino e persistência | vazio (sem algoritmo escolhido) |
 | `src/evaluation/` | Validação por coorte/tempo, calibração, métricas por subgrupo | vazio |
 | `src/prediction/` | Probabilidade → faixa de risco → fatores explicativos | vazio |

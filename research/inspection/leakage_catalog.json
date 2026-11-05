@@ -1,0 +1,390 @@
+{
+  "oulad": [
+    {
+      "table": "studentInfo",
+      "variable": "code_module / code_presentation",
+      "class": "PERMITTED",
+      "justification": "Known at registration. Use for grouping/normalisation, not as a shortcut for outcome."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "gender",
+      "class": "PERMITTED",
+      "justification": "Declared at registration. Fairness review required before use."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "region",
+      "class": "PERMITTED",
+      "justification": "Declared at registration."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "highest_education",
+      "class": "PERMITTED",
+      "justification": "Prior education, known at registration."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "imd_band",
+      "class": "PERMITTED",
+      "justification": "Area deprivation index of the address; 1,111 missing values."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "age_band",
+      "class": "PERMITTED",
+      "justification": "Known at registration."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "disability",
+      "class": "PERMITTED",
+      "justification": "Declared at registration. Sensitive: fairness review required."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "num_of_prev_attempts",
+      "class": "PERMITTED",
+      "justification": "Counts PAST attempts at the module."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "studied_credits",
+      "class": "CONDITIONAL",
+      "justification": "Total credits the student is taking; the snapshot date is not documented and the value may include modules added/dropped during the year."
+    },
+    {
+      "table": "studentInfo",
+      "variable": "final_result",
+      "class": "PROHIBITED",
+      "justification": "It IS the outcome (label source)."
+    },
+    {
+      "table": "studentRegistration",
+      "variable": "date_registration",
+      "class": "PERMITTED",
+      "justification": "Known once the student registers; only defined for students registered by the cutoff."
+    },
+    {
+      "table": "studentRegistration",
+      "variable": "date_registration IS MISSING",
+      "class": "CONDITIONAL",
+      "justification": "45 rows; 86.7% of them are Withdrawn. Missingness may be an artefact of the withdrawal process (record cleanup), i.e. outcome-revealing. Do not use a missing-indicator."
+    },
+    {
+      "table": "studentRegistration",
+      "variable": "date_unregistration",
+      "class": "PROHIBITED",
+      "justification": "Defines the withdrawal event. Allowed ONLY to filter who is still registered at the cutoff (population definition), never as a feature."
+    },
+    {
+      "table": "courses",
+      "variable": "module_presentation_length",
+      "class": "PERMITTED",
+      "justification": "Planned length, published in advance."
+    },
+    {
+      "table": "assessments",
+      "variable": "assessment_type / weight / date (due date)",
+      "class": "PERMITTED",
+      "justification": "Published assessment calendar. 11 exam dates are missing."
+    },
+    {
+      "table": "vle",
+      "variable": "activity_type / week_from / week_to",
+      "class": "PERMITTED",
+      "justification": "Course design metadata (82% of week_from/week_to missing)."
+    },
+    {
+      "table": "studentVle",
+      "variable": "sum_click, id_site, date (date <= cutoff)",
+      "class": "CONDITIONAL",
+      "justification": "Each interaction has its own day stamp: usable only when date <= cutoff_day."
+    },
+    {
+      "table": "studentVle",
+      "variable": "any aggregate over the whole presentation",
+      "class": "PROHIBITED",
+      "justification": "Totals, last activity day, engagement slope over the full presentation all embed the future (and the absence of clicks after withdrawal)."
+    },
+    {
+      "table": "studentAssessment",
+      "variable": "date_submitted (<= cutoff)",
+      "class": "CONDITIONAL",
+      "justification": "Usable only for submissions on or before the cutoff."
+    },
+    {
+      "table": "studentAssessment",
+      "variable": "score (submission <= cutoff)",
+      "class": "CONDITIONAL",
+      "justification": "OULAD has no score RELEASE date; assuming the score is known on submission day is optimistic. Phase 03 must test a release lag (e.g. +7/+14 days)."
+    },
+    {
+      "table": "studentAssessment",
+      "variable": "is_banked == 1",
+      "class": "CONDITIONAL",
+      "justification": "Result carried over from a previous presentation; date semantics undocumented. Excluded from as-of aggregates for now."
+    },
+    {
+      "table": "studentAssessment",
+      "variable": "Exam score",
+      "class": "PROHIBITED",
+      "justification": "Final exam happens at the end of the presentation: future at any early cutoff."
+    },
+    {
+      "table": "derived",
+      "variable": "count/mean of assessments over the whole presentation",
+      "class": "PROHIBITED",
+      "justification": "Missing submissions after withdrawal mechanically encode the outcome."
+    },
+    {
+      "table": "derived",
+      "variable": "presentation-level withdrawal rate of the SAME presentation",
+      "class": "PROHIBITED",
+      "justification": "Target encoding with the evaluated cohort's own labels."
+    },
+    {
+      "table": "derived",
+      "variable": "statistics from PREVIOUS presentations (e.g. module historic withdrawal rate)",
+      "class": "CONDITIONAL",
+      "justification": "Allowed if computed only from presentations that finished before the predicted one starts."
+    },
+    {
+      "table": "derived",
+      "variable": "per-module click normalisation (percentiles, z-scores)",
+      "class": "CONDITIONAL",
+      "justification": "Must use only data <= cutoff and be fitted on training presentations only."
+    },
+    {
+      "table": "design",
+      "variable": "same id_student across presentations",
+      "class": "CONDITIONAL",
+      "justification": "Some students appear in more than one presentation (count in research/inspection/phase02_oulad.json): train/test must split by student and/or by time, otherwise the model sees the same person on both sides."
+    }
+  ],
+  "uci": [
+    {
+      "variable": "Marital status",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Application mode",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Application order",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Course",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Daytime/evening attendance",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Previous qualification",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Previous qualification (grade)",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Nacionality",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Mother's qualification",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Father's qualification",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Mother's occupation",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Father's occupation",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Admission grade",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Displaced",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Educational special needs",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Gender",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Age at enrollment",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "International",
+      "class_sem1_weeks_2_6": "PERMITTED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Documented by the authors as known at enrollment."
+    },
+    {
+      "variable": "Debtor",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Collection date not documented; could reflect debt accumulated after leaving."
+    },
+    {
+      "variable": "Tuition fees up to date",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Collection date not documented; 32% of Dropout vs 1% of Graduate are not up to date — strong separation compatible with post-dropout measurement. Highest-risk variable."
+    },
+    {
+      "variable": "Scholarship holder",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Collection date not documented; scholarships can be granted or lost during the course."
+    },
+    {
+      "variable": "Curricular units 1st sem (enrolled)",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Set at course registration for the semester; the extraction moment is undocumented."
+    },
+    {
+      "variable": "Curricular units 1st sem (credited)",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Credit transfers are usually decided at enrollment; timing undocumented."
+    },
+    {
+      "variable": "Curricular units 1st sem (evaluations)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "Counted at the END of semester 1. Students with units enrolled and 0 evaluations are 100% Dropout: the variable records the abandonment itself."
+    },
+    {
+      "variable": "Curricular units 1st sem (approved)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "End-of-semester-1 result."
+    },
+    {
+      "variable": "Curricular units 1st sem (grade)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "End-of-semester-1 average."
+    },
+    {
+      "variable": "Curricular units 1st sem (without evaluations)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PERMITTED",
+      "justification": "End-of-semester-1 result."
+    },
+    {
+      "variable": "Curricular units 2nd sem (enrolled)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Known at the start of semester 2, but value 0 can mean the student already left (outcome-revealing)."
+    },
+    {
+      "variable": "Curricular units 2nd sem (credited)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Same as above."
+    },
+    {
+      "variable": "Curricular units 2nd sem (evaluations)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PROHIBITED",
+      "justification": "End-of-semester-2 result."
+    },
+    {
+      "variable": "Curricular units 2nd sem (approved)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PROHIBITED",
+      "justification": "End-of-semester-2 result."
+    },
+    {
+      "variable": "Curricular units 2nd sem (grade)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PROHIBITED",
+      "justification": "End-of-semester-2 average."
+    },
+    {
+      "variable": "Curricular units 2nd sem (without evaluations)",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PROHIBITED",
+      "justification": "End-of-semester-2 result."
+    },
+    {
+      "variable": "Unemployment rate",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Reference year undocumented. Only 10 distinct values: acts as a cohort identifier."
+    },
+    {
+      "variable": "Inflation rate",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Same as Unemployment rate."
+    },
+    {
+      "variable": "GDP",
+      "class_sem1_weeks_2_6": "CONDITIONAL",
+      "class_sem2_weeks_2_6": "CONDITIONAL",
+      "justification": "Same as Unemployment rate."
+    },
+    {
+      "variable": "Target",
+      "class_sem1_weeks_2_6": "PROHIBITED",
+      "class_sem2_weeks_2_6": "PROHIBITED",
+      "justification": "Outcome label."
+    }
+  ]
+}

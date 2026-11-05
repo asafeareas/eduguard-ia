@@ -1,0 +1,1796 @@
+{
+  "structure": {
+    "courses": {
+      "n_rows": 22,
+      "n_columns": 3,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 0,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "module_presentation_length",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 7,
+          "min": 234.0,
+          "max": 269.0,
+          "mean": 255.5455,
+          "n_zeros": 0
+        }
+      ]
+    },
+    "assessments": {
+      "n_rows": 206,
+      "n_columns": 6,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 11,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_assessment",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 206,
+          "min": 1752.0,
+          "max": 40088.0,
+          "mean": 26473.9757,
+          "n_zeros": 0
+        },
+        {
+          "name": "assessment_type",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 3
+        },
+        {
+          "name": "date",
+          "dtype": "float64",
+          "n_missing": 11,
+          "n_unique": 74,
+          "min": 12.0,
+          "max": 261.0,
+          "mean": 145.0051,
+          "n_zeros": 0
+        },
+        {
+          "name": "weight",
+          "dtype": "float64",
+          "n_missing": 0,
+          "n_unique": 24,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 20.8738,
+          "n_zeros": 56
+        }
+      ]
+    },
+    "vle": {
+      "n_rows": 6364,
+      "n_columns": 6,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 10486,
+      "columns": [
+        {
+          "name": "id_site",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 6364,
+          "min": 526721.0,
+          "max": 1077905.0,
+          "mean": 726099.0941,
+          "n_zeros": 0
+        },
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "activity_type",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 20
+        },
+        {
+          "name": "week_from",
+          "dtype": "float64",
+          "n_missing": 5243,
+          "n_unique": 30,
+          "min": 0.0,
+          "max": 29.0,
+          "mean": 15.2043,
+          "n_zeros": 2
+        },
+        {
+          "name": "week_to",
+          "dtype": "float64",
+          "n_missing": 5243,
+          "n_unique": 30,
+          "min": 0.0,
+          "max": 29.0,
+          "mean": 15.215,
+          "n_zeros": 2
+        }
+      ]
+    },
+    "studentInfo": {
+      "n_rows": 32593,
+      "n_columns": 12,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 1111,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 28785,
+          "min": 3733.0,
+          "max": 2716795.0,
+          "mean": 706687.6691,
+          "n_zeros": 0
+        },
+        {
+          "name": "gender",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 2
+        },
+        {
+          "name": "region",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 13
+        },
+        {
+          "name": "highest_education",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 5
+        },
+        {
+          "name": "imd_band",
+          "dtype": "object",
+          "n_missing": 1111,
+          "n_unique": 10
+        },
+        {
+          "name": "age_band",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 3
+        },
+        {
+          "name": "num_of_prev_attempts",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 7,
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 0.1632,
+          "n_zeros": 28421
+        },
+        {
+          "name": "studied_credits",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 61,
+          "min": 30.0,
+          "max": 655.0,
+          "mean": 79.7587,
+          "n_zeros": 0
+        },
+        {
+          "name": "disability",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 2
+        },
+        {
+          "name": "final_result",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        }
+      ]
+    },
+    "studentRegistration": {
+      "n_rows": 32593,
+      "n_columns": 5,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 22566,
+      "columns": [
+        {
+          "name": "code_module",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 7
+        },
+        {
+          "name": "code_presentation",
+          "dtype": "object",
+          "n_missing": 0,
+          "n_unique": 4
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 28785,
+          "min": 3733.0,
+          "max": 2716795.0,
+          "mean": 706687.6691,
+          "n_zeros": 0
+        },
+        {
+          "name": "date_registration",
+          "dtype": "float64",
+          "n_missing": 45,
+          "n_unique": 332,
+          "min": -322.0,
+          "max": 167.0,
+          "mean": -69.4113,
+          "n_zeros": 2
+        },
+        {
+          "name": "date_unregistration",
+          "dtype": "float64",
+          "n_missing": 22521,
+          "n_unique": 416,
+          "min": -365.0,
+          "max": 444.0,
+          "mean": 49.7576,
+          "n_zeros": 419
+        }
+      ]
+    },
+    "studentAssessment": {
+      "n_rows": 173912,
+      "n_columns": 5,
+      "n_duplicate_rows": 0,
+      "total_missing_cells": 173,
+      "columns": [
+        {
+          "name": "id_assessment",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 188,
+          "min": 1752.0,
+          "max": 37443.0,
+          "mean": 26553.8036,
+          "n_zeros": 0
+        },
+        {
+          "name": "id_student",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 23369,
+          "min": 6516.0,
+          "max": 2698588.0,
+          "mean": 705150.7172,
+          "n_zeros": 0
+        },
+        {
+          "name": "date_submitted",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 312,
+          "min": -11.0,
+          "max": 608.0,
+          "mean": 116.0329,
+          "n_zeros": 61
+        },
+        {
+          "name": "is_banked",
+          "dtype": "int64",
+          "n_missing": 0,
+          "n_unique": 2,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.011,
+          "n_zeros": 172003
+        },
+        {
+          "name": "score",
+          "dtype": "float64",
+          "n_missing": 173,
+          "n_unique": 101,
+          "min": 0.0,
+          "max": 100.0,
+          "mean": 75.7996,
+          "n_zeros": 329
+        }
+      ]
+    },
+    "studentVle": {
+      "n_rows": 10655280,
+      "n_columns": 6,
+      "dtypes": {
+        "code_module": "category",
+        "code_presentation": "category",
+        "id_student": "int32",
+        "id_site": "int32",
+        "date": "int16",
+        "sum_click": "int32"
+      },
+      "total_missing_cells": 0,
+      "n_full_row_duplicates": 787170,
+      "date_min": -25,
+      "date_max": 269,
+      "sum_click_quantiles": {
+        "0.5": 2.0,
+        "0.9": 8.0,
+        "0.99": 34.0,
+        "1.0": 6977.0
+      }
+    }
+  },
+  "integrity": {
+    "granularity": {
+      "courses": {
+        "key": [
+          "code_module",
+          "code_presentation"
+        ],
+        "n_rows": 22,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "assessments": {
+        "key": [
+          "id_assessment"
+        ],
+        "n_rows": 206,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "vle": {
+        "key": [
+          "id_site"
+        ],
+        "n_rows": 6364,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "studentInfo": {
+        "key": [
+          "code_module",
+          "code_presentation",
+          "id_student"
+        ],
+        "n_rows": 32593,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "studentRegistration": {
+        "key": [
+          "code_module",
+          "code_presentation",
+          "id_student"
+        ],
+        "n_rows": 32593,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "studentAssessment": {
+        "key": [
+          "id_assessment",
+          "id_student"
+        ],
+        "n_rows": 173912,
+        "n_duplicate_keys": 0,
+        "unique": true
+      },
+      "studentVle": {
+        "key": [
+          "code_module",
+          "code_presentation",
+          "id_student",
+          "id_site",
+          "date"
+        ],
+        "n_rows": 10655280,
+        "n_duplicate_keys": 2195960
+      }
+    },
+    "orphans": {
+      "assessments->courses": 0,
+      "vle->courses": 0,
+      "studentInfo->courses": 0,
+      "studentRegistration->studentInfo": 0,
+      "studentInfo->studentRegistration": 0,
+      "studentAssessment->assessments": 0,
+      "studentAssessment->studentInfo": 0,
+      "studentVle->studentInfo": 0,
+      "studentVle->vle(id_site)": 0
+    },
+    "consistency": {
+      "withdrawn_without_unregistration_date": 93,
+      "not_withdrawn_with_unregistration_date": 9,
+      "unregistration_before_registration": 0,
+      "registration_missing": 45,
+      "submissions_after_presentation_end": 85,
+      "submissions_after_end_that_are_banked": 0
+    }
+  },
+  "students_in_multiple_presentations": {
+    "n_students": 3538,
+    "n_unique_students": 28785,
+    "max_presentations_per_student": 5
+  },
+  "outcome_distribution": [
+    {
+      "final_result": "Pass",
+      "count": 12361,
+      "proportion": 0.3793
+    },
+    {
+      "final_result": "Withdrawn",
+      "count": 10156,
+      "proportion": 0.3116
+    },
+    {
+      "final_result": "Fail",
+      "count": 7052,
+      "proportion": 0.2164
+    },
+    {
+      "final_result": "Distinction",
+      "count": 3024,
+      "proportion": 0.0928
+    }
+  ],
+  "outcome_by_module": [
+    {
+      "code_module": "AAA",
+      "Distinction": 0.059,
+      "Fail": 0.122,
+      "Pass": 0.651,
+      "Withdrawn": 0.168
+    },
+    {
+      "code_module": "BBB",
+      "Distinction": 0.086,
+      "Fail": 0.223,
+      "Pass": 0.389,
+      "Withdrawn": 0.302
+    },
+    {
+      "code_module": "CCC",
+      "Distinction": 0.112,
+      "Fail": 0.176,
+      "Pass": 0.266,
+      "Withdrawn": 0.445
+    },
+    {
+      "code_module": "DDD",
+      "Distinction": 0.061,
+      "Fail": 0.225,
+      "Pass": 0.355,
+      "Withdrawn": 0.359
+    },
+    {
+      "code_module": "EEE",
+      "Distinction": 0.121,
+      "Fail": 0.192,
+      "Pass": 0.441,
+      "Withdrawn": 0.246
+    },
+    {
+      "code_module": "FFF",
+      "Distinction": 0.086,
+      "Fail": 0.22,
+      "Pass": 0.384,
+      "Withdrawn": 0.31
+    },
+    {
+      "code_module": "GGG",
+      "Distinction": 0.156,
+      "Fail": 0.287,
+      "Pass": 0.441,
+      "Withdrawn": 0.115
+    }
+  ],
+  "outcome_by_presentation": [
+    {
+      "code_presentation": "2013B",
+      "Distinction": 0.07,
+      "Fail": 0.265,
+      "Pass": 0.377,
+      "Withdrawn": 0.288
+    },
+    {
+      "code_presentation": "2013J",
+      "Distinction": 0.085,
+      "Fail": 0.226,
+      "Pass": 0.421,
+      "Withdrawn": 0.268
+    },
+    {
+      "code_presentation": "2014B",
+      "Distinction": 0.1,
+      "Fail": 0.235,
+      "Pass": 0.33,
+      "Withdrawn": 0.335
+    },
+    {
+      "code_presentation": "2014J",
+      "Distinction": 0.103,
+      "Fail": 0.176,
+      "Pass": 0.381,
+      "Withdrawn": 0.34
+    }
+  ],
+  "binary_label_options": {
+    "A_withdrawn_vs_pass_distinction (Fail excluded)": {
+      "n": 25541,
+      "positive_rate": 0.3976
+    },
+    "B_withdrawn_vs_all_others": {
+      "n": 32593,
+      "positive_rate": 0.3116
+    },
+    "C_withdrawn_or_fail_vs_pass_distinction": {
+      "n": 32593,
+      "positive_rate": 0.528
+    }
+  },
+  "withdrawal_timing": {
+    "quantiles": {
+      "0.1": -38.0,
+      "0.25": -2.0,
+      "0.5": 27.0,
+      "0.75": 109.0,
+      "0.9": 170.0
+    },
+    "counts_by_window": {
+      "antes do dia 0": 2676,
+      "semanas 1-2": 1781,
+      "semanas 3-4": 575,
+      "semanas 5-6": 519,
+      "após semana 6": 4512,
+      "nan": 93
+    }
+  },
+  "withdrawal_rate_by_attribute": {
+    "highest_education": [
+      {
+        "highest_education": "No Formal quals",
+        "n": 347,
+        "events": 149,
+        "rate": 0.4294,
+        "small_sample": false
+      },
+      {
+        "highest_education": "Lower Than A Level",
+        "n": 13158,
+        "events": 4620,
+        "rate": 0.3511,
+        "small_sample": false
+      },
+      {
+        "highest_education": "A Level or Equivalent",
+        "n": 14045,
+        "events": 4030,
+        "rate": 0.2869,
+        "small_sample": false
+      },
+      {
+        "highest_education": "HE Qualification",
+        "n": 4730,
+        "events": 1283,
+        "rate": 0.2712,
+        "small_sample": false
+      },
+      {
+        "highest_education": "Post Graduate Qualification",
+        "n": 313,
+        "events": 74,
+        "rate": 0.2364,
+        "small_sample": false
+      }
+    ],
+    "imd_band": [
+      {
+        "imd_band": "0-10%",
+        "n": 3311,
+        "events": 1231,
+        "rate": 0.3718,
+        "small_sample": false
+      },
+      {
+        "imd_band": "20-30%",
+        "n": 3654,
+        "events": 1321,
+        "rate": 0.3615,
+        "small_sample": false
+      },
+      {
+        "imd_band": "10-20",
+        "n": 3516,
+        "events": 1246,
+        "rate": 0.3544,
+        "small_sample": false
+      },
+      {
+        "imd_band": "40-50%",
+        "n": 3256,
+        "events": 1042,
+        "rate": 0.32,
+        "small_sample": false
+      },
+      {
+        "imd_band": "30-40%",
+        "n": 3539,
+        "events": 1095,
+        "rate": 0.3094,
+        "small_sample": false
+      },
+      {
+        "imd_band": "60-70%",
+        "n": 2905,
+        "events": 859,
+        "rate": 0.2957,
+        "small_sample": false
+      },
+      {
+        "imd_band": "50-60%",
+        "n": 3124,
+        "events": 899,
+        "rate": 0.2878,
+        "small_sample": false
+      },
+      {
+        "imd_band": "80-90%",
+        "n": 2762,
+        "events": 774,
+        "rate": 0.2802,
+        "small_sample": false
+      },
+      {
+        "imd_band": "70-80%",
+        "n": 2879,
+        "events": 797,
+        "rate": 0.2768,
+        "small_sample": false
+      },
+      {
+        "imd_band": "90-100%",
+        "n": 2536,
+        "events": 656,
+        "rate": 0.2587,
+        "small_sample": false
+      },
+      {
+        "imd_band": "<missing>",
+        "n": 1111,
+        "events": 236,
+        "rate": 0.2124,
+        "small_sample": false
+      }
+    ],
+    "age_band": [
+      {
+        "age_band": "0-35",
+        "n": 22944,
+        "events": 7381,
+        "rate": 0.3217,
+        "small_sample": false
+      },
+      {
+        "age_band": "35-55",
+        "n": 9433,
+        "events": 2721,
+        "rate": 0.2885,
+        "small_sample": false
+      },
+      {
+        "age_band": "55<=",
+        "n": 216,
+        "events": 54,
+        "rate": 0.25,
+        "small_sample": false
+      }
+    ],
+    "num_of_prev_attempts_cap": [
+      {
+        "num_of_prev_attempts_cap": "3+",
+        "n": 198,
+        "events": 74,
+        "rate": 0.3737,
+        "small_sample": false
+      },
+      {
+        "num_of_prev_attempts_cap": "2",
+        "n": 675,
+        "events": 247,
+        "rate": 0.3659,
+        "small_sample": false
+      },
+      {
+        "num_of_prev_attempts_cap": "1",
+        "n": 3299,
+        "events": 1150,
+        "rate": 0.3486,
+        "small_sample": false
+      },
+      {
+        "num_of_prev_attempts_cap": "0",
+        "n": 28421,
+        "events": 8685,
+        "rate": 0.3056,
+        "small_sample": false
+      }
+    ],
+    "studied_credits_band": [
+      {
+        "studied_credits_band": ">120",
+        "n": 2256,
+        "events": 1157,
+        "rate": 0.5129,
+        "small_sample": false
+      },
+      {
+        "studied_credits_band": "91-120",
+        "n": 6390,
+        "events": 2576,
+        "rate": 0.4031,
+        "small_sample": false
+      },
+      {
+        "studied_credits_band": "61-90",
+        "n": 3379,
+        "events": 1209,
+        "rate": 0.3578,
+        "small_sample": false
+      },
+      {
+        "studied_credits_band": "≤60",
+        "n": 20568,
+        "events": 5214,
+        "rate": 0.2535,
+        "small_sample": false
+      }
+    ],
+    "registration_band": [
+      {
+        "registration_band": "<missing>",
+        "n": 45,
+        "events": 39,
+        "rate": 0.8667,
+        "small_sample": false
+      },
+      {
+        "registration_band": "≤-90",
+        "n": 9799,
+        "events": 3746,
+        "rate": 0.3823,
+        "small_sample": false
+      },
+      {
+        "registration_band": "-89..-30",
+        "n": 14308,
+        "events": 4247,
+        "rate": 0.2968,
+        "small_sample": false
+      },
+      {
+        "registration_band": "-29..0",
+        "n": 8207,
+        "events": 2075,
+        "rate": 0.2528,
+        "small_sample": false
+      },
+      {
+        "registration_band": ">0 (após início)",
+        "n": 234,
+        "events": 49,
+        "rate": 0.2094,
+        "small_sample": false
+      }
+    ],
+    "disability": [
+      {
+        "disability": "Y",
+        "n": 3164,
+        "events": 1245,
+        "rate": 0.3935,
+        "small_sample": false
+      },
+      {
+        "disability": "N",
+        "n": 29429,
+        "events": 8911,
+        "rate": 0.3028,
+        "small_sample": false
+      }
+    ],
+    "gender": [
+      {
+        "gender": "M",
+        "n": 17875,
+        "events": 5670,
+        "rate": 0.3172,
+        "small_sample": false
+      },
+      {
+        "gender": "F",
+        "n": 14718,
+        "events": 4486,
+        "rate": 0.3048,
+        "small_sample": false
+      }
+    ],
+    "code_module": [
+      {
+        "code_module": "CCC",
+        "n": 4434,
+        "events": 1975,
+        "rate": 0.4454,
+        "small_sample": false
+      },
+      {
+        "code_module": "DDD",
+        "n": 6272,
+        "events": 2250,
+        "rate": 0.3587,
+        "small_sample": false
+      },
+      {
+        "code_module": "FFF",
+        "n": 7762,
+        "events": 2403,
+        "rate": 0.3096,
+        "small_sample": false
+      },
+      {
+        "code_module": "BBB",
+        "n": 7909,
+        "events": 2388,
+        "rate": 0.3019,
+        "small_sample": false
+      },
+      {
+        "code_module": "EEE",
+        "n": 2934,
+        "events": 722,
+        "rate": 0.2461,
+        "small_sample": false
+      },
+      {
+        "code_module": "AAA",
+        "n": 748,
+        "events": 126,
+        "rate": 0.1684,
+        "small_sample": false
+      },
+      {
+        "code_module": "GGG",
+        "n": 2534,
+        "events": 292,
+        "rate": 0.1152,
+        "small_sample": false
+      }
+    ]
+  },
+  "cramers_v_with_final_result": {
+    "highest_education": 0.1024,
+    "imd_band": 0.0937,
+    "age_band": 0.0584,
+    "num_of_prev_attempts_cap": 0.0721,
+    "studied_credits_band": 0.1045,
+    "registration_band": 0.0714,
+    "disability": 0.0652,
+    "gender": 0.0225,
+    "code_module": 0.1215,
+    "region": 0.0678
+  },
+  "non_exam_score_by_outcome": [
+    {
+      "final_result": "Distinction",
+      "count": 25449.0,
+      "mean": 88.542,
+      "std": 11.55,
+      "min": 0.0,
+      "25%": 83.0,
+      "50%": 90.0,
+      "75%": 97.0,
+      "max": 100.0
+    },
+    {
+      "final_result": "Fail",
+      "count": 27726.0,
+      "mean": 65.427,
+      "std": 21.087,
+      "min": 0.0,
+      "25%": 53.0,
+      "50%": 67.0,
+      "75%": 80.0,
+      "max": 100.0
+    },
+    {
+      "final_result": "Pass",
+      "count": 102583.0,
+      "mean": 77.169,
+      "std": 16.379,
+      "min": 0.0,
+      "25%": 68.0,
+      "50%": 80.0,
+      "75%": 88.0,
+      "max": 100.0
+    },
+    {
+      "final_result": "Withdrawn",
+      "count": 13022.0,
+      "mean": 66.087,
+      "std": 23.181,
+      "min": 0.0,
+      "25%": 53.0,
+      "50%": 70.0,
+      "75%": 83.0,
+      "max": 100.0
+    }
+  ],
+  "first_assessment": {
+    "due_day": {
+      "count": 22.0,
+      "mean": 27.454545454545453,
+      "std": 14.634360326454388,
+      "min": 12.0,
+      "25%": 19.0,
+      "50%": 21.5,
+      "75%": 31.0,
+      "max": 61.0
+    },
+    "share_submitted_by_outcome (students still registered at due date)": {
+      "Distinction": 0.9977,
+      "Fail": 0.7913,
+      "Pass": 0.9898,
+      "Withdrawn": 0.7741
+    },
+    "median_score_by_outcome": {
+      "Distinction": 88.0,
+      "Fail": 70.0,
+      "Pass": 78.0,
+      "Withdrawn": 70.0
+    }
+  },
+  "last_activity_ratio_by_outcome": [
+    {
+      "final_result": "Distinction",
+      "count": 3024.0,
+      "mean": 0.954,
+      "std": 0.047,
+      "min": 0.657,
+      "25%": 0.925,
+      "50%": 0.97,
+      "75%": 0.993,
+      "max": 1.0
+    },
+    {
+      "final_result": "Fail",
+      "count": 6678.0,
+      "mean": 0.559,
+      "std": 0.33,
+      "min": -0.092,
+      "25%": 0.241,
+      "50%": 0.579,
+      "75%": 0.896,
+      "max": 1.0
+    },
+    {
+      "final_result": "Pass",
+      "count": 12358.0,
+      "mean": 0.943,
+      "std": 0.055,
+      "min": 0.126,
+      "25%": 0.91,
+      "50%": 0.953,
+      "75%": 0.985,
+      "max": 1.0
+    },
+    {
+      "final_result": "Withdrawn",
+      "count": 7168.0,
+      "mean": 0.273,
+      "std": 0.25,
+      "min": -0.095,
+      "25%": 0.073,
+      "50%": 0.201,
+      "75%": 0.435,
+      "max": 1.0
+    }
+  ],
+  "share_last_activity_before_half": {
+    "Distinction": 0.0,
+    "Fail": 0.4173,
+    "Pass": 0.0004,
+    "Withdrawn": 0.5609
+  },
+  "fail_without_exam_submission": {
+    "modules_with_exam_records": [
+      "CCC",
+      "DDD"
+    ],
+    "share": 0.6762,
+    "n_fail_in_those_modules": 2193
+  },
+  "weekly_mean_clicks_weeks_1_6": [
+    {
+      "week": 1,
+      "Distinction": 113.6,
+      "Fail": 44.7,
+      "Pass": 81.1,
+      "Withdrawn": 46.6
+    },
+    {
+      "week": 2,
+      "Distinction": 101.5,
+      "Fail": 38.7,
+      "Pass": 73.9,
+      "Withdrawn": 44.1
+    },
+    {
+      "week": 3,
+      "Distinction": 117.9,
+      "Fail": 55.8,
+      "Pass": 92.4,
+      "Withdrawn": 67.5
+    },
+    {
+      "week": 4,
+      "Distinction": 94.3,
+      "Fail": 37.4,
+      "Pass": 69.7,
+      "Withdrawn": 43.6
+    },
+    {
+      "week": 5,
+      "Distinction": 87.4,
+      "Fail": 32.1,
+      "Pass": 65.0,
+      "Withdrawn": 39.5
+    },
+    {
+      "week": 6,
+      "Distinction": 73.7,
+      "Fail": 24.8,
+      "Pass": 55.0,
+      "Withdrawn": 30.1
+    }
+  ],
+  "clicks_relative_to_withdrawal": [
+    {
+      "index": 0,
+      "rel_week": -8,
+      "mean": 31.173,
+      "median": 4.0,
+      "size": 4010,
+      "share_inactive": 0.412
+    },
+    {
+      "index": 1,
+      "rel_week": -7,
+      "mean": 29.253,
+      "median": 3.0,
+      "size": 4010,
+      "share_inactive": 0.437
+    },
+    {
+      "index": 2,
+      "rel_week": -6,
+      "mean": 26.835,
+      "median": 2.0,
+      "size": 4010,
+      "share_inactive": 0.448
+    },
+    {
+      "index": 3,
+      "rel_week": -5,
+      "mean": 22.094,
+      "median": 1.0,
+      "size": 4010,
+      "share_inactive": 0.489
+    },
+    {
+      "index": 4,
+      "rel_week": -4,
+      "mean": 19.397,
+      "median": 0.0,
+      "size": 4010,
+      "share_inactive": 0.541
+    },
+    {
+      "index": 5,
+      "rel_week": -3,
+      "mean": 14.543,
+      "median": 0.0,
+      "size": 4010,
+      "share_inactive": 0.584
+    },
+    {
+      "index": 6,
+      "rel_week": -2,
+      "mean": 12.227,
+      "median": 0.0,
+      "size": 4010,
+      "share_inactive": 0.611
+    },
+    {
+      "index": 7,
+      "rel_week": -1,
+      "mean": 11.762,
+      "median": 0.0,
+      "size": 4010,
+      "share_inactive": 0.642
+    },
+    {
+      "index": 8,
+      "rel_week": 0,
+      "mean": 8.018,
+      "median": 0.0,
+      "size": 4010,
+      "share_inactive": 0.646
+    }
+  ],
+  "activity_type_click_share_until_week4": [
+    {
+      "activity_type": "forumng",
+      "Withdrawn": 0.2275,
+      "Fail": 0.2339,
+      "Pass": 0.2661,
+      "Distinction": 0.2997
+    },
+    {
+      "activity_type": "oucontent",
+      "Withdrawn": 0.1983,
+      "Fail": 0.2074,
+      "Pass": 0.2166,
+      "Distinction": 0.1917
+    },
+    {
+      "activity_type": "homepage",
+      "Withdrawn": 0.2042,
+      "Fail": 0.2015,
+      "Pass": 0.197,
+      "Distinction": 0.1906
+    },
+    {
+      "activity_type": "quiz",
+      "Withdrawn": 0.1545,
+      "Fail": 0.1365,
+      "Pass": 0.1259,
+      "Distinction": 0.1454
+    },
+    {
+      "activity_type": "subpage",
+      "Withdrawn": 0.1193,
+      "Fail": 0.1219,
+      "Pass": 0.106,
+      "Distinction": 0.0917
+    },
+    {
+      "activity_type": "resource",
+      "Withdrawn": 0.0443,
+      "Fail": 0.0448,
+      "Pass": 0.0362,
+      "Distinction": 0.0338
+    },
+    {
+      "activity_type": "url",
+      "Withdrawn": 0.0218,
+      "Fail": 0.0233,
+      "Pass": 0.0206,
+      "Distinction": 0.018
+    },
+    {
+      "activity_type": "ouwiki",
+      "Withdrawn": 0.0151,
+      "Fail": 0.0147,
+      "Pass": 0.0178,
+      "Distinction": 0.018
+    },
+    {
+      "activity_type": "page",
+      "Withdrawn": 0.0046,
+      "Fail": 0.0054,
+      "Pass": 0.0034,
+      "Distinction": 0.0025
+    },
+    {
+      "activity_type": "glossary",
+      "Withdrawn": 0.0025,
+      "Fail": 0.0026,
+      "Pass": 0.003,
+      "Distinction": 0.0028
+    }
+  ],
+  "temporal_cutoffs": {
+    "S2": {
+      "cutoff_day": 13,
+      "population": 28069,
+      "excluded_already_unregistered": 4524,
+      "label_counts": {
+        "Pass": 12339,
+        "Fail": 7026,
+        "Withdrawn": 5682,
+        "Distinction": 3022
+      },
+      "binary_A_positive_rate": 0.27,
+      "medians_by_outcome": [
+        {
+          "final_result": "Distinction",
+          "total_clicks": 230.0,
+          "active_days": 11.0,
+          "distinct_sites": 23.0,
+          "clicks_pre_start": 63.0,
+          "clicks_last_7_days": 64.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 0.0,
+          "mean_score": 87.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Fail",
+          "total_clicks": 63.0,
+          "active_days": 5.0,
+          "distinct_sites": 12.0,
+          "clicks_pre_start": 11.0,
+          "clicks_last_7_days": 12.0,
+          "days_since_last_activity": 3.0,
+          "n_submitted": 0.0,
+          "mean_score": 72.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Pass",
+          "total_clicks": 151.0,
+          "active_days": 9.0,
+          "distinct_sites": 19.0,
+          "clicks_pre_start": 37.0,
+          "clicks_last_7_days": 41.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 0.0,
+          "mean_score": 80.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Withdrawn",
+          "total_clicks": 86.0,
+          "active_days": 6.0,
+          "distinct_sites": 15.0,
+          "clicks_pre_start": 18.0,
+          "clicks_last_7_days": 19.0,
+          "days_since_last_activity": 2.0,
+          "n_submitted": 0.0,
+          "mean_score": 73.0,
+          "n_missing_submissions": 0.0
+        }
+      ],
+      "share_zero_clicks_by_outcome": {
+        "Distinction": 0.0162,
+        "Fail": 0.1187,
+        "Pass": 0.0284,
+        "Withdrawn": 0.0806
+      },
+      "share_with_submission": 0.1062,
+      "share_presentations_with_due_assessment": 0.0459,
+      "remaining_withdrawals_after_cutoff_share_of_all_withdrawn": 0.5595
+    },
+    "S4": {
+      "cutoff_day": 27,
+      "population": 27535,
+      "excluded_already_unregistered": 5058,
+      "label_counts": {
+        "Pass": 12356,
+        "Fail": 7037,
+        "Withdrawn": 5119,
+        "Distinction": 3023
+      },
+      "binary_A_positive_rate": 0.2497,
+      "medians_by_outcome": [
+        {
+          "final_result": "Distinction",
+          "total_clicks": 389.0,
+          "active_days": 18.0,
+          "distinct_sites": 29.0,
+          "clicks_pre_start": 63.0,
+          "clicks_last_7_days": 49.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 1.0,
+          "mean_score": 89.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Fail",
+          "total_clicks": 130.0,
+          "active_days": 8.0,
+          "distinct_sites": 18.0,
+          "clicks_pre_start": 11.0,
+          "clicks_last_7_days": 9.0,
+          "days_since_last_activity": 3.0,
+          "n_submitted": 1.0,
+          "mean_score": 70.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Pass",
+          "total_clicks": 275.0,
+          "active_days": 15.0,
+          "distinct_sites": 26.0,
+          "clicks_pre_start": 36.0,
+          "clicks_last_7_days": 35.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 1.0,
+          "mean_score": 79.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Withdrawn",
+          "total_clicks": 180.0,
+          "active_days": 11.0,
+          "distinct_sites": 21.0,
+          "clicks_pre_start": 20.0,
+          "clicks_last_7_days": 16.0,
+          "days_since_last_activity": 2.0,
+          "n_submitted": 1.0,
+          "mean_score": 70.0,
+          "n_missing_submissions": 0.0
+        }
+      ],
+      "share_zero_clicks_by_outcome": {
+        "Distinction": 0.0066,
+        "Fail": 0.079,
+        "Pass": 0.0115,
+        "Withdrawn": 0.0399
+      },
+      "share_with_submission": 0.7186,
+      "share_presentations_with_due_assessment": 0.8188,
+      "remaining_withdrawals_after_cutoff_share_of_all_withdrawn": 0.504
+    },
+    "S6": {
+      "cutoff_day": 41,
+      "population": 27022,
+      "excluded_already_unregistered": 5571,
+      "label_counts": {
+        "Pass": 12356,
+        "Fail": 7038,
+        "Withdrawn": 4604,
+        "Distinction": 3024
+      },
+      "binary_A_positive_rate": 0.2304,
+      "medians_by_outcome": [
+        {
+          "final_result": "Distinction",
+          "total_clicks": 503.5,
+          "active_days": 25.0,
+          "distinct_sites": 35.0,
+          "clicks_pre_start": 63.0,
+          "clicks_last_7_days": 41.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 1.0,
+          "mean_score": 90.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Fail",
+          "total_clicks": 162.0,
+          "active_days": 11.0,
+          "distinct_sites": 21.0,
+          "clicks_pre_start": 11.0,
+          "clicks_last_7_days": 3.0,
+          "days_since_last_activity": 4.0,
+          "n_submitted": 1.0,
+          "mean_score": 70.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Pass",
+          "total_clicks": 362.0,
+          "active_days": 20.0,
+          "distinct_sites": 30.0,
+          "clicks_pre_start": 36.0,
+          "clicks_last_7_days": 28.0,
+          "days_since_last_activity": 1.0,
+          "n_submitted": 1.0,
+          "mean_score": 80.0,
+          "n_missing_submissions": 0.0
+        },
+        {
+          "final_result": "Withdrawn",
+          "total_clicks": 232.0,
+          "active_days": 14.0,
+          "distinct_sites": 25.0,
+          "clicks_pre_start": 20.0,
+          "clicks_last_7_days": 8.0,
+          "days_since_last_activity": 3.0,
+          "n_submitted": 1.0,
+          "mean_score": 70.5,
+          "n_missing_submissions": 0.0
+        }
+      ],
+      "share_zero_clicks_by_outcome": {
+        "Distinction": 0.0043,
+        "Fail": 0.0655,
+        "Pass": 0.0076,
+        "Withdrawn": 0.03
+      },
+      "share_with_submission": 0.8254,
+      "share_presentations_with_due_assessment": 0.9102,
+      "remaining_withdrawals_after_cutoff_share_of_all_withdrawn": 0.4533
+    }
+  },
+  "univariate_separation_by_cutoff": [
+    {
+      "index": 0,
+      "week_label": "Semana 2",
+      "indicator": "Cliques acumulados",
+      "variable": "total_clicks",
+      "auc": 0.364,
+      "separation": 0.2721,
+      "coverage": 1.0
+    },
+    {
+      "index": 1,
+      "week_label": "Semana 2",
+      "indicator": "Dias ativos",
+      "variable": "active_days",
+      "auc": 0.3831,
+      "separation": 0.2337,
+      "coverage": 1.0
+    },
+    {
+      "index": 2,
+      "week_label": "Semana 2",
+      "indicator": "Materiais distintos",
+      "variable": "distinct_sites",
+      "auc": 0.3906,
+      "separation": 0.2188,
+      "coverage": 1.0
+    },
+    {
+      "index": 3,
+      "week_label": "Semana 2",
+      "indicator": "Cliques antes do início",
+      "variable": "clicks_pre_start",
+      "auc": 0.3963,
+      "separation": 0.2074,
+      "coverage": 1.0
+    },
+    {
+      "index": 4,
+      "week_label": "Semana 2",
+      "indicator": "Cliques nos últimos 7 dias",
+      "variable": "clicks_last_7_days",
+      "auc": 0.3743,
+      "separation": 0.2513,
+      "coverage": 1.0
+    },
+    {
+      "index": 5,
+      "week_label": "Semana 2",
+      "indicator": "Dias desde o último acesso",
+      "variable": "days_since_last_activity",
+      "auc": 0.6042,
+      "separation": 0.2084,
+      "coverage": 1.0
+    },
+    {
+      "index": 6,
+      "week_label": "Semana 2",
+      "indicator": "Avaliações entregues",
+      "variable": "n_submitted",
+      "auc": 0.4607,
+      "separation": 0.0785,
+      "coverage": 1.0
+    },
+    {
+      "index": 7,
+      "week_label": "Semana 2",
+      "indicator": "Nota média (entregues)",
+      "variable": "mean_score",
+      "auc": 0.3817,
+      "separation": 0.2365,
+      "coverage": 0.1143
+    },
+    {
+      "index": 8,
+      "week_label": "Semana 2",
+      "indicator": "Avaliações vencidas não entregues",
+      "variable": "n_missing_submissions",
+      "auc": 0.5032,
+      "separation": 0.0064,
+      "coverage": 1.0
+    },
+    {
+      "index": 9,
+      "week_label": "Semana 4",
+      "indicator": "Cliques acumulados",
+      "variable": "total_clicks",
+      "auc": 0.378,
+      "separation": 0.244,
+      "coverage": 1.0
+    },
+    {
+      "index": 10,
+      "week_label": "Semana 4",
+      "indicator": "Dias ativos",
+      "variable": "active_days",
+      "auc": 0.3788,
+      "separation": 0.2424,
+      "coverage": 1.0
+    },
+    {
+      "index": 11,
+      "week_label": "Semana 4",
+      "indicator": "Materiais distintos",
+      "variable": "distinct_sites",
+      "auc": 0.4099,
+      "separation": 0.1803,
+      "coverage": 1.0
+    },
+    {
+      "index": 12,
+      "week_label": "Semana 4",
+      "indicator": "Cliques antes do início",
+      "variable": "clicks_pre_start",
+      "auc": 0.4049,
+      "separation": 0.1902,
+      "coverage": 1.0
+    },
+    {
+      "index": 13,
+      "week_label": "Semana 4",
+      "indicator": "Cliques nos últimos 7 dias",
+      "variable": "clicks_last_7_days",
+      "auc": 0.3879,
+      "separation": 0.2242,
+      "coverage": 1.0
+    },
+    {
+      "index": 14,
+      "week_label": "Semana 4",
+      "indicator": "Dias desde o último acesso",
+      "variable": "days_since_last_activity",
+      "auc": 0.6115,
+      "separation": 0.223,
+      "coverage": 1.0
+    },
+    {
+      "index": 15,
+      "week_label": "Semana 4",
+      "indicator": "Avaliações entregues",
+      "variable": "n_submitted",
+      "auc": 0.4337,
+      "separation": 0.1327,
+      "coverage": 1.0
+    },
+    {
+      "index": 16,
+      "week_label": "Semana 4",
+      "indicator": "Nota média (entregues)",
+      "variable": "mean_score",
+      "auc": 0.3224,
+      "separation": 0.3552,
+      "coverage": 0.7536
+    },
+    {
+      "index": 17,
+      "week_label": "Semana 4",
+      "indicator": "Avaliações vencidas não entregues",
+      "variable": "n_missing_submissions",
+      "auc": 0.602,
+      "separation": 0.204,
+      "coverage": 1.0
+    },
+    {
+      "index": 18,
+      "week_label": "Semana 6",
+      "indicator": "Cliques acumulados",
+      "variable": "total_clicks",
+      "auc": 0.3725,
+      "separation": 0.255,
+      "coverage": 1.0
+    },
+    {
+      "index": 19,
+      "week_label": "Semana 6",
+      "indicator": "Dias ativos",
+      "variable": "active_days",
+      "auc": 0.37,
+      "separation": 0.26,
+      "coverage": 1.0
+    },
+    {
+      "index": 20,
+      "week_label": "Semana 6",
+      "indicator": "Materiais distintos",
+      "variable": "distinct_sites",
+      "auc": 0.4141,
+      "separation": 0.1718,
+      "coverage": 1.0
+    },
+    {
+      "index": 21,
+      "week_label": "Semana 6",
+      "indicator": "Cliques antes do início",
+      "variable": "clicks_pre_start",
+      "auc": 0.4089,
+      "separation": 0.1822,
+      "coverage": 1.0
+    },
+    {
+      "index": 22,
+      "week_label": "Semana 6",
+      "indicator": "Cliques nos últimos 7 dias",
+      "variable": "clicks_last_7_days",
+      "auc": 0.3471,
+      "separation": 0.3058,
+      "coverage": 1.0
+    },
+    {
+      "index": 23,
+      "week_label": "Semana 6",
+      "indicator": "Dias desde o último acesso",
+      "variable": "days_since_last_activity",
+      "auc": 0.6365,
+      "separation": 0.273,
+      "coverage": 1.0
+    },
+    {
+      "index": 24,
+      "week_label": "Semana 6",
+      "indicator": "Avaliações entregues",
+      "variable": "n_submitted",
+      "auc": 0.4211,
+      "separation": 0.1579,
+      "coverage": 1.0
+    },
+    {
+      "index": 25,
+      "week_label": "Semana 6",
+      "indicator": "Nota média (entregues)",
+      "variable": "mean_score",
+      "auc": 0.3061,
+      "separation": 0.3878,
+      "coverage": 0.8677
+    },
+    {
+      "index": 26,
+      "week_label": "Semana 6",
+      "indicator": "Avaliações vencidas não entregues",
+      "variable": "n_missing_submissions",
+      "auc": 0.6144,
+      "separation": 0.2287,
+      "coverage": 1.0
+    }
+  ],
+  "leakage_reference_week4_population": {
+    "total clicks over whole presentation": {
+      "auc": 0.1605,
+      "separation": 0.679
+    },
+    "last active day over whole presentation": {
+      "auc": 0.0093,
+      "separation": 0.9815
+    },
+    "assessments submitted over whole presentation": {
+      "auc": 0.0495,
+      "separation": 0.9011
+    }
+  },
+  "information_availability_by_week": [
+    {
+      "index": 0,
+      "week": 1,
+      "cutoff_day": 6,
+      "population": 29103,
+      "share_with_vle_activity": 0.8982,
+      "share_with_submission": 0.0266,
+      "share_presentations_with_due_assessment": 0.0
+    },
+    {
+      "index": 1,
+      "week": 2,
+      "cutoff_day": 13,
+      "population": 28069,
+      "share_with_vle_activity": 0.9397,
+      "share_with_submission": 0.1062,
+      "share_presentations_with_due_assessment": 0.0459
+    },
+    {
+      "index": 2,
+      "week": 3,
+      "cutoff_day": 20,
+      "population": 27887,
+      "share_with_vle_activity": 0.9574,
+      "share_with_submission": 0.4638,
+      "share_presentations_with_due_assessment": 0.5668
+    },
+    {
+      "index": 3,
+      "week": 4,
+      "cutoff_day": 27,
+      "population": 27535,
+      "share_with_vle_activity": 0.9665,
+      "share_with_submission": 0.7186,
+      "share_presentations_with_due_assessment": 0.8188
+    },
+    {
+      "index": 4,
+      "week": 5,
+      "cutoff_day": 34,
+      "population": 27235,
+      "share_with_vle_activity": 0.9713,
+      "share_with_submission": 0.8105,
+      "share_presentations_with_due_assessment": 0.9108
+    },
+    {
+      "index": 5,
+      "week": 6,
+      "cutoff_day": 41,
+      "population": 27022,
+      "share_with_vle_activity": 0.9739,
+      "share_with_submission": 0.8254,
+      "share_presentations_with_due_assessment": 0.9102
+    },
+    {
+      "index": 6,
+      "week": 7,
+      "cutoff_day": 48,
+      "population": 26778,
+      "share_with_vle_activity": 0.9758,
+      "share_with_submission": 0.8365,
+      "share_presentations_with_due_assessment": 0.9098
+    },
+    {
+      "index": 7,
+      "week": 8,
+      "cutoff_day": 55,
+      "population": 26523,
+      "share_with_vle_activity": 0.9774,
+      "share_with_submission": 0.8571,
+      "share_presentations_with_due_assessment": 0.9092
+    }
+  ]
+}

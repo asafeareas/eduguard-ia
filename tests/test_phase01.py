@@ -21,13 +21,16 @@ EXPECTED_DIRS = [
     "data/raw", "data/processed", "data/external", "data/interim",
     "notebooks", "research", "tests", "docs",
     "src/data", "src/preprocessing", "src/feature_engineering",
-    "src/models", "src/evaluation", "src/prediction",
+    "src/models", "src/evaluation", "src/prediction", "src/analysis",
 ]
 EXPECTED_DOCS = [
     "README.md", "requirements.txt", ".gitignore",
     "docs/DATASET_RESEARCH.md", "docs/DATA_DICTIONARY.md",
     "docs/PROJECT_ARCHITECTURE.md", "docs/TECHNICAL_DECISIONS.md",
     "docs/DATA_SOURCES.md",
+    # Phase 02
+    "docs/EXPLORATORY_DATA_ANALYSIS.md", "docs/TEMPORAL_FEASIBILITY.md",
+    "docs/DATA_LEAKAGE_AUDIT.md", "docs/DATASET_COMPARISON.md", "docs/FEATURE_CANDIDATES.md",
 ]
 
 
